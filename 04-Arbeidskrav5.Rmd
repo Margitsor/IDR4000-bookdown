@@ -71,7 +71,7 @@ styrkedat %>%
   group_by(sets) %>%
   summarise(m = mean(prosentvis.endring),
             sd = sd(prosentvis.endring)) 
-print()
+
 
 dxa <- lm(post ~ pre + sex + sets, data = styrkedat)
 summary(dxa)
