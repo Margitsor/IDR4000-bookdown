@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "John Doe"
+title: "Mappe eksamen"
+author: "Margit Dahl Sørensen"
 date: "`r Sys.Date()`"
 output: pdf_document
 documentclass: book
