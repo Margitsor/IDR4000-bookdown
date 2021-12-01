@@ -3,6 +3,7 @@ output:
   pdf_document: default
   html_document: default
 ---
+
 # Arbeidskrav i vitenskapsteori
 
 ## Oppgave 1
@@ -27,6 +28,8 @@ For å sammenligne med hypotetisk deduksjon som oppgir en hypotese med ulike emp
 
 ## Oppgave 3
 
+
+
 Bird beskriver replikasjonskrisen som foregår innenfor forskningsfeltet, som et stort problem som kan ha flere negative konsekvenser for vitenskapelig allmenhet, som at troverdigheten er synkende. Bird bruker tre ulike konsept for å forklare replikasjonskrisen. Disse er type-I feil, type-II feil og basefrekvensfeilen. Type-I feil, er å akseptere en hypotese eller teori som ikke stemmer [@bird2020]. Et eksempel på dette kan være en promilletest som viser at en sjåfør kjører med promille, selv om sjåføren ikke har drukket alkohol. Type-II feil er å forkaste en hypotese eller en teori som faktisk stemmer. Dette kan være at en promille test viser at en påvirket sjåfør ikke har promille. Basefrekvensfeilen er en feil som forekommer når man fokuserer på at en viss sannsynlighet forekommer ved en test, som å se på hvor mange sjåfører som kjører ruspåvirket. Hvis 50 av 1000 mennesker som blir testet for rus, tester positivt, men bare 10 faktisk kjørte ruspåvirket, vil det si at det var 40 falsk-positive tester. Fenomenet påpeker da at når man konkluderer med hvor mange tester som slo ut for rus, og ikke tar hensyn for hvor mange falsk-positive tester det var forekommer basefrekvensfeilen. Det er færre folk som ikke kjører påvirket, så da er sannsynligheten for at de daller i den 5% feilen større enn at de faktisk kjører ruspåvirket. I dette eksempelet vil basefrekvensfeilen oppstå fordi frekvensen av ruspåvirket sjåfører mot ikke-ruspåvirket sjåfører i befolkningen generelt er lav. Bird påpeker hvordan dette slår ut i forskning ved å bruke dette fenomenet. Satt i sammenheng med forskning viser Bird til hvordan dette vil slå ut på hypotesetesting, og hvordan falsk-positive, og falsk-negative forkastninger vil forekomme. Dette fordi man ikke tar høyde for den generelle forekomsten i befolkningen når man tester på for små grupper [@bird2020].
 
 En annen forklaringer som blir nevnt ved replikasjonskrisen er publikasjons bias. Publikasjons bias forekommer når resultater blir skjevt fremstilt for å avgjøre om en studie skal publiseres eller ikke. Dette forekommer først og fremst ved å oftere publisere studier med statistisk signifikante resultater. Dette vil da bety at studier som er gjennomført hvor resultatene ikke er statistisk signifikante, resultatene ikke stemmer med hypotesen ikke vil bli publisert [@bird2020].
@@ -35,4 +38,4 @@ Andre forklaringer til replikasjonskrisen er at flere studier ikke blir gjennomf
 
 Bird presenterer en mer akademisk forklaring enn de andre årsakene som blir nevnt. Om forskere driver med svindel eller praktiserer dårlig gjennomføring i studiene blir vanskelig å kunne konkludere med. Bird kommer med en forklaring som viser hvordan hypotesetesting kan tolkes feil, eller aksepteres med stor mulighet for type-I eller type-II feil. Forklaringene som har blitt nevnt er alle aksepterbare, og mulige, og det blir vanskelig å konkludere at den ene er bedre enn den andre, men Bird presenterer en mer troverdig forklaring.
 
-
+[@bird2020]
