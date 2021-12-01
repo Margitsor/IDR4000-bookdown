@@ -19,23 +19,22 @@ editor_options:
     wrap: 72
 ---
 
-# Rabilitet
+# Reabilitet
 
 ## Introduksjon
 
-Maksimalt oksygenopptak $\dot VO_{2max}$ ble først beskrevet av
-[@hill1923] , og kan defineres som kroppens evne til å ta opp og
-forbruke oksygen per tidsenhet [@hill1923; @Basset2000]. Innen
-toppidrett måles ofte det maksimale oksygenopptaket for å måle utøverens
-kapasitet opp mot arbeidskravet i den spesifikke idretten, og
-$\dot VO_{2max}$ kan i så måte også sees på som et mål på den aerobe
-effekten til utøveren [@bassett2000]. I Olympiatoppens testprotokoller
-benytter de flere definerte hjelpekriterier for å sikre at man faktisk
-har funnet deltakerens maksimale oksygenopptak [@tønnessen2017].
-Følgende kriterier er beskrevet; platå i $\dot VO_{2max}$ er oppnådd,
-økning i ventilasjon med utflating av $\dot VO_{2max}$ verdi, RER over
-1.10/1.05<!-- Vilken gäller? -->, og blodlaktat over 8 [@tønnessen2017]
-
+Maksimalt oksygenopptak vo2maks ble først beskrevet av [@hill1923\] , og
+kan defineres som kroppens evne til å ta opp og forbruke oksygen per
+tidsenhet \[@hill1923; @Basset2000]. Innen toppidrett måles ofte det
+maksimale oksygenopptaket for å måle utøverens kapasitet opp mot
+arbeidskravet i den spesifikke idretten, og vo2maks kan i så måte også
+sees på som et mål på den aerobe effekten til utøveren [@bassett2000]. I
+Olympiatoppens testprotokoller benytter de flere definerte
+hjelpekriterier for å sikre at man faktisk har funnet deltakerens
+maksimale oksygenopptak [@tønnessen2017]. Følgende kriterier er
+beskrevet; platå i vo2maks er oppnådd, økning i ventilasjon med
+utflating av vo2maks verdi, RER over 1.10/1.05<!-- Vilken gäller? -->,
+og blodlaktat over 8 [@tønnessen2017]
 
 ## Metode
 
@@ -139,8 +138,9 @@ reliabilitet <- read_excel("~/Documents/Master i treningsfysiologi/R-studio/Mapp
 Det var 11 deltakere i studien, samtlige deltakere er studenter ved
 Høgskolen i Innlandet. Deskriptive data for disse deltakerne er vist i
 Tabell 1, i Figur 1 kan man se utviklingen fra pre-test til post-test
-fordelt på kjønn. Det typiske målefeilet (typical error, [@hopkins2000]) fra
-pre til post-test er utregnet til å være `r round(reliabilitet$cv, 2)`%.
+fordelt på kjønn. Det typiske målefeilet (typical error, [@hopkins2000])
+fra pre til post-test er utregnet til å være
+`r round(reliabilitet$cv, 2)`%.
 
 <!-- All kod i figuren under kan settes i en pipe, lägg till figurtext till figuren med fig.cap i code chunken -->
 
@@ -216,5 +216,3 @@ standardisering av treningshverdagen i forkant av testene. Det kan også
 tenkes at med et varierende nivå hos deltagerne kan enkelte oppleve en
 treningseffekt av test 1. Samtidig som andre kanskje ble slitne av å få
 en test inn i treningshverdagen.
-
-
