@@ -1,42 +1,41 @@
-Introduksjon
+# Ett sett vs tre sett styrketrening 
+
+## Introduksjon
 
 Flere forskere har undersøkt forskjellen på hvordan ulike sett og reps påvirker maksimal styrke, muskel hypertrofi og kroppssammensetning. Schoenfeld og flere [@2019] gjennomførte et studie for undersøke forskjellen i hypertrofi forskjellen mellom å gjennomføre ett eller tre sett i styreprogrammet. I denne studien var det ingen signifikant forskjell mellom gruppen som gjennomførte ett sett og gruppen som gjennomførte tre sett, men begge gruppene hadde signifikant økt muskel styrke fra pre-test til post-test. Flere andre gjennomførte studier viser et annet resultat, og konkluderer med at å gjennomføre tre sett gir en statistisk signifikant økning i maksimal styrke [@rhea2002; @munn2005; @fröhlich2010]. På den andre siden konkluderer Carpinelli [@carpinelli1998], at det ikke er signifikant forskjell på ett og tre sett, og diskuterer for at ett sett holder for å få god utvikling i muskelstyrke.
 
 Dette danner grunnlaget for ønsket om å undersøke denne problemstillingen videre. Formålet med denne studien er å se om det vil forekomme endring i lean bodymass og styrkeadaptasjon etter 12 ukers treningsintervensjon, med ulik volum belastning på hvert ben, og sammenligne disse endringene.
 
 
-Intervensjon
-
+[**Intervensjon**]{.ul}
 Intervensjonen bestod av 12 ukers full-kropps styrketrening. Beinøvelsene ble gjennomført på et og et bein for å tillate interne styrkeforskjeller. Begge utøverne gjennomførte begge protokollene (et sett, og tre sett) og det ble tilfeldig valgt hvilket ben som skulle gjennomføre hvilken protokoll. Muskelstyrken ble vurdert ved oppstart, under (uke 3,5 og 9) og etter treningsintervensjon. Kroppssammensetning ble målt før og etter treningsintervensjonen. Muskelbiopsi ble samlet 4 ganger under intervensjonen. Ved start av intervensjon, før, og en time etter treningsøkt fem, og etter intervensjon.
 
-Treningsprotokoll
 
-Oppvarming
+[**Treningsprotokoll**]{.ul}
 
+[**Oppvarming**]{.ul}
 Alle deltakerne gjennomførte en standardisert oppvarmingsprotokoll før hver treningsøkt, hvor protokollen bestod av tre deler. Første del bestod av 5 min sykling på ergometersykkel til opplevd anstrengelse på 12-14 på Borg-skalaen (RPE). Andre del av oppvarmingen 10 repetisjoner av fire kroppsvekt treningsøvelser (individuelt tilpasset armhevninger, sit-ups, rygghev og knebøy). Siste del av oppvarmingen var et sett med 10 repetisjoner av ~50% av en repetisjon maksimum [1RM], for hver motstandsøvelse.
 
-Styrkeprogram
 
+[**Styrkeprogram**]{.ul}
 Beinøvelsene ble gjennomført i denne rekkefølgen: et beins beinpress, knefleksjon og kneekstensjon. Disse ble gjennomført som et eller tre sett per øvelse. Det ene settet ble gjennomført mellom andre og tredje sett. Etter å ha beinøvelsene gjennomførte deltakerne benkpress med manualer, nedtrekk og skulderpress eller sittende roing. Pausene mellom settene var 90-180 sekunder. Treningsintensiteten økte gradvis gjennom de 12 ukene. Deltakerne startet med 10RM de første to ukene, 8RM de neste tre ukene, og 7RM de siste sju ukene.
 
-Tester
 
-Maksimal styrke
+[**Tester**]{.ul}
 
+[**MAksimal styrke**]{.ul}
 Maksimal styrke ble vurdert som 1RM i benpress med manualer og kneekstensjon. Spesifikk oppvarming på testdagen bestod av 10, 6 og 3 repetisjoner på 50, 75 og 85 % av forventet maksimum. 1RM ble funnet ved å øke motstanden gradvis inntil deltakeren ikke klarte å gjennomføre en fullstendig repetisjon. På hver øvelse ble den høyeste vekten deltakeren klarte å fullføre godkjent som 1RM. Deltakerne fikk fire til seks forsøk hver.
 
-Kroppssammensetning
-
+[**Kroppssammensetning**]{.ul}
 Kroppssammensetningen ble testet før og etter intervensjonen ved bruk av dual-energy røntgenabsorptiometri (DXA), i henhold til standard protokoll. Før DXA-målingene fikk deltakerne beskjed om å faste i 2 timer, og ikke gjennomføre moderat fysisk aktivitet 48 timer før testtidspunkt. Den siste DXA-målingen ble gjennomført to dager etter siste styrkeøkt.
 
-Statistisk test
-
+[**Statistisk test**]{.ul}
 Statistisk analyse er gjennomført i R-studio (Version 1.4.1717). Deskriptiv statistikk er oppgitt som prosent, og ANCOVA modell er brukt til å regne ut p-verdi på endringsscore fra pre- til post-test. Statistisk signifikans er satt ved p <0,05.
 
-Resultater
 
-Lean bodymass
+## Resultater
 
+[**Lean bodymass**]{.ul}
 Resultatene presentert i studien viser at 12 uker med styrketrening førte til en endring av lean body mass fra pre til post test på beina som gjennomførte tre sett (3,32 ± 4,39%, p<0,001), det samme gjelder for beina som gjennomførte ett sett (2,04 ± 3,71%, p<0,001). Endringer mellom de ulike treningsintervensjonene viser ingen signifikant endring mellom gruppene (114,56 ae, p<0,193).
 
 ```{r setup, include=FALSE}
@@ -96,8 +95,8 @@ moddat <- dxadata %>%
 moddat %>%
  ggplot(aes(time, lean.mass, group = paste(participant, group), color = group)) + geom_line() + theme_bw()
 ```
-Muskel styrke
 
+[**Muskel styrke**]{.ul}
 Resultatene viser at 12 ukers treningsintervensjon fører til en endring i muskelstyrke fra pre til post test på beina som gjennomførte et sett. mellom beina som gjennomførte ett sett (31,0 ± 14,2%, p<0,001), og beina som gjennomførte tre sett (2,04 ± 3,71%, p< 0,001). Endring i muskelstyrke for de ulike treningsintervensjonene ved post test er signifikant (0.029 ae, p<0.029).
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
@@ -141,15 +140,13 @@ styrkemod %>%
  ggplot(aes(time, combined.load, group = paste(participant, sets), color = sets)) + geom_line() + theme_bw() 
 ```
 
-Diskusjon
-
+## Diskusjon
 To til tre styrkeøkter i 12 uker øker maksimal styrke i beina, og muskel hypertrofi. Disse resultatene er gjeldende for om man gjennomfører ett eller tre sett. Resultatene presentert i denne studien viser at endringen vil være større om man gjennomfører tre sett. Dette samsvarer med det store mengder av litteraturen viser [@rhea2002; @munn2005; @fröhlich2010]. Som presentert i introduksjonen viser resultatene de presenterer at tre sett har signifikant større økning enn ett sett. Rhea med flere viser til at deltakerne som kjørte tre sett hadde dobbelt så stor utvikling som deltakerne som gjennomførte ett sett (25%) etter tre uker (48%). Etter 12 uker ble det større forskjell mellom gruppene hvor deltakerne som gjennomførte tre sett hadde 56% økning, og deltakerne som gjennomførte ett sett hadde 26% økning. Dette kan være et tegn på at skilnaden mellom gruppen kan være enda større hvis samme styrkeprogram blir gjennomført i en periode som er lengre enn 12 uker.
 
 På den andre siden konkluderer Carpinelli [@carpinelli1998] som nevnt i introduksjonen at forskjellen mellom deltakerne som gjennomført ett sett og tre sett ikke var stor nok til at det var hensiktsmessig å gjennomføre tre sett. Dette understreker de med å påpeke at ved så lite forskjell vil det være lettere for folk å praktisere ett sett i sitt treningsprogram i det daglige liv. Dette er et viktig poeng å ta med seg inn i resultatene fra dette studiet da det er gjennomført på vanlige mennesker, og ikke treningsutøvere, som kan ha vanskeligheter med å få tid til å gjennomføre et styrkeprogram med tre sett på hver øvelse. Resultatene presentert over viser og at beina som gjennomførte ett sett hadde signifikant endring i lean bodymass, og i muskelstyrke.
 
-Konklusjon
-
+## Konklusjon
 Etter endt studie kan man konkludere med at om man gjennomfører ett sett eller tre sett med styrketrening to til tre ganger i uken, vil man kunne se en signifikant økning i muskel styrke og hypertrofi. Ved å gjennomføre tre sett vil endringen være større enn ved ett sett. Til videre forskning kan man undersøke hvordan denne endringen vil være i en lengre periode enn 12 uker.
 
-Referanser
+## Referanser
 

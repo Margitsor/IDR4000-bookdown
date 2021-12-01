@@ -217,3 +217,12 @@ treningseffekt av test 1. Samtidig som andre kanskje ble slitne av å få
 en test inn i treningshverdagen.
 
 ## Referanser
+
+<!--chapter:end:index.rmd-->
+
+# Labrapport 
+
+## Formål 
+
+<!--chapter:end:01-new.rmd-->
+

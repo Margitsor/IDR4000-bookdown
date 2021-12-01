@@ -4,14 +4,17 @@
 %
 \documentclass[
 ]{book}
+\title{Mappeeksamen}
+\author{Margit Dahl Sørensen}
+\date{2021-12-01}
+
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amsmath}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
-  \usepackage{amssymb}
 \else % if luatex or xetex
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
@@ -37,52 +40,12 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={A Minimal Book Example},
-  pdfauthor={John Doe},
+  pdftitle={Mappeeksamen},
+  pdfauthor={Margit Dahl Sørensen},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -110,15 +73,29 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
-\ifluatex
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{multicol}
+\usepackage{hhline}
+\usepackage{hyperref}
+\ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{plainnat}
-
-\title{A Minimal Book Example}
-\author{John Doe}
-\date{2021-11-30}
 
 \begin{document}
 \maketitle
@@ -127,137 +104,205 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{about}{%
-\chapter{About}\label{about}}
+\hypertarget{rabilitet}{%
+\chapter{Rabilitet}\label{rabilitet}}
 
-This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports; for example, a math equation \(a^2 + b^2 = c^2\).
+\hypertarget{introduksjon}{%
+\section{Introduksjon}\label{introduksjon}}
 
-\hypertarget{usage}{%
-\section{Usage}\label{usage}}
+Maksimalt oksygenopptak \(\dot VO_{2max}\) ble først beskrevet av
+{[}@ \citep{hill1923} , og kan defineres som kroppens evne til å ta opp og
+forbruke oksygen per tidsenhet \citep{HillLupton, BassetHowley}. Innen
+toppidrett måles ofte det maksimale oksygenopptaket for å måle utøverens
+kapasitet opp mot arbeidskravet i den spesifikke idretten, og
+\(\dot VO_{2max}\) kan i så måte også sees på som et mål på den aerobe
+effekten til utøveren \citep{bassett2000}. I Olympiatoppens testprotokoller
+benytter de flere definerte hjelpekriterier for å sikre at man faktisk
+har funnet deltakerens maksimale oksygenopptak \citep{tønnessen2017}.
+Følgende kriterier er beskrevet; platå i \(\dot VO_{2max}\) er oppnådd,
+økning i ventilasjon med utflating av \(\dot VO_{2max}\) verdi, RER over
+1.10/1.05, og blodlaktat over 8 \citep{tønnessen2017}
+\citep{røn}
+\#\# Metode
 
-Each \textbf{bookdown} chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter \emph{must} start with a first-level heading: \texttt{\#\ A\ good\ chapter}, and can contain one (and only one) first-level heading.
+I forkant av testen målte alle deltakerne kroppsvekten i samme klær som
+ble brukt under testen, men ble bedt om å ta av seg skoene. Kroppsvekten
+som senere brukt i beregningen av maksimalt oksygenopptak (ml kg\textsuperscript{-1}
+min\textsuperscript{-1}) er kroppsvekten målt i forkant av test, etter at 300g har blitt
+trukket av for å ta høyde for vekten av klærne. For å sikre intern
+validitet ble deltakerne bedt om å avstå fra anstrengende fysisk
+aktivitet dagen før test, standardisere måltidet i forkant av test samt
+avstå fra inntak av koffein under de siste 12 timene før testen
+\citep{halperin2015}. Pre- og post-tester ble gjennomført på samme tid på
+døgnet under standardiserte forhold.. Post-test ble gjennomført 6 dager
+etter gjennomført
+pretest.
+Det ble ikke kontrollert for fysisk aktivitet mellom testdagene.
 
-Use second-level and higher headings within chapters like: \texttt{\#\#\ A\ short\ section} or \texttt{\#\#\#\ An\ even\ shorter\ section}.
+Alle deltakerne gjennomførte en 10 minutter lang oppvarmingsprotokoll på
+tredemøllen (Woodway, 4 front , Wisconsin), beskrevet for deltakerne i
+forkant av testen. Denne oppvarmingsprotokollen bestod av fem minutter
+på 11-13 i Borg 6-20 RPE skala (Borg,1982),
+etterfulgt av 2x1min på starthastighet og stigning med 30 sekund
+mellom.
+Siste tre min var også 11-13 i
+borg. Etter oppvarming
+var det to min pause før testen begynte. Starthastighet for begge
+kjønn var satt til
+8km/t, med stigning på 10.5\% og 5.5\% for henholdsvis menn og kvinner.
 
-The \texttt{index.Rmd} file is required, and is also your first book chapter. It will be the homepage when you render the book.
+̇VO2max ble målt ved hjelp av en metabolsk analysator med
+Vyntus CPX miksekammer (Vyntus CPX, Jaeger-CareFusion, UK). Forut for
+alle tester ble analysatoren gass og volumkalibrert med en feillmargin
+på henholdsvis 2\% og 0.2\%. Analysatoren ble
+stilt inn til å gjøre målinger hvert 30sek, og V̇O\textsubscript{2max} ble kalkulert
+gjennom å bruke snittet av de to høyeste påfølgende målingene av V̇O\textsubscript{2}.
+Underveis i testen mottok alle deltakerne en høylytt verbal oppmuntring
+fra testleder. Alle deltakerne
+gjennomførte også begge testene med samme testleder og med samme
+personer til stede i rommet for å redusere konfundering \citep{halperin}.
 
-\hypertarget{render-book}{%
-\section{Render book}\label{render-book}}
+For hvert medgåtte minutt av testen ble hastigheten på møllen økt med
+1km/t, helt til utmattelse, hvor testen ble avsluttet. Deltakernes
+hjertefrekvens (GARMIN/POLAR) ble også registrert under hele testen. Når
+testen ble avsluttet ble deltakerne bedt om å rapportere opplevd
+anstrengelse ved hjelp av Borg-skala \citep{borg1982}. Maksimal
+hjertefrekvens under testen ble også registrert. Ett minutt etter
+avsluttet test ble hjertefrekvens registrert, og det ble målt og
+analysert blodlaktat(BIOSEN).
 
-You can render the HTML version of this example book without changing anything:
+\hypertarget{resultater}{%
+\section{Resultater}\label{resultater}}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Find the \textbf{Build} pane in the RStudio IDE, and
-\item
-  Click on \textbf{Build Book}, then select your output format, or select ``All formats'' if you'd like to use multiple formats from the same book source files.
-\end{enumerate}
+\providecommand{\docline}[3]{\noalign{\global\setlength{\arrayrulewidth}{#1}}\arrayrulecolor[HTML]{#2}\cline{#3}}
 
-Or build the book from the R console:
+\setlength{\tabcolsep}{2pt}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{render\_book}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
+\renewcommand*{\arraystretch}{1.5}
 
-To render this example to PDF as a \texttt{bookdown::pdf\_book}, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
+\begin{longtable}[c]{|p{1.08in}|p{1.02in}|p{1.02in}}
 
-\hypertarget{preview-book}{%
-\section{Preview book}\label{preview-book}}
 
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in ``Preview book'', or from the R console:
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{serve\_book}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
+\hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
 
-\hypertarget{hello-bookdown}{%
-\chapter{Hello bookdown}\label{hello-bookdown}}
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{Kvinner}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{Menn}}}} \\
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-3}
 
-\hypertarget{a-section}{%
-\section{A section}\label{a-section}}
+\endfirsthead
 
-All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+\hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
 
-\hypertarget{an-unnumbered-section}{%
-\subsection*{An unnumbered section}\label{an-unnumbered-section}}
-\addcontentsline{toc}{subsection}{An unnumbered section}
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{Kvinner}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{Menn}}}} \\
 
-Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-3}\endhead
 
-\hypertarget{cross}{%
-\chapter{Cross-references}\label{cross}}
 
-Placeholder
 
-\hypertarget{chapters-and-sub-chapters}{%
-\section{Chapters and sub-chapters}\label{chapters-and-sub-chapters}}
+\multicolumn{3}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 3.13in+4\tabcolsep+2\arrayrulewidth}!{\color[HTML]{FFFFFF}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{Verdier\ er\ gitt\ som\ gjennomsnitt\ og\ (Standardavvik)}}}} \\
 
-\hypertarget{captioned-figures-and-tables}{%
-\section{Captioned figures and tables}\label{captioned-figures-and-tables}}
+\endfoot
 
-\hypertarget{parts}{%
-\chapter{Parts}\label{parts}}
 
-You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
 
-Add a numbered part: \texttt{\#\ (PART)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{N}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{4}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{7}}}} \\
 
-Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
 
-Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
 
-\hypertarget{footnotes-and-citations}{%
-\chapter{Footnotes and citations}\label{footnotes-and-citations}}
 
-\hypertarget{footnotes}{%
-\section{Footnotes}\label{footnotes}}
 
-Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{Alder\ (år)}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{24.5\ (1.29)}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{23.9\ (1.77)}}}} \\
 
-\hypertarget{citations}{%
-\section{Citations}\label{citations}}
 
-Reference items in your bibliography file(s) using \texttt{@key}.
 
-For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib).
-Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
 
-The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
 
-\hypertarget{blocks}{%
-\chapter{Blocks}\label{blocks}}
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{Vekt\ (kg)}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{58.9\ (6.28)}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{74.8\ (5.55)}}}} \\
 
-Placeholder
 
-\hypertarget{equations}{%
-\section{Equations}\label{equations}}
 
-\hypertarget{theorems-and-proofs}{%
-\section{Theorems and proofs}\label{theorems-and-proofs}}
 
-\hypertarget{callout-blocks}{%
-\section{Callout blocks}\label{callout-blocks}}
 
-\hypertarget{sharing-your-book}{%
-\chapter{Sharing your book}\label{sharing-your-book}}
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{Høyde\ (cm)}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{166\ (2.99)}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\global\setmainfont{Helvetica}{180\ (3.1)}}}} \\
 
-Placeholder
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-3}
 
-\hypertarget{publishing}{%
-\section{Publishing}\label{publishing}}
 
-\hypertarget{pages}{%
-\section{404 pages}\label{pages}}
 
-\hypertarget{metadata-for-sharing}{%
-\section{Metadata for sharing}\label{metadata-for-sharing}}
+\end{longtable}
+
+Det var 11 deltakere i studien, samtlige deltakere er studenter ved
+Høgskolen i Innlandet. Deskriptive data for disse deltakerne er vist i
+Tabell 1, i Figur 1 kan man se utviklingen fra pre-test til post-test
+fordelt på kjønn. Det typiske målefeilet (typical error, \citep{hopkins}) fra
+pre til post-test er utregnet til å være 4.04\%.
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/unnamed-chunk-3-1.pdf}
+\caption{\label{fig:unnamed-chunk-3}Figurtekst legg til\ldots{}}
+\end{figure}
+
+\hypertarget{diskusjon}{%
+\section{Diskusjon}\label{diskusjon}}
+
+Ettersom testing av maksimalt oksygenopptak er en test som gjennomføres
+til utmattelse, vil man kunne forvente en viss variasjon i
+testresultatene ettersom opplevd anstrengelse kan påvirkes av flere
+ulike variabler \citep{halperin2015}. For å redusere
+konfundering
+vil flere faktorer være nyttig å ta hensyn til under slik testing. Som
+nevnt i metoden vil standardisering av matinntak, koffeininntak, utstyr
+og tidspunkt for gjennomføring av test være med på å kunne sikre intern
+validitet i resultatene. Eksempler er deltakernes kjennskap til testen,
+verbal oppmuntring og personer tilstede under testen er andre faktorer
+som potensielt kan bidra til konfundering. Felles for alle faktorer er
+at graden av påvirkning på resultatene muligens reduseres ved hjelp av
+en standardisert testprotokoll. Deltakerne - og testlederne, sin
+kjennskap til testen er en annen faktor som trolig påvirker resultatene
+i vårt prosjekt. I dette tilfellet fantes det enkelte deltakere som
+hadde gjennomført en liknende test flere ganger, og en kan da forvente
+en mindre grad av variasjon mellom resultatene på pre og post test,
+sammenlignet med de deltakerne som gjennomførte testen for første gang
+på pretest. Dette fordi kjennskapen og kunnskapen de tilegnet seg på
+pre-test, trolig spiller inn på testresultatene.
+Standardfeilen
+på 4.04\% kan også tyde på at enkelte av disse resultatene kan være
+utsatt for konfundering av ulik sort \citep{hopkins2000}.
+
+Grunnen til at vi snakker om standardfeil er at når vi ønsker å måle
+påvirkningen av trening på en gruppe individer er det viktig å kunne si
+noe om hva som er endring og hva som er støy (målefeil). Desto mindre
+støy en test innebærer jo bedre er målingen. Målet som brukes er
+standardfeil. Hva som danner denne variasjonen som representeres ved
+typical error er multifaktorelt, men hoveddelen er som oftest biologisk
+\citep{hopkins2000}.
+
+For å måle standardfeil har vi brukt within subject deviation metoden.
+Denne metoden påvirkes ikke av at gjennomsnittet endrer seg fra test til
+test \citetext{\citealp[. Data for målinger i VO2max fra fem sertifiserte
+Australske laboratorier fastslo ett gjennomsnitt på 2.2\% for
+standardfeil \[@halperin2015\]. Data fra det Australske institutt for
+sport har også fastslått at en standardfeil på omtrent 2\% er riktig for
+både maksimal og submaksimal VO2 {[}\citet{clark2007}]{hopkins2000}; \citealp{robertson2010}; \citealp{saunders2009}}. Dette indikerer at med godt kalibrert utstyr og med
+utøvere som er godt vant med testingen vil en standardfeil på 2\% for det
+biologiske, og analytiske være riktig \citep{halperin2015}. Vår standardfeil
+på 4.04\% kan derfor tenkes å være et bilde hvordan det kan se ut med få
+deltakere, med ulikt utgangspunkt, men også uten skikkelig
+standardisering av treningshverdagen i forkant av testene. Det kan også
+tenkes at med et varierende nivå hos deltagerne kan enkelte oppleve en
+treningseffekt av test 1. Samtidig som andre kanskje ble slitne av å få
+en test inn i treningshverdagen.
+
+\hypertarget{referanser}{%
+\section{Referanser}\label{referanser}}
+
+\hypertarget{labrapport}{%
+\chapter{Labrapport}\label{labrapport}}
+
+\hypertarget{formuxe5l}{%
+\section{Formål}\label{formuxe5l}}
 
   \bibliography{book.bib,packages.bib}
 
