@@ -21,203 +21,13 @@ editor_options:
 
 # Rabilitet
 
+Placeholder
+
+
 ## Introduksjon
-
-Maksimalt oksygenopptak $\dot VO_{2max}$ ble først beskrevet av
-[@ [@hill1923] , og kan defineres som kroppens evne til å ta opp og
-forbruke oksygen per tidsenhet [@hill1923; @Basset2000]. Innen
-toppidrett måles ofte det maksimale oksygenopptaket for å måle utøverens
-kapasitet opp mot arbeidskravet i den spesifikke idretten, og
-$\dot VO_{2max}$ kan i så måte også sees på som et mål på den aerobe
-effekten til utøveren [@bassett2000]. I Olympiatoppens testprotokoller
-benytter de flere definerte hjelpekriterier for å sikre at man faktisk
-har funnet deltakerens maksimale oksygenopptak [@tønnessen2017].
-Følgende kriterier er beskrevet; platå i $\dot VO_{2max}$ er oppnådd,
-økning i ventilasjon med utflating av $\dot VO_{2max}$ verdi, RER over
-1.10/1.05<!-- Vilken gäller? -->, og blodlaktat over 8 [@tønnessen2017]
-
-
 ## Metode
-
-I forkant av testen målte alle deltakerne kroppsvekten i samme klær som
-ble brukt under testen, men ble bedt om å ta av seg skoene. Kroppsvekten
-som senere brukt i beregningen av maksimalt oksygenopptak (ml kg^-1^
-min^-1^) er kroppsvekten målt i forkant av test, etter at 300g har blitt
-trukket av for å ta høyde for vekten av klærne. For å sikre intern
-validitet ble deltakerne bedt om å avstå fra anstrengende fysisk
-aktivitet dagen før test, standardisere måltidet i forkant av test samt
-avstå fra inntak av koffein under de siste 12 timene før testen
-[@halperin2015]. Pre- og post-tester ble gjennomført på samme tid på
-døgnet under standardiserte forhold.. Post-test ble gjennomført 6 dager
-etter gjennomført
-pretest.<!-- Är det möjligt att förklara närmare vad som menas med pre- post? Man får intrycket av pre (före) något, men här ska det bara vara liknande förhållanden. Kanske undvika pre post och förklara i inledninga av metoden att två repeterade tester genomfördes, sedan kalla dessa test 1 och 2? -->
-Det ble ikke kontrollert for fysisk aktivitet mellom testdagene.
-
-Alle deltakerne gjennomførte en 10 minutter lang oppvarmingsprotokoll på
-tredemøllen (Woodway, 4 front , Wisconsin), beskrevet for deltakerne i
-forkant av testen. Denne oppvarmingsprotokollen bestod av fem minutter
-på 11-13 i Borg 6-20 RPE skala (Borg,1982<!--Lägg till referens -->),
-etterfulgt av 2x1min på starthastighet og stigning med 30 sekund
-mellom<!-- Lite förvirrande, var det en stigning var 30e sekund? -->.
-Siste tre min var også 11-13 i
-borg<!-- Anpassades då hastighet eller stigning? -->. Etter oppvarming
-var det to min pause før testen begynte. Starthastighet for begge
-kjønn<!-- Beskriv tabellen med försökspersonsdata i text--> var satt til
-8km/t, med stigning på 10.5% og 5.5% for henholdsvis menn og kvinner.
-
-̇V<sub>O2max</sub> ble målt ved hjelp av en metabolsk analysator med
-Vyntus CPX miksekammer (Vyntus CPX, Jaeger-CareFusion, UK). Forut for
-alle tester ble analysatoren gass og volumkalibrert med en feillmargin
-på henholdsvis 2% og 0.2%<!-- Vad betyder det? -->. Analysatoren ble
-stilt inn til å gjøre målinger hvert 30sek, og V̇O~2max~ ble kalkulert
-gjennom å bruke snittet av de to høyeste påfølgende målingene av V̇O~2~.
-Underveis i testen mottok alle deltakerne en høylytt verbal oppmuntring
-fra testleder<!-- Vad äger Halperin om det? -->. Alle deltakerne
-gjennomførte også begge testene med samme testleder og med samme
-personer til stede i rommet for å redusere konfundering [@halperin1923].
-
-For hvert medgåtte minutt av testen ble hastigheten på møllen økt med
-1km/t, helt til utmattelse, hvor testen ble avsluttet. Deltakernes
-hjertefrekvens (GARMIN/POLAR) ble også registrert under hele testen. Når
-testen ble avsluttet ble deltakerne bedt om å rapportere opplevd
-anstrengelse ved hjelp av Borg-skala [@borg1982]. Maksimal
-hjertefrekvens under testen ble også registrert. Ett minutt etter
-avsluttet test ble hjertefrekvens registrert, og det ble målt og
-analysert blodlaktat(BIOSEN).
-
 ## Resultater
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(readxl)
-vo2g1 <- read_excel("~/Documents/Master i treningsfysiologi/R-studio/Mappeeksamen/Arbeidskrav 1/Data/vo2g1.xlsx")
-library(tidyverse) # 
-library(knitr)
-library(kableExtra)
-library(flextable)
-vo2g1 %>% # heter vo2data
-  select(fp, time, sex, age, height, weight) %>% 
-  # Velger fp, time, sex, age, height and weight
-  
-  filter(time == "pre") %>% # filter for å bare ha resulat fra pre
-  
-  group_by(sex) %>% # lager grupper for kjønn
-  mutate(n = n()) %>% # legger til variabel for å få antall deltagere per kjønn
-   pivot_longer(names_to = "variable", 
-               values_to = "value", 
-               cols = age:n) %>% # summerer alle varibler og legger til "varible" og "Value" som kolonne og variablene som rader
-   group_by(sex, variable) %>% # definerer gruppene på nytt 
-  summarise(m = mean(value), 
-            s = sd(value)) %>% # regner ut gjennomnsitt og sdandardavvik og legger til som kolonne
-  mutate(ms = if_else(variable == "n", as.character(m), paste0(signif(m, 3),  " (", signif(s, 3), ")"))) %>% # formaterer det på gunstig måte og bruker signif til å runde av desiamler.
-   ungroup() %>% # må til for å fjerne kolonner
-  select(-m, -s) %>% # Velger de jeg skal fjerne
-   pivot_wider(names_from = sex, 
-              values_from = ms) %>% # Henter navn fra sex og verdier fra values og danner en bredere tabell
-   mutate(variable = factor(variable, levels = c("n", "age", "weight", "height"), labels = c("N", "Alder (år)", "Vekt (kg)", "Høyde (cm)"))) %>% # Endrer navn på variabler 
-  arrange(variable) %>% 
-   flextable()  %>%
-   set_header_labels(variable = "",
-                    F = "Kvinner", M = "Menn") %>%
-  add_footer_row(values = "Verdier er gitt som gjennomsnitt og (Standardavvik)", colwidths = 3) %>%
-   autofit()
-```
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(readxl)
-reliabilitet <- read_excel("~/Documents/Master i treningsfysiologi/R-studio/Mappeeksamen/Arbeidskrav 1/Data/realabilitet_uttrekning.xlsx") %>%
-  mutate(diff = `VO2_max_ml/min post` - `VO2_max_ml/min pre`) %>% # Change/difference score
-  summarise(s = sd(diff),
-            m = mean(c(`VO2_max_ml/min post`, `VO2_max_ml/min pre`)), # mean
-            te = s / sqrt(2), # the typical error. 
-            cv = 100 * (te / m),
-             L = qt(0.975, 4) * s)  # Calculate as a percentage of the mean
-```
-
-<!-- Flytta detta tidigare i rapporten, detta är metod. -->
-
-Det var 11 deltakere i studien, samtlige deltakere er studenter ved
-Høgskolen i Innlandet. Deskriptive data for disse deltakerne er vist i
-Tabell 1, i Figur 1 kan man se utviklingen fra pre-test til post-test
-fordelt på kjønn. Det typiske målefeilet (typical error, [@hopkins2000]) fra
-pre til post-test er utregnet til å være `r round(reliabilitet$cv, 2)`%.
-
-<!-- All kod i figuren under kan settes i en pipe, lägg till figurtext till figuren med fig.cap i code chunken -->
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "Figurtekst legg til..."}
-library(readxl)
-library(ggtext)
-read_excel("~/Documents/Master i treningsfysiologi/R-studio/Mappeeksamen/Arbeidskrav 1/Data/vo2g1.xlsx") %>%
-  select(fp, time, vo2max = `VO2_max_ml/min`, sex)  %>%
-  mutate(time = factor(time, levels = c("pre", "post"), 
-                           labels = c("Pre-test", "Post-test"))) %>%
-  mutate(sex = factor(sex, levels =c("F", "M"),
-                      labels = c("Kvinner", "Menn"))) %>%
-  ggplot(aes(time, vo2max, color = sex, group = fp)) + 
-  geom_line() +
-  geom_point(size = 3) +
-  labs(x = "Test tidspunkt",
-       y = "VO<sub>2max</sub> (ml kg<sup>-1</sup> min<sup>-1</sup>) ", 
-       color = "Kjønn") +
-  theme_bw() +
-  theme(axis.text.x = element_text(color = "black", size = 12, face = "bold"), 
-        axis.title.y = element_markdown())
-```
-
 ## Diskusjon
-
-<!-- Starta diskussion med de viktigaste resultaten, vilka var 4% TE -->
-
-Ettersom testing av maksimalt oksygenopptak er en test som gjennomføres
-til utmattelse, vil man kunne forvente en viss variasjon i
-testresultatene ettersom opplevd anstrengelse kan påvirkes av flere
-ulike variabler [@halperin2015]. For å redusere
-konfundering<!-- osäker på om detta blir rätt på norsk, konfundering = tvil, det är en faktor eller variable som kan vara konfunderande, kan det stämma? Vi önksar dessutom undvika effekten av dessa konfunderande faktorer. Här krävs alltså lite tydligare språkbruk -->
-vil flere faktorer være nyttig å ta hensyn til under slik testing. Som
-nevnt i metoden vil standardisering av matinntak, koffeininntak, utstyr
-og tidspunkt for gjennomføring av test være med på å kunne sikre intern
-validitet i resultatene. Eksempler er deltakernes kjennskap til testen,
-verbal oppmuntring og personer tilstede under testen er andre faktorer
-som potensielt kan bidra til konfundering. Felles for alle faktorer er
-at graden av påvirkning på resultatene muligens reduseres ved hjelp av
-en standardisert testprotokoll. Deltakerne - og testlederne, sin
-kjennskap til testen er en annen faktor som trolig påvirker resultatene
-i vårt prosjekt. I dette tilfellet fantes det enkelte deltakere som
-hadde gjennomført en liknende test flere ganger, og en kan da forvente
-en mindre grad av variasjon mellom resultatene på pre og post test,
-sammenlignet med de deltakerne som gjennomførte testen for første gang
-på pretest. Dette fordi kjennskapen og kunnskapen de tilegnet seg på
-pre-test, trolig spiller inn på testresultatene.
-Standardfeilen<!-- hitta ett bättre ord eftersom standardfeil är standard error i statistiken -->
-på 4.04% kan også tyde på at enkelte av disse resultatene kan være
-utsatt for konfundering av ulik sort [@hopkins2000].
-
-Grunnen til at vi snakker om standardfeil er at når vi ønsker å måle
-påvirkningen av trening på en gruppe individer er det viktig å kunne si
-noe om hva som er endring og hva som er støy (målefeil). Desto mindre
-støy en test innebærer jo bedre er målingen. Målet som brukes er
-standardfeil. Hva som danner denne variasjonen som representeres ved
-typical error er multifaktorelt, men hoveddelen er som oftest biologisk
-[@hopkins2000].
-
-For å måle standardfeil har vi brukt within subject deviation metoden.
-Denne metoden påvirkes ikke av at gjennomsnittet endrer seg fra test til
-test [@hopkins2000] . Data for målinger i VO2max fra fem sertifiserte
-Australske laboratorier fastslo ett gjennomsnitt på 2.2% for
-standardfeil [@halperin2015]. Data fra det Australske institutt for
-sport har også fastslått at en standardfeil på omtrent 2% er riktig for
-både maksimal og submaksimal VO2 [@clark2007; @robertson2010;
-@saunders2009]. Dette indikerer at med godt kalibrert utstyr og med
-utøvere som er godt vant med testingen vil en standardfeil på 2% for det
-biologiske, og analytiske være riktig [@halperin2015]. Vår standardfeil
-på 4.04% kan derfor tenkes å være et bilde hvordan det kan se ut med få
-deltakere, med ulikt utgangspunkt, men også uten skikkelig
-standardisering av treningshverdagen i forkant av testene. Det kan også
-tenkes at med et varierende nivå hos deltagerne kan enkelte oppleve en
-treningseffekt av test 1. Samtidig som andre kanskje ble slitne av å få
-en test inn i treningshverdagen.
-
-## Referanser
 
 <!--chapter:end:index.rmd-->
 
@@ -227,39 +37,15 @@ en test inn i treningshverdagen.
 
 <!--chapter:end:01-new.rmd-->
 
+
 # Arbeidskrav i vitenskapsteori
 
+Placeholder
+
+
 ## Oppgave 1
-
-Falsifikasjonisme Karl Popper var en analytisk filosof, som utarbeidet et falsifiserbarhetskriterium. Popper ble inspirert til denne tankegangen gjennom tre ulike kilder, demarkasjonsproblemet, induksjonsproblemet og risikable forutsigelser. Demarkasjonsproblemet danner grunnlaget for utfordringen med å skille vitenskap og pseudovitenskap fra hverandre. Induksjonsproblemet stiller et spørsmål om hvordan man kan vite at en vitenskapelig teori er sann. Dette så ikke Popper på som et problem da han mente at vitenskapelige teorier ikke kan bekreftes. Det siste som inspirerte popper er risikable forutsigelser som er vanskelig eller umulige å falsifisere [@alnes2018].
-
-Poppers demarkasjonskriterium kommer fra ønsket å skille vitenskapelig teori fra ikke-vitenskapelig teori også kalt pseudovitenskap [@dellsén2021]. Løsningen på dette mente han ikke kunne komme fra å verifisere teorier, da dette kan være vanskelig eller umulig. Løsningen på dette problemet blir da å falsifisere teorier, ergo å bekrefte at de er usanne, eller feil. Et eksempel på dette er en teori om at alle hunder er hvite. Det er umulig å bekrefte at det aldri har vært hunder som har en annen farge, eller at det noen gang kommer til å være hunder som har en annen farge. Dette er årsaken til at Popper mener det er umulig å bekrefte en teori, da man aldri kan vite hva som har vært eller hva som kommer. Ved å bruke samme eksempel kan man falsifisere teorien når man oppdager en hund som ikke er hvit. Falsifikasjon er da kriteriet som kan skille vitenskap fra pseudovitenskap, i følge Popper [@okasha2016].
-
-Popper ytret at vitenskapelige teorier som ikke er mulig å falsifisere, hvor man uansett kan få de empiriske bevisene til å passe inn i teorien, skaper lite troverdighet og at disse ikke skulle godtas som vitenskapelig teori [@okasha2016]. Popper [@popper1969] forklarer dette med teorier fra Marx, Freud og Adler, som han syns var utfordrende at skulle aksepteres som vitenskapelige teorier. Teorier som er mulig å falsifisere (dette betyr ikke at de trenger å være usanne) er mer troverdig, og viktige teorier når de blir testet.
-
-Samir Okasha [@okasha2016] beskriver flere utfordringer ved Poppers falsifiserbarhetskriterium. En av utfordringene Okasha beskriver er hvordan dette kriteriet kan påvirke hvordan verden blir oppfattet hvis man hele tiden skal avkrefte teorier. Med dette mener han at vitenskapelige teorier som ikke kan falsifiseres likevel kan ha eller hatt stor påvirkning på hvordan den vitenskapelige teoriene kan utvikle seg. Disse teoriene kan og bidra til nye viktige oppdagelser innenfor tematikken. Videre beskriver Okasha problematikken med å skulle definere hvile teorier som kan kalles vitenskap og ikke-vitenskap, og hvorfor dette ikke er nødvendig. Et av eksemplene han trekker frem er hvordan det nesten er umulig at alle observasjoner stemmer med en vitenskapelig teori. Videre beskriver han hvor vid og bred vitenskapen er, og hvor ulik alle teoriene er. Han beskriver vitenskap som ulike teorier som har mange fellestrekk, og at selv uten alle fellestrekkene vil dette være vitenskapelige teorier med bekreftende observasjoner [@okasha2016]. Jeg mener Okasha har et godt poeng i at det ikke er så viktig å skille mellom vitenskap og psudovitenskap som Popper ønsket. Som Okasha påpeker har det blitt gjort viktig oppdagelser i lyset av en teori som viste seg å ikke stemme, og det er derfor ikke like viktig med det markante skillet, men at begrepet er litt flytende.
-
 ## Oppgave 2
-
-HD-metoden og abduksjon/Bayesisme Hypotetisk deduktiv metode kan deles i to ulike kontekster for ulike faser av utvikling av teorien, oppdagelseskonteksten og begrunnelseskonteksten. Oppdagelseskonteksten er miljøet der teorien eller hypotesen blir oppdaget. I følge Hempel finnes det ingen bestemt metode å finne opp nye ideer, men de kan for eksempel oppstå fra fantasier eller ulike observasjoner man gjør [@dellsén2021]. Dette kan forekommer tilfeldig, eller hvis man prøver å finne en forklaring eller årsak på et bestemt problem. Dette er begrunnelseskonteksten. Hempel [@hempel1966] beskriver at det ikke er noen fasit på hvordan nye teorier blir oppdaget, men at det skje på mange ulike måter.
-
-Den logiske strukturen i hypotetisk deduktiv metode er å bekrefte om en idé stemmer ved å teste den, gjennom å observere konsekvensene. Metoden er delt inn i fire ulike faser for bekreftelse av en ny teori [@dellsén2021]. Fase en er å oppdage en ny teori eller lete etter en hypotese på et problem. Andre fase er å dedusere de empiriske konsekvensene fra teorien. Dette vil si at hypotesen kan være «det finnes liv på Jupiter». Dette vil si at de empiriske konsekvensene av dette vil være at det er oksygen på Jupiter, det er vann på Jupiter osv. Ved fase 3 undersøker man, og samler inn data for å se om hypotesen stemmer, og om innsamlede data stemmer med de empiriske konsekvensene. For eksempelet beskrevet over vil dette bety at man må teste om det er oksygen, vann osv på Jupiter. Hvis de ikke stemmer forkaster man, eller endre hypotesen for å komme nærmere en ny idé eller hypotese som forklarer problemstillingen. Når man eventuelt har innsamlede data som stemmer med de empiriske konsekvensene kan man konkludere. Da har man til en viss grad fått en induktiv bekreftelse av hypotesen. Dette fordi det kan være andre årsaker som fører til endringen eller årsakssammenheng som hypotesen ikke tar for seg. Dette vil ikke bety at den hypotesen som man først har kommet frem til ikke stemmer, men at det er andre årsaksforhold som og kan påvirke [@hempel1966].
-
-Abduksjon er en vitenskapelig metode man bruker for å bekrefte teorier. Denne metoden handler om å dra slutninger til den beste forklaringen til et nytt fenomen eller ny data. For å finne dette trenger man flere ulike teorier som har forskjellige årsaksforklaringer på dataen. Det er flere elementer som kan bidra til at en forklaring er bedre. Hvis teorien har forklaringskraft, forklarer flere forskjellige data, vil dette styrke teorien. Det samme gjelder hvis teorien har en enklere årsaksforklaring, forklarer dataen ut fra færre ting [@dellsén2021]. Dette vil si at i abduksjon må man sammenligne flere ulike forklaringer til samme fenomen, og finne den som best forklarer dataen.
-
-For å sammenligne med hypotetisk deduksjon som oppgir en hypotese med ulike empiriske konsekvenser tilbyr abduksjon flere hypoteser eller forklaringer. Noe som kan være en svakhet med HD metoden er at det kan være flere konsekvenser og årsaker som kan underligge ved en «korrekt» hypotese enn det man ser. En annen svakhet med HD metoden er at svarene man får fra dataen kan være en tilfeldighet, som gjør at det virker som man bekrefter hypotesen, men det er egentlig andre bedre forklaringer på problemet. Dette er et av problemene som gjorde at abduksjon ble skapt. Ved abduksjon ønsker man å se på ulike forklaringer og finne den metoden som gir den beste forklaringen til problemet. Dette betyr at det abduksjon ønsker å se flere forklaringene til det samme problemet for å finne den beste forklaringen [@dellsén2021].
-
 ## Oppgave 3
-
-Bird beskriver replikasjonskrisen som foregår innenfor forskningsfeltet, som et stort problem som kan ha flere negative konsekvenser for vitenskapelig allmenhet, som at troverdigheten er synkende. Bird bruker tre ulike konsept for å forklare replikasjonskrisen. Disse er type-I feil, type-II feil og basefrekvensfeilen. Type-I feil, er å akseptere en hypotese eller teori som ikke stemmer [@bird2020]. Et eksempel på dette kan være en promilletest som viser at en sjåfør kjører med promille, selv om sjåføren ikke har drukket alkohol. Type-II feil er å forkaste en hypotese eller en teori som faktisk stemmer. Dette kan være at en promille test viser at en påvirket sjåfør ikke har promille. Basefrekvensfeilen er en feil som forekommer når man fokuserer på at en viss sannsynlighet forekommer ved en test, som å se på hvor mange sjåfører som kjører ruspåvirket. Hvis 50 av 1000 mennesker som blir testet for rus, tester positivt, men bare 10 faktisk kjørte ruspåvirket, vil det si at det var 40 falsk-positive tester. Fenomenet påpeker da at når man konkluderer med hvor mange tester som slo ut for rus, og ikke tar hensyn for hvor mange falsk-positive tester det var forekommer basefrekvensfeilen. Det er færre folk som ikke kjører påvirket, så da er sannsynligheten for at de daller i den 5% feilen større enn at de faktisk kjører ruspåvirket. I dette eksempelet vil basefrekvensfeilen oppstå fordi frekvensen av ruspåvirket sjåfører mot ikke-ruspåvirket sjåfører i befolkningen generelt er lav. Bird påpeker hvordan dette slår ut i forskning ved å bruke dette fenomenet. Satt i sammenheng med forskning viser Bird til hvordan dette vil slå ut på hypotesetesting, og hvordan falsk-positive, og falsk-negative forkastninger vil forekomme. Dette fordi man ikke tar høyde for den generelle forekomsten i befolkningen når man tester på for små grupper [@bird2020].
-
-En annen forklaringer som blir nevnt ved replikasjonskrisen er publikasjons bias. Publikasjons bias forekommer når resultater blir skjevt fremstilt for å avgjøre om en studie skal publiseres eller ikke. Dette forekommer først og fremst ved å oftere publisere studier med statistisk signifikante resultater. Dette vil da bety at studier som er gjennomført hvor resultatene ikke er statistisk signifikante, resultatene ikke stemmer med hypotesen ikke vil bli publisert [@bird2020].
-
-Andre forklaringer til replikasjonskrisen er at flere studier ikke blir gjennomført på tilstrekkelig måte for å kunne repetere forsøket, eller at studiet mangler validitet, ergo at studiet ikke gjennomføres på den måten det var planlagt at det skulle gjøres, eller gjennomført slik det er beskrevet at det er gjort. En annen forklaring som blir nevnt er hacking av resultater for å få en studie til å se bedre ut enn det er [@bird2020].
-
-Bird presenterer en mer akademisk forklaring enn de andre årsakene som blir nevnt. Om forskere driver med svindel eller praktiserer dårlig gjennomføring i studiene blir vanskelig å kunne konkludere med. Bird kommer med en forklaring som viser hvordan hypotesetesting kan tolkes feil, eller aksepteres med stor mulighet for type-I eller type-II feil. Forklaringene som har blitt nevnt er alle aksepterbare, og mulige, og det blir vanskelig å konkludere at den ene er bedre enn den andre, men Bird presenterer en mer troverdig forklaring.
-
-## Referanser
 
 <!--chapter:end:02-ArbeidskravVitenskapsteori.rmd-->
 
@@ -283,162 +69,20 @@ De ulike artiklene har brukt forskjellige statistiske tester, for å regne ut fo
 
 Resultater [@rønnestad2010b] økte snittwatten med 6.0 +- 1.7%, Men det var en tendens til høyere snittwatt i kontrollgruppen (4.6 ± 2.0%). Det var ingen signifikant endring mellom gruppene, og det var kun kontrollgruppen som forbedret watten signifikant. Den maksimal styrken økte med 21.2 ± 4.9% i kontrollgruppen. Det var en signifikant forskjell mellom gruppene i maksimal styrke. @rønnestad2010a Resultatene viser en signifikant forskjell mellom intervensjonsgruppen og kontrollgruppen etter endt intervensjon. Intervensjonsgruppen økte prestasjonen med 14 ±3%, og kontrollgruppen økte 4 ±1% @rønnestad2015 Intervensjonsgruppen økte snittwatten med 6,5 ±5,7%. Gruppen som bare trente utholdenhet, hadde ingen endring i prestasjon. Det var en signifikant økning i intervensjonsgruppen i forhold til kontrollgruppen @aagaard2011 Etter endt studie økte intervensjonsgruppen prestasjonen med 8% på 45 min prestasjonstesten. På 45 minutters prestasjonstest. Forfatterne konkluderer med at det var en signifikant forskjell mellom de to ulike gruppene på prestasjonstesten. @vikmoen2016 Intervensjonsgruppen hadde en økning 6,4% ± 7,9 % på 40 minutters prestasjonstest. Det var ingen signifikant endring i kontrollgruppen 2,0 ±6,1%). Ingen signifikant forskjell mellom gruppene.
 
-## Referanser
+
 
 <!--chapter:end:03-Arbeidskrav4.rmd-->
 
+
 # Ett sett vs tre sett styrketrening 
 
+Placeholder
+
+
 ## Introduksjon
-
-Flere forskere har undersøkt forskjellen på hvordan ulike sett og reps påvirker maksimal styrke, muskel hypertrofi og kroppssammensetning. Schoenfeld og flere [@2019] gjennomførte et studie for undersøke forskjellen i hypertrofi forskjellen mellom å gjennomføre ett eller tre sett i styreprogrammet. I denne studien var det ingen signifikant forskjell mellom gruppen som gjennomførte ett sett og gruppen som gjennomførte tre sett, men begge gruppene hadde signifikant økt muskel styrke fra pre-test til post-test. Flere andre gjennomførte studier viser et annet resultat, og konkluderer med at å gjennomføre tre sett gir en statistisk signifikant økning i maksimal styrke [@rhea2002; @munn2005; @fröhlich2010]. På den andre siden konkluderer Carpinelli [@carpinelli1998], at det ikke er signifikant forskjell på ett og tre sett, og diskuterer for at ett sett holder for å få god utvikling i muskelstyrke.
-
-Dette danner grunnlaget for ønsket om å undersøke denne problemstillingen videre. Formålet med denne studien er å se om det vil forekomme endring i lean bodymass og styrkeadaptasjon etter 12 ukers treningsintervensjon, med ulik volum belastning på hvert ben, og sammenligne disse endringene.
-
-
-[**Intervensjon**]{.ul}
-Intervensjonen bestod av 12 ukers full-kropps styrketrening. Beinøvelsene ble gjennomført på et og et bein for å tillate interne styrkeforskjeller. Begge utøverne gjennomførte begge protokollene (et sett, og tre sett) og det ble tilfeldig valgt hvilket ben som skulle gjennomføre hvilken protokoll. Muskelstyrken ble vurdert ved oppstart, under (uke 3,5 og 9) og etter treningsintervensjon. Kroppssammensetning ble målt før og etter treningsintervensjonen. Muskelbiopsi ble samlet 4 ganger under intervensjonen. Ved start av intervensjon, før, og en time etter treningsøkt fem, og etter intervensjon.
-
-
-[**Treningsprotokoll**]{.ul}
-
-[**Oppvarming**]{.ul}
-Alle deltakerne gjennomførte en standardisert oppvarmingsprotokoll før hver treningsøkt, hvor protokollen bestod av tre deler. Første del bestod av 5 min sykling på ergometersykkel til opplevd anstrengelse på 12-14 på Borg-skalaen (RPE). Andre del av oppvarmingen 10 repetisjoner av fire kroppsvekt treningsøvelser (individuelt tilpasset armhevninger, sit-ups, rygghev og knebøy). Siste del av oppvarmingen var et sett med 10 repetisjoner av ~50% av en repetisjon maksimum [1RM], for hver motstandsøvelse.
-
-
-[**Styrkeprogram**]{.ul}
-Beinøvelsene ble gjennomført i denne rekkefølgen: et beins beinpress, knefleksjon og kneekstensjon. Disse ble gjennomført som et eller tre sett per øvelse. Det ene settet ble gjennomført mellom andre og tredje sett. Etter å ha beinøvelsene gjennomførte deltakerne benkpress med manualer, nedtrekk og skulderpress eller sittende roing. Pausene mellom settene var 90-180 sekunder. Treningsintensiteten økte gradvis gjennom de 12 ukene. Deltakerne startet med 10RM de første to ukene, 8RM de neste tre ukene, og 7RM de siste sju ukene.
-
-
-[**Tester**]{.ul}
-
-[**MAksimal styrke**]{.ul}
-Maksimal styrke ble vurdert som 1RM i benpress med manualer og kneekstensjon. Spesifikk oppvarming på testdagen bestod av 10, 6 og 3 repetisjoner på 50, 75 og 85 % av forventet maksimum. 1RM ble funnet ved å øke motstanden gradvis inntil deltakeren ikke klarte å gjennomføre en fullstendig repetisjon. På hver øvelse ble den høyeste vekten deltakeren klarte å fullføre godkjent som 1RM. Deltakerne fikk fire til seks forsøk hver.
-
-[**Kroppssammensetning**]{.ul}
-Kroppssammensetningen ble testet før og etter intervensjonen ved bruk av dual-energy røntgenabsorptiometri (DXA), i henhold til standard protokoll. Før DXA-målingene fikk deltakerne beskjed om å faste i 2 timer, og ikke gjennomføre moderat fysisk aktivitet 48 timer før testtidspunkt. Den siste DXA-målingen ble gjennomført to dager etter siste styrkeøkt.
-
-[**Statistisk test**]{.ul}
-Statistisk analyse er gjennomført i R-studio (Version 1.4.1717). Deskriptiv statistikk er oppgitt som prosent, og ANCOVA modell er brukt til å regne ut p-verdi på endringsscore fra pre- til post-test. Statistisk signifikans er satt ved p <0,05.
-
-
 ## Resultater
-
-[**Lean bodymass**]{.ul}
-Resultatene presentert i studien viser at 12 uker med styrketrening førte til en endring av lean body mass fra pre til post test på beina som gjennomførte tre sett (3,32 ± 4,39%, p<0,001), det samme gjelder for beina som gjennomførte ett sett (2,04 ± 3,71%, p<0,001). Endringer mellom de ulike treningsintervensjonene viser ingen signifikant endring mellom gruppene (114,56 ae, p<0,193).
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-remotes::install_github("dhammarstrom/exscidata")
-library(tidyverse)
-library(exscidata)
-data("dxadata") 
-data("strengthvolume")
-```
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
-library(tidyverse)
-styrkedat <- dxadata %>%
-  select(participant:include, lean.left_leg, lean.right_leg) %>%
-  pivot_longer(names_to = "leg", 
-               values_to = "lean.mass", 
-               cols = lean.left_leg:lean.right_leg) %>%
-  mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
-         sets = if_else(multiple == leg, "multiple", "single")) %>%
-  select(participant, time, sets, sex, leg, lean.mass) %>%
-  
-  pivot_wider(names_from = time,
-              values_from = lean.mass) %>%
-  mutate(lbm.change = post - pre) %>%
-  mutate(pre.mc = pre - mean(pre)) %>% 
-  mutate(prosentvis.endring = ((post - pre) / pre) * 100) %>%
-  filter(!is.na(lbm.change)) 
-  
- 
-  
-styrkedat %>%   
-  group_by(sets) %>%
-  summarise(m = mean(prosentvis.endring),
-            sd = sd(prosentvis.endring)) 
-
-
-dxa <- lm(post ~ pre + sex + sets, data = styrkedat)
-summary(dxa)
-plot(dxa)
-```
-
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", fig.cap = "Muskelvekst fra pretest - posttest for alle forsøkspersoner skilt ved ett- sett og tre- sett"}
-#endre teksten 
-moddat <- dxadata %>%
-  select(participant:include, lean.left_leg, lean.right_leg) %>%
-  pivot_longer(names_to = "leg", 
-               values_to = "lean.mass", 
-               cols = lean.left_leg:lean.right_leg) %>%
-   mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
-         sets = if_else(multiple == leg, "Multiple", "Single")) %>%
-  select(participant, time, sets, sex, leg, lean.mass) %>%
-  group_by(participant) %>%
-  mutate(n = n(), group = factor(sets, levels = c("Single", "Multiple")), time = factor(time, levels = c("pre", "post")))
-
-moddat %>%
- ggplot(aes(time, lean.mass, group = paste(participant, group), color = group)) + geom_line() + theme_bw()
-```
-
-[**Muskel styrke**]{.ul}
-Resultatene viser at 12 ukers treningsintervensjon fører til en endring i muskelstyrke fra pre til post test på beina som gjennomførte et sett. mellom beina som gjennomførte ett sett (31,0 ± 14,2%, p<0,001), og beina som gjennomførte tre sett (2,04 ± 3,71%, p< 0,001). Endring i muskelstyrke for de ulike treningsintervensjonene ved post test er signifikant (0.029 ae, p<0.029).
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
-styrkedat1 <- strengthvolume %>%
-  filter(!is.na(load)) %>%
-  group_by(exercise) %>%
-  mutate(scaled.load = load / max(load, na.rm = TRUE)) %>%
-  group_by(participant, time, sex, sets) %>%
-  summarise(combined.load = mean(scaled.load, na.rm = TRUE)) %>%
-  ungroup() %>%
-  
-  
-  pivot_wider(names_from = time,
-              values_from = combined.load) %>%
-  mutate(prosentvis.endring = ((post - pre) / pre) * 100) 
-
-styrkedat1 %>%    
-  filter(!is.na(post)) %>%
-  group_by(sets) %>%
-  summarise(m = mean(prosentvis.endring),
-            sd = sd(prosentvis.endring)) 
-
-m2 <- lm(post ~ pre + sex + sets, data = styrkedat1)
-summary(m2)
-plot(m2)
-```
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", fig.cap = "Figur 2 viser endring i muskelstyrke for alle forsøkspersonene fra pre- post skildt ved single- sett og multiple- sett"}
-#Endre teksten 
-styrkemod <- strengthvolume %>%
-  group_by(exercise) %>%
-  mutate(scaled.load = load / max(load, na.rm = TRUE)) %>%
-  group_by(participant, time, sex, sets) %>%
-  summarise(combined.load = mean(scaled.load, na.rm = TRUE)) %>%
-  ungroup() 
-
-styrkemod %>%
-  filter(!is.na(combined.load), time == factor(time, levels = c("pre", "post"))) %>%
-  mutate(time = factor(time, levels = c("pre", "post")),
-         group = factor(sets, levels = c("Single", "Multiple"))) %>%
- ggplot(aes(time, combined.load, group = paste(participant, sets), color = sets)) + geom_line() + theme_bw() 
-```
-
 ## Diskusjon
-To til tre styrkeøkter i 12 uker øker maksimal styrke i beina, og muskel hypertrofi. Disse resultatene er gjeldende for om man gjennomfører ett eller tre sett. Resultatene presentert i denne studien viser at endringen vil være større om man gjennomfører tre sett. Dette samsvarer med det store mengder av litteraturen viser [@rhea2002; @munn2005; @fröhlich2010]. Som presentert i introduksjonen viser resultatene de presenterer at tre sett har signifikant større økning enn ett sett. Rhea med flere viser til at deltakerne som kjørte tre sett hadde dobbelt så stor utvikling som deltakerne som gjennomførte ett sett (25%) etter tre uker (48%). Etter 12 uker ble det større forskjell mellom gruppene hvor deltakerne som gjennomførte tre sett hadde 56% økning, og deltakerne som gjennomførte ett sett hadde 26% økning. Dette kan være et tegn på at skilnaden mellom gruppen kan være enda større hvis samme styrkeprogram blir gjennomført i en periode som er lengre enn 12 uker.
-
-På den andre siden konkluderer Carpinelli [@carpinelli1998] som nevnt i introduksjonen at forskjellen mellom deltakerne som gjennomført ett sett og tre sett ikke var stor nok til at det var hensiktsmessig å gjennomføre tre sett. Dette understreker de med å påpeke at ved så lite forskjell vil det være lettere for folk å praktisere ett sett i sitt treningsprogram i det daglige liv. Dette er et viktig poeng å ta med seg inn i resultatene fra dette studiet da det er gjennomført på vanlige mennesker, og ikke treningsutøvere, som kan ha vanskeligheter med å få tid til å gjennomføre et styrkeprogram med tre sett på hver øvelse. Resultatene presentert over viser og at beina som gjennomførte ett sett hadde signifikant endring i lean bodymass, og i muskelstyrke.
-
 ## Konklusjon
-Etter endt studie kan man konkludere med at om man gjennomfører ett sett eller tre sett med styrketrening to til tre ganger i uken, vil man kunne se en signifikant økning i muskel styrke og hypertrofi. Ved å gjennomføre tre sett vil endringen være større enn ved ett sett. Til videre forskning kan man undersøke hvordan denne endringen vil være i en lengre periode enn 12 uker.
-
-## Referanser
-
 
 <!--chapter:end:04-Arbeidskrav5.rmd-->
 

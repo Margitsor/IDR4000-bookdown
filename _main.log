@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.1)  1 DEC 2021 18:01
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.1)  1 DEC 2021 18:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -374,208 +374,50 @@ Package graphics Info: Driver file: xetex.def on input line 107.
 )
 \Gin@req@height=\dimen174
 \Gin@req@width=\dimen175
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip62
-\multirow@cntb=\count312
-\multirow@dima=\skip63
-\bigstrutjot=\dimen176
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen177
-\WF@size=\dimen178
-\c@WF@wrappedlines=\count313
-\WF@box=\box62
-\WF@everypar=\toks24
-Package: wrapfig 2003/01/31  v 3.6
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count314
-\float@exts=\toks25
-\float@box=\box63
-\@float@everytoks=\toks26
-\@floatcapt=\box64
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
-Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
-\everycr=\toks27
-\minrowclearance=\skip64
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
-Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-(/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/tabu/tabu.sty
-Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
-(/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
-Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box65
-\sift@deathcycles=\count315
-\@vwid@loff=\dimen179
-\@vwid@roff=\dimen180
-)
-\c@taburow=\count316
-\tabu@nbcols=\count317
-\tabu@cnt=\count318
-\tabu@Xcol=\count319
-\tabu@alloc=\count320
-\tabu@nested=\count321
-\tabu@target=\dimen181
-\tabu@spreadtarget=\dimen182
-\tabu@naturalX=\dimen183
-\tabucolX=\dimen184
-\tabu@Xsum=\dimen185
-\extrarowdepth=\dimen186
-\abovetabulinesep=\dimen187
-\belowtabulinesep=\dimen188
-\tabustrutrule=\dimen189
-\tabu@thebody=\toks28
-\tabu@footnotes=\toks29
-\tabu@box=\box66
-\tabu@arstrutbox=\box67
-\tabu@hleads=\box68
-\tabu@vleads=\box69
-\tabu@cellskip=\skip65
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable.sty
-Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box70
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
-Package: threeparttablex 2013/07/23 v0.3 by daleif
-(/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
-Package: environ 2014/05/04 v0.3 A new way to define environments
-(/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-))
-\TPTL@width=\skip66
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box71
-\UL@hyphenbox=\box72
-\UL@skip=\skip67
-\UL@hook=\toks30
-\UL@height=\dimen190
-\UL@pe=\count322
-\UL@pixel=\dimen191
-\ULC@box=\box73
-Package: ulem 2019/11/18
-\ULdepth=\dimen192
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
-Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen193
-\c@nlinenum=\count323
-\TeXr@lab=\toks31
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
-\c@tracingmulticols=\count324
-\mult@box=\box74
-\multicol@leftmargin=\dimen194
-\c@unbalance=\count325
-\c@collectmore=\count326
-\doublecol@number=\count327
-\multicoltolerance=\count328
-\multicolpretolerance=\count329
-\full@width=\dimen195
-\page@free=\dimen196
-\premulticols=\dimen197
-\postmulticols=\dimen198
-\multicolsep=\skip68
-\multicolbaselineskip=\skip69
-\partial@page=\box75
-\last@line=\box76
-\maxbalancingoverflow=\dimen199
-\mult@rightbox=\box77
-\mult@grightbox=\box78
-\mult@firstbox=\box79
-\mult@gfirstbox=\box80
-\@tempa=\box81
-\@tempa=\box82
-\@tempa=\box83
-\@tempa=\box84
-\@tempa=\box85
-\@tempa=\box86
-\@tempa=\box87
-\@tempa=\box88
-\@tempa=\box89
-\@tempa=\box90
-\@tempa=\box91
-\@tempa=\box92
-\@tempa=\box93
-\@tempa=\box94
-\@tempa=\box95
-\@tempa=\box96
-\@tempa=\box97
-\@tempa=\box98
-\@tempa=\box99
-\@tempa=\box100
-\@tempa=\box101
-\@tempa=\box102
-\@tempa=\box103
-\@tempa=\box104
-\@tempa=\box105
-\@tempa=\box106
-\@tempa=\box107
-\@tempa=\box108
-\@tempa=\box109
-\@tempa=\box110
-\@tempa=\box111
-\@tempa=\box112
-\@tempa=\box113
-\@tempa=\box114
-\@tempa=\box115
-\@tempa=\box116
-\c@minrows=\count330
-\c@columnbadness=\count331
-\c@finalcolumnbadness=\count332
-\last@try=\dimen256
-\multicolovershoot=\dimen257
-\multicolundershoot=\dimen258
-\mult@nat@firstbox=\box117
-\colbreak@box=\box118
-\mc@col@check@num=\count333
-) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/tools/hhline.sty
-Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
 ) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip70
-\bibsep=\skip71
+\bibhang=\skip62
+\bibsep=\skip63
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count334
+\c@NAT@ctr=\count312
 )
 No file _main.aux.
 \openout1 = `_main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 100.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 100.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 100.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 100.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 100.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 100.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 100.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 82.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -601,7 +443,7 @@ Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 100.
+(Font)              scaled to size 10.0pt on input line 82.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -633,15 +475,15 @@ Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 100.
+(Font)              scaled to size 10.0pt on input line 82.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 100.
+(Font)              `operators' in the math version `normal' on input line 82.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 100.
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 82.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 100.
+(Font)              `operators' in the math version `bold' on input line 82.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 100.
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 82.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -720,13 +562,13 @@ Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 100.
+(Font)              `symbols' in the math version `normal' on input line 82.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 100.
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 82.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 100.
+(Font)              `symbols' in the math version `bold' on input line 82.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 100.
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 82.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -787,14 +629,14 @@ Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
 (fontspec)             =6.0pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 100.
+(Font)              `largesymbols' in the math version `normal' on input line 82.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 100.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 82.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 100.
+(Font)              `largesymbols' in the math version `bold' on input line 82.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 100.
-Package hyperref Info: Link coloring OFF on input line 100.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 82.
+Package hyperref Info: Link coloring OFF on input line 82.
 (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -802,11 +644,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count335
+\c@section@level=\count313
 )
-LaTeX Info: Redefining \ref on input line 100.
-LaTeX Info: Redefining \pageref on input line 100.
-LaTeX Info: Redefining \nameref on input line 100.
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
 \@outlinefile=\write3
 \openout3 = `_main.out'.
 
@@ -814,32 +656,32 @@ LaTeX Info: Redefining \nameref on input line 100.
 Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 102.
+(Font)              scaled to size 12.0pt on input line 84.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 102.
+(Font)              scaled to size 8.0pt on input line 84.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 102.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 102.
+(Font)              scaled to size 6.0pt on input line 84.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 84.
 (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.0011pt on input line 102.
+(Font)              scaled to size 12.0011pt on input line 84.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 102.
+(Font)              scaled to size 8.00073pt on input line 84.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 102.
+(Font)              scaled to size 6.00055pt on input line 84.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 102.
+(Font)              scaled to size 11.99872pt on input line 84.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 102.
+(Font)              scaled to size 7.99915pt on input line 84.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 102.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 102.
+(Font)              scaled to size 5.99936pt on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
 (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 102.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
 (/Users/margitsorensen/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -855,447 +697,151 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 Chapter 1.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 113.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 113.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 113.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 113.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 113.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 113.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 113.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 113.
+[5] [6
 
-Package natbib Warning: Citation `hill1923' on page 5 undefined on input line 114.
-
-
-Package natbib Warning: Citation `hill1923' on page 5 undefined on input line 115.
-
-
-Package natbib Warning: Citation `Basset2000' on page 5 undefined on input line 115.
-
-
-Package natbib Warning: Citation `bassett2000' on page 5 undefined on input line 119.
-
-
-Package natbib Warning: Citation `tønnessen2017' on page 5 undefined on input line 121.
-
-
-Package natbib Warning: Citation `tønnessen2017' on page 5 undefined on input line 124.
-
-
-Package natbib Warning: Citation `halperin2015' on page 5 undefined on input line 137.
-
-[5]
-
-Package natbib Warning: Citation `halperin1923' on page 6 undefined on input line 164.
-
-
-Package natbib Warning: Citation `borg1982' on page 6 undefined on input line 170.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica/B scale = 0.8128387852912245.
-
-
-Package fontspec Info: Helvetica/I scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica/BI scale = 0.8018053820824344.
-
-
-Package fontspec Info: Font family 'Helvetica(0)' created for font 'Helvetica'
-(fontspec)             with options
-(fontspec)             [Scale=MatchLowercase,Ligatures=TeX,Scale=1].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"Helvetica/AAT:mapping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"Helvetica/B/AAT:mapping=tex-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"Helvetica/I/AAT:mapping=tex-text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"Helvetica/BI/AAT:mapping=tex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
-
-LaTeX Font Info:    Font shape `TU/Helvetica(0)/m/n' will be
-(Font)              scaled to size 11.0pt on input line 190.
-
-Package fontspec Info: Helvetica scale = 0.9999973374868539.
-
-
-Package fontspec Info: Helvetica scale = 0.9999973374868539.
-
-
-Package fontspec Info: Helvetica/B scale = 0.9825662920407693.
-
-
-Package fontspec Info: Helvetica/I scale = 0.9999973374868539.
-
-
-Package fontspec Info: Helvetica/BI scale = 0.9692290223685705.
-
-
-Package fontspec Info: Font family 'Helvetica(1)' created for font 'Helvetica'
-(fontspec)             with options [Scale=MatchLowercase].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999973374868539]"Helvetica/AAT"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9825662920407693]"Helvetica/B/AAT"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[0.9999973374868539]"Helvetica/I/AAT"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[0.9692290223685705]"Helvetica/BI/AAT"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
-
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/Helvetica(1)/m/n on input line 190.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  TU/lmr/m/it --> TU/Helvetica(1)/m/it on input line 190.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  TU/lmr/bx/n --> TU/Helvetica(1)/b/n on input line 190.
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package fontspec Info: Helvetica scale = 0.8272588095903724.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 1.1 on input line 234.
-
-
-Package natbib Warning: Citation `hopkins2000' on page 6 undefined on input line 239.
-
-File: _main_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
-<use _main_files/figure-latex/unnamed-chunk-3-1.pdf>
-
-Package natbib Warning: Citation `halperin2015' on page 6 undefined on input line 254.
-
-
-Package natbib Warning: Citation `hopkins2000' on page 6 undefined on input line 273.
-
-
-Underfull \vbox (badness 1466) has occurred while \output is active []
-
-[6]
-
-Package natbib Warning: Citation `hopkins2000' on page 7 undefined on input line 281.
-
-
-Underfull \vbox (badness 1990) has occurred while \output is active []
-
-[7]
-
-Package natbib Warning: Citation `hopkins2000' on page 8 undefined on input line 285.
-
-
-Package natbib Warning: Citation `halperin2015' on page 8 undefined on input line 287.
-
-
-Package natbib Warning: Citation `clark2007' on page 8 undefined on input line 289.
-
-
-Package natbib Warning: Citation `robertson2010' on page 8 undefined on input line 289.
-
-
-Package natbib Warning: Citation `saunders2009' on page 8 undefined on input line 289.
-
-
-Package natbib Warning: Citation `halperin2015' on page 8 undefined on input line 291.
-
-[8]
+]
 Chapter 2.
-[9
-
-] [10
+[7] [8
 
 ]
 Chapter 3.
+[9] [10
 
-Package natbib Warning: Citation `alnes2018' on page 11 undefined on input line 314.
+]
+Chapter 4.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 134.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 134.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00092pt on input line 134.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00064pt on input line 134.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00046pt on input line 134.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 134.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 134.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 134.
+
+Package natbib Warning: Citation `rønnestad2010b' on page 11 undefined on input line 134.
 
 
-Package natbib Warning: Citation `dellsén2021' on page 11 undefined on input line 316.
+Package natbib Warning: Citation `vikmoen2016' on page 11 undefined on input line 134.
 
 
-Package natbib Warning: Citation `okasha2016' on page 11 undefined on input line 316.
+Package natbib Warning: Citation `rønnestad2010a' on page 11 undefined on input line 134.
 
 
-Package natbib Warning: Citation `okasha2016' on page 11 undefined on input line 318.
-
-
-Package natbib Warning: Citation `popper1969' on page 11 undefined on input line 318.
+Package natbib Warning: Citation `rønnestad2015' on page 11 undefined on input line 134.
 
 [11]
 
-Package natbib Warning: Citation `okasha2016' on page 12 undefined on input line 320.
+Package natbib Warning: Citation `hulley2013' on page 12 undefined on input line 138.
 
 
-Package natbib Warning: Citation `okasha2016' on page 12 undefined on input line 320.
+Package natbib Warning: Citation `Parab2010' on page 12 undefined on input line 138.
 
 
-Package natbib Warning: Citation `dellsén2021' on page 12 undefined on input line 325.
+Package natbib Warning: Citation `helsebiblioteketuå' on page 12 undefined on input line 138.
 
 
-Package natbib Warning: Citation `hempel1966' on page 12 undefined on input line 325.
+Package natbib Warning: Citation `rønnestad2010a' on page 12 undefined on input line 138.
 
 
-Package natbib Warning: Citation `dellsén2021' on page 12 undefined on input line 327.
+Package natbib Warning: Citation `rønnestad2010b' on page 12 undefined on input line 138.
 
 
-Package natbib Warning: Citation `hempel1966' on page 12 undefined on input line 327.
+Package natbib Warning: Citation `rønnestad2015' on page 12 undefined on input line 138.
+
+
+Package natbib Warning: Citation `aagaard2011' on page 12 undefined on input line 138.
+
+
+Package natbib Warning: Citation `rønnestad2010a' on page 12 undefined on input line 142.
+
+
+Package natbib Warning: Citation `rønnestad2010b' on page 12 undefined on input line 142.
+
+
+Package natbib Warning: Citation `rønnestad2015' on page 12 undefined on input line 142.
+
+
+Package natbib Warning: Citation `vikmoen2016' on page 12 undefined on input line 142.
+
+
+Package natbib Warning: Citation `aagaard2011' on page 12 undefined on input line 142.
+
+
+Package natbib Warning: Citation `rønnestad2010a' on page 12 undefined on input line 144.
+
+
+Package natbib Warning: Citation `rønnestad2010b' on page 12 undefined on input line 144.
+
+
+Package natbib Warning: Citation `rønnestad2015' on page 12 undefined on input line 144.
+
+
+Package natbib Warning: Citation `vikmoen2016' on page 12 undefined on input line 144.
+
+
+Package natbib Warning: Citation `kim2015' on page 12 undefined on input line 144.
+
+
+Package natbib Warning: Citation `aagaard2011' on page 12 undefined on input line 144.
+
+
+Package natbib Warning: Citation `altman2009' on page 12 undefined on input line 144.
+
+
+Package natbib Warning: Citation `vikmoen2016' on page 12 undefined on input line 144.
+
+
+Package natbib Warning: Citation `rønnestad2015' on page 12 undefined on input line 144.
+
+
+Package natbib Warning: Citation `rønnestad2010a' on page 12 undefined on input line 144.
+
+
+Package natbib Warning: Citation `rønnestad2010b' on page 12 undefined on input line 144.
+
+
+Overfull \hbox (88.47343pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 12 \TU/lmr/m/sl/10 CHAPTER 4.  STYRKE OG UTHOLDENHETSTRENING FOR GODT TRENTE SYKLISTER
+ []
 
 [12]
 
-Package natbib Warning: Citation `dellsén2021' on page 13 undefined on input line 329.
+Package natbib Warning: Citation `rønnestad2010b' on page 13 undefined on input line 146.
 
 
-Package natbib Warning: Citation `dellsén2021' on page 13 undefined on input line 331.
+Package natbib Warning: Citation `rønnestad2010a' on page 13 undefined on input line 146.
 
 
-Package natbib Warning: Citation `bird2020' on page 13 undefined on input line 336.
+Package natbib Warning: Citation `rønnestad2015' on page 13 undefined on input line 146.
 
 
-Package natbib Warning: Citation `bird2020' on page 13 undefined on input line 336.
+Package natbib Warning: Citation `aagaard2011' on page 13 undefined on input line 146.
+
+
+Package natbib Warning: Citation `vikmoen2016' on page 13 undefined on input line 146.
 
 [13]
-
-Package natbib Warning: Citation `bird2020' on page 14 undefined on input line 338.
-
-
-Package natbib Warning: Citation `bird2020' on page 14 undefined on input line 340.
-
-[14]
-Chapter 4.
-
-Package natbib Warning: Citation `rønnestad2010b' on page 15 undefined on input line 355.
-
-
-Package natbib Warning: Citation `vikmoen2016' on page 15 undefined on input line 355.
-
-
-Package natbib Warning: Citation `rønnestad2010a' on page 15 undefined on input line 355.
-
-
-Package natbib Warning: Citation `rønnestad2015' on page 15 undefined on input line 355.
-
-[15
-
-]
-
-Package natbib Warning: Citation `hulley2013' on page 16 undefined on input line 359.
-
-
-Package natbib Warning: Citation `Parab2010' on page 16 undefined on input line 359.
-
-
-Package natbib Warning: Citation `helsebiblioteketuå' on page 16 undefined on input line 359.
-
-
-Package natbib Warning: Citation `rønnestad2010a' on page 16 undefined on input line 359.
-
-
-Package natbib Warning: Citation `rønnestad2010b' on page 16 undefined on input line 359.
-
-
-Package natbib Warning: Citation `rønnestad2015' on page 16 undefined on input line 359.
-
-
-Package natbib Warning: Citation `aagaard2011' on page 16 undefined on input line 359.
-
-
-Package natbib Warning: Citation `rønnestad2010a' on page 16 undefined on input line 363.
-
-
-Package natbib Warning: Citation `rønnestad2010b' on page 16 undefined on input line 363.
-
-
-Package natbib Warning: Citation `rønnestad2015' on page 16 undefined on input line 363.
-
-
-Package natbib Warning: Citation `vikmoen2016' on page 16 undefined on input line 363.
-
-
-Package natbib Warning: Citation `aagaard2011' on page 16 undefined on input line 363.
-
-
-Package natbib Warning: Citation `rønnestad2010a' on page 16 undefined on input line 365.
-
-
-Package natbib Warning: Citation `rønnestad2010b' on page 16 undefined on input line 365.
-
-
-Package natbib Warning: Citation `rønnestad2015' on page 16 undefined on input line 365.
-
-
-Package natbib Warning: Citation `vikmoen2016' on page 16 undefined on input line 365.
-
-
-Package natbib Warning: Citation `kim2015' on page 16 undefined on input line 365.
-
-
-Package natbib Warning: Citation `aagaard2011' on page 16 undefined on input line 365.
-
-
-Package natbib Warning: Citation `altman2009' on page 16 undefined on input line 365.
-
-
-Package natbib Warning: Citation `vikmoen2016' on page 16 undefined on input line 365.
-
-
-Package natbib Warning: Citation `rønnestad2015' on page 16 undefined on input line 365.
-
-
-Package natbib Warning: Citation `rønnestad2010a' on page 16 undefined on input line 365.
-
-
-Package natbib Warning: Citation `rønnestad2010b' on page 16 undefined on input line 365.
-
-
 Overfull \hbox (88.47343pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 16 \TU/lmr/m/sl/10 CHAPTER 4.  STYRKE OG UTHOLDENHETSTRENING FOR GODT TRENTE SYKLISTER
+\TU/lmr/m/n/10 14 \TU/lmr/m/sl/10 CHAPTER 4.  STYRKE OG UTHOLDENHETSTRENING FOR GODT TRENTE SYKLISTER
  []
 
-[16]
-
-Package natbib Warning: Citation `rønnestad2010b' on page 17 undefined on input line 367.
-
-
-Package natbib Warning: Citation `rønnestad2010a' on page 17 undefined on input line 367.
-
-
-Package natbib Warning: Citation `rønnestad2015' on page 17 undefined on input line 367.
-
-
-Package natbib Warning: Citation `aagaard2011' on page 17 undefined on input line 367.
-
-
-Package natbib Warning: Citation `vikmoen2016' on page 17 undefined on input line 367.
-
-[17]
-Overfull \hbox (88.47343pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 18 \TU/lmr/m/sl/10 CHAPTER 4.  STYRKE OG UTHOLDENHETSTRENING FOR GODT TRENTE SYKLISTER
- []
-
-[18
+[14
 
 ]
 Chapter 5.
-
-Package natbib Warning: Citation `2019' on page 19 undefined on input line 378.
-
-
-Package natbib Warning: Citation `rhea2002' on page 19 undefined on input line 378.
-
-
-Package natbib Warning: Citation `munn2005' on page 19 undefined on input line 378.
-
-
-Package natbib Warning: Citation `fröhlich2010' on page 19 undefined on input line 378.
-
-
-Package natbib Warning: Citation `carpinelli1998' on page 19 undefined on input line 378.
-
-[19]
-File: _main_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
-<use _main_files/figure-latex/unnamed-chunk-5-1.pdf>
-[20]
-File: _main_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
-<use _main_files/figure-latex/unnamed-chunk-7-1.pdf>
-
-Package natbib Warning: Citation `rhea2002' on page 21 undefined on input line 428.
-
-
-Package natbib Warning: Citation `munn2005' on page 21 undefined on input line 428.
-
-
-Package natbib Warning: Citation `fröhlich2010' on page 21 undefined on input line 428.
-
-[21] [22]
-
-Package natbib Warning: Citation `carpinelli1998' on page 23 undefined on input line 430.
-
 No file _main.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
-[23] (./_main.aux)
+[15] (./_main.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -1306,15 +852,15 @@ Package rerunfilecheck Warning: File `_main.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `_main.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  C2EAEAEBC98F66623458A9833C3505B0;2667.
+(rerunfilecheck)             After:  BD789BBF394E604BF872244D2688186A;2247.
  ) 
 Here is how much of TeX's memory you used:
- 18620 strings out of 478256
- 341788 string characters out of 5854543
- 791686 words of memory out of 5000000
- 38860 multiletter control sequences out of 15000+600000
- 410067 words of font info for 91 fonts, out of 8000000 for 9000
+ 16857 strings out of 478256
+ 310140 string characters out of 5854543
+ 759600 words of memory out of 5000000
+ 37183 multiletter control sequences out of 15000+600000
+ 409865 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,7n,128p,1914b,510s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 86i,6n,121p,1785b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on _main.pdf (23 pages).
+Output written on _main.pdf (15 pages).

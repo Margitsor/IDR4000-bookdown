@@ -1,0 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+  bibliography:
+- book.bib
+---
+Forskningsartiklene som er brukt i denne oppgaven har som hovedmål å finne ut hvordan styrketrening, sammen med utholdenhetstrening, påvirker profesjonelle eller godt trente syklisters prestasjon. Felles for alle studiene er at de gjennomføre en styrkeintervensjon fra 11 til 25 uker på intervensjonsgruppene, og sammenligner forskjellene i ulike styrke- og utholdenhetstester med en kontrollgruppe. De sammenligner Dette vil si at alle studiene bruker randomisert kontrollert studie (RCT) som studiedesign. I et RCT blir deltakerne tilfeldig valgt hvilken gruppe de tilhører, kontrollgruppe eller intervensjonsgruppe. Ved å tilfeldig fordele de ulike deltakerne i kontrollgruppe, og intervensjonsgruppe vil man minske sannsynligheten for at det er store forskjeller mellom gruppene \[@hulley2013; @Parab2010\]. Det er med fordel at alle studiene i denne oppgaven bruker dette studie designet for å kunne se effekten for intervensjonsgruppen, mot kontrollgruppen. Dette vil si at resultatene vil vise hvilken effekt intervensjonen har eller ikke har, og ikke være påvirket av store gruppeforskjeller \[@helsebiblioteketuå\] . Utvalg: I de ulike studiene skilte deltaker gruppene seg fra 12 til 23 deltakere. Alle deltakerne var godt trente syklister. I noen av prosjektene var deltakerne syklister på høyt nasjonalt eller internasjonalt nivå \[@rønnestad2010a; @rønnestad2010b; @rønnestad2015; @aagaard2011\]. Ingen av forfatterne beskrev rekrutteringsprosessen eller at det ble gjennomført en styrkeberegning (antall beregning) for å argumentere for antall deltakere i studiene.
