@@ -25,7 +25,7 @@ editor_options:
 
 Maksimalt oksygenopptak $\dot VO_{2max}$ ble først beskrevet av
 [@ [@hill1923] , og kan defineres som kroppens evne til å ta opp og
-forbruke oksygen per tidsenhet [@HillLupton; @BassetHowley]. Innen
+forbruke oksygen per tidsenhet [@Hill1923; @Basset2000]. Innen
 toppidrett måles ofte det maksimale oksygenopptaket for å måle utøverens
 kapasitet opp mot arbeidskravet i den spesifikke idretten, og
 $\dot VO_{2max}$ kan i så måte også sees på som et mål på den aerobe
@@ -74,7 +74,7 @@ gjennom å bruke snittet av de to høyeste påfølgende målingene av V̇O~2~.
 Underveis i testen mottok alle deltakerne en høylytt verbal oppmuntring
 fra testleder<!-- Vad äger Halperin om det? -->. Alle deltakerne
 gjennomførte også begge testene med samme testleder og med samme
-personer til stede i rommet for å redusere konfundering [@halperin].
+personer til stede i rommet for å redusere konfundering [@halperin1923].
 
 For hvert medgåtte minutt av testen ble hastigheten på møllen økt med
 1km/t, helt til utmattelse, hvor testen ble avsluttet. Deltakernes
@@ -139,7 +139,7 @@ reliabilitet <- read_excel("~/Documents/Master i treningsfysiologi/R-studio/Mapp
 Det var 11 deltakere i studien, samtlige deltakere er studenter ved
 Høgskolen i Innlandet. Deskriptive data for disse deltakerne er vist i
 Tabell 1, i Figur 1 kan man se utviklingen fra pre-test til post-test
-fordelt på kjønn. Det typiske målefeilet (typical error, [@hopkins]) fra
+fordelt på kjønn. Det typiske målefeilet (typical error, [@hopkins2000]) fra
 pre til post-test er utregnet til å være `r round(reliabilitet$cv, 2)`%.
 
 <!-- All kod i figuren under kan settes i en pipe, lägg till figurtext till figuren med fig.cap i code chunken -->
