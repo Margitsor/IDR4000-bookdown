@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.1)  1 DEC 2021 17:52
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.1)  1 DEC 2021 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -875,7 +875,7 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 Package natbib Warning: Citation `hill1923' on page 5 undefined on input line 114.
 
 
-Package natbib Warning: Citation `Hill1923' on page 5 undefined on input line 115.
+Package natbib Warning: Citation `hill1923' on page 5 undefined on input line 115.
 
 
 Package natbib Warning: Citation `Basset2000' on page 5 undefined on input line 115.
@@ -1155,7 +1155,15 @@ Package natbib Warning: Citation `rønnestad2015' on page 15 undefined on input 
 [15
 
 ]
-Missing character: There is no å ("E5) in font lmmi10!
+
+Package natbib Warning: Citation `hulley2013' on page 16 undefined on input line 359.
+
+
+Package natbib Warning: Citation `Parab2010' on page 16 undefined on input line 359.
+
+
+Package natbib Warning: Citation `helsebiblioteketuå' on page 16 undefined on input line 359.
+
 
 Package natbib Warning: Citation `rønnestad2010a' on page 16 undefined on input line 359.
 
@@ -1199,18 +1207,29 @@ Package natbib Warning: Citation `vikmoen2016' on page 16 undefined on input lin
 Package natbib Warning: Citation `kim2015' on page 16 undefined on input line 365.
 
 
+Package natbib Warning: Citation `aagaard2011' on page 16 undefined on input line 365.
+
+
+Package natbib Warning: Citation `altman2009' on page 16 undefined on input line 365.
+
+
+Package natbib Warning: Citation `vikmoen2016' on page 16 undefined on input line 365.
+
+
+Package natbib Warning: Citation `rønnestad2015' on page 16 undefined on input line 365.
+
+
+Package natbib Warning: Citation `rønnestad2010a' on page 16 undefined on input line 365.
+
+
+Package natbib Warning: Citation `rønnestad2010b' on page 16 undefined on input line 365.
+
+
 Overfull \hbox (88.47343pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 16 \TU/lmr/m/sl/10 CHAPTER 4.  STYRKE OG UTHOLDENHETSTRENING FOR GODT TRENTE SYKLISTER
  []
 
 [16]
-Missing character: There is no ø ("F8) in font lmmi10!
-
-Package natbib Warning: Citation `rønnestad2010a' on page 17 undefined on input line 365.
-
-
-Package natbib Warning: Citation `rønnestad2010b' on page 17 undefined on input line 365.
-
 
 Package natbib Warning: Citation `rønnestad2010b' on page 17 undefined on input line 367.
 

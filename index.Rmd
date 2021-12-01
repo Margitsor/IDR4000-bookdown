@@ -24,8 +24,8 @@ editor_options:
 ## Introduksjon
 
 Maksimalt oksygenopptak $\dot VO_{2max}$ ble først beskrevet av
-[@ [@hill1923] , og kan defineres som kroppens evne til å ta opp og
-forbruke oksygen per tidsenhet [@Hill1923; @Basset2000]. Innen
+[@hill1923] , og kan defineres som kroppens evne til å ta opp og
+forbruke oksygen per tidsenhet [@hill1923; @Basset2000]. Innen
 toppidrett måles ofte det maksimale oksygenopptaket for å måle utøverens
 kapasitet opp mot arbeidskravet i den spesifikke idretten, og
 $\dot VO_{2max}$ kan i så måte også sees på som et mål på den aerobe
@@ -217,4 +217,4 @@ tenkes at med et varierende nivå hos deltagerne kan enkelte oppleve en
 treningseffekt av test 1. Samtidig som andre kanskje ble slitne av å få
 en test inn i treningshverdagen.
 
-## Referanser
+
