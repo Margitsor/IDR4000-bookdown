@@ -35,7 +35,8 @@ har funnet deltakerens maksimale oksygenopptak [@tønnessen2017].
 Følgende kriterier er beskrevet; platå i $\dot VO_{2max}$ er oppnådd,
 økning i ventilasjon med utflating av $\dot VO_{2max}$ verdi, RER over
 1.10/1.05<!-- Vilken gäller? -->, og blodlaktat over 8 [@tønnessen2017]
-[@røn]
+
+
 ## Metode
 
 I forkant av testen målte alle deltakerne kroppsvekten i samme klær som
@@ -201,11 +202,11 @@ typical error er multifaktorelt, men hoveddelen er som oftest biologisk
 
 For å måle standardfeil har vi brukt within subject deviation metoden.
 Denne metoden påvirkes ikke av at gjennomsnittet endrer seg fra test til
-test [@hopkins2000\] . Data for målinger i VO2max fra fem sertifiserte
+test [@hopkins2000] . Data for målinger i VO2max fra fem sertifiserte
 Australske laboratorier fastslo ett gjennomsnitt på 2.2% for
-standardfeil \[@halperin2015\]. Data fra det Australske institutt for
+standardfeil [@halperin2015]. Data fra det Australske institutt for
 sport har også fastslått at en standardfeil på omtrent 2% er riktig for
-både maksimal og submaksimal VO2 \[@clark2007; @robertson2010;
+både maksimal og submaksimal VO2 [@clark2007; @robertson2010;
 @saunders2009]. Dette indikerer at med godt kalibrert utstyr og med
 utøvere som er godt vant med testingen vil en standardfeil på 2% for det
 biologiske, og analytiske være riktig [@halperin2015]. Vår standardfeil
