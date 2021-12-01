@@ -45,6 +45,16 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -61,226 +71,37 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\setcounter{secnumdepth}{5}
 \usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{wrapfig}
-\usepackage{float}
-\usepackage{colortbl}
-\usepackage{pdflscape}
-\usepackage{tabu}
-\usepackage{threeparttable}
-\usepackage{threeparttablex}
-\usepackage[normalem]{ulem}
-\usepackage{makecell}
-\usepackage{xcolor}
-\usepackage{multicol}
-\usepackage{hhline}
-\usepackage{hyperref}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
 
 \begin{document}
-\frontmatter
 \maketitle
 
-\mainmatter
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
 \hypertarget{rabilitet}{%
 \chapter{Rabilitet}\label{rabilitet}}
+
+Placeholder
 
 \hypertarget{introduksjon}{%
 \section{Introduksjon}\label{introduksjon}}
 
-Maksimalt oksygenopptak \(\dot VO_{2max}\) ble først beskrevet av {[}@
-(\protect\hyperlink{ref-hill1923}{\textbf{hill1923?}}) , og kan
-defineres som kroppens evne til å ta opp og forbruke oksygen per
-tidsenhet (\protect\hyperlink{ref-HillLupton}{\textbf{HillLupton?}};
-\protect\hyperlink{ref-BassetHowley}{\textbf{BassetHowley?}}). Innen
-toppidrett måles ofte det maksimale oksygenopptaket for å måle utøverens
-kapasitet opp mot arbeidskravet i den spesifikke idretten, og
-\(\dot VO_{2max}\) kan i så måte også sees på som et mål på den aerobe
-effekten til utøveren
-(\protect\hyperlink{ref-bassett2000}{\textbf{bassett2000?}}). I
-Olympiatoppens testprotokoller benytter de flere definerte
-hjelpekriterier for å sikre at man faktisk har funnet deltakerens
-maksimale oksygenopptak
-(\protect\hyperlink{ref-tuxf8nnessen2017}{\textbf{tønnessen2017?}}).
-Følgende kriterier er beskrevet; platå i \(\dot VO_{2max}\) er oppnådd,
-økning i ventilasjon med utflating av \(\dot VO_{2max}\) verdi, RER over
-1.10/1.05, og blodlaktat over 8
-(\protect\hyperlink{ref-tuxf8nnessen2017}{\textbf{tønnessen2017?}})
-(\protect\hyperlink{ref-ruxf8n}{\textbf{røn?}}) \#\# Metode
-
-I forkant av testen målte alle deltakerne kroppsvekten i samme klær som
-ble brukt under testen, men ble bedt om å ta av seg skoene. Kroppsvekten
-som senere brukt i beregningen av maksimalt oksygenopptak (ml
-kg\textsuperscript{-1} min\textsuperscript{-1}) er kroppsvekten målt i
-forkant av test, etter at 300g har blitt trukket av for å ta høyde for
-vekten av klærne. For å sikre intern validitet ble deltakerne bedt om å
-avstå fra anstrengende fysisk aktivitet dagen før test, standardisere
-måltidet i forkant av test samt avstå fra inntak av koffein under de
-siste 12 timene før testen
-(\protect\hyperlink{ref-halperin2015}{\textbf{halperin2015?}}). Pre- og
-post-tester ble gjennomført på samme tid på døgnet under standardiserte
-forhold.. Post-test ble gjennomført 6 dager etter gjennomført pretest.
-Det ble ikke kontrollert for fysisk aktivitet mellom testdagene.
-
-Alle deltakerne gjennomførte en 10 minutter lang oppvarmingsprotokoll på
-tredemøllen (Woodway, 4 front , Wisconsin), beskrevet for deltakerne i
-forkant av testen. Denne oppvarmingsprotokollen bestod av fem minutter
-på 11-13 i Borg 6-20 RPE skala (Borg,1982), etterfulgt av 2x1min på
-starthastighet og stigning med 30 sekund mellom. Siste tre min var også
-11-13 i borg. Etter oppvarming var det to min pause før testen begynte.
-Starthastighet for begge kjønn var satt til 8km/t, med stigning på
-10.5\% og 5.5\% for henholdsvis menn og kvinner.
-
-̇VO2max ble målt ved hjelp av en metabolsk analysator med Vyntus CPX
-miksekammer (Vyntus CPX, Jaeger-CareFusion, UK). Forut for alle tester
-ble analysatoren gass og volumkalibrert med en feillmargin på
-henholdsvis 2\% og 0.2\%. Analysatoren ble stilt inn til å gjøre
-målinger hvert 30sek, og V̇O\textsubscript{2max} ble kalkulert gjennom å
-bruke snittet av de to høyeste påfølgende målingene av
-V̇O\textsubscript{2}. Underveis i testen mottok alle deltakerne en
-høylytt verbal oppmuntring fra testleder. Alle deltakerne gjennomførte
-også begge testene med samme testleder og med samme personer til stede i
-rommet for å redusere konfundering
-(\protect\hyperlink{ref-halperin}{\textbf{halperin?}}).
-
-For hvert medgåtte minutt av testen ble hastigheten på møllen økt med
-1km/t, helt til utmattelse, hvor testen ble avsluttet. Deltakernes
-hjertefrekvens (GARMIN/POLAR) ble også registrert under hele testen. Når
-testen ble avsluttet ble deltakerne bedt om å rapportere opplevd
-anstrengelse ved hjelp av Borg-skala
-(\protect\hyperlink{ref-borg1982}{\textbf{borg1982?}}). Maksimal
-hjertefrekvens under testen ble også registrert. Ett minutt etter
-avsluttet test ble hjertefrekvens registrert, og det ble målt og
-analysert blodlaktat(BIOSEN).
+\hypertarget{metode}{%
+\section{Metode}\label{metode}}
 
 \hypertarget{resultater}{%
 \section{Resultater}\label{resultater}}
 
-\providecommand{\docline}[3]{\noalign{\global\setlength{\arrayrulewidth}{#1}}\arrayrulecolor[HTML]{#2}\cline{#3}}
-
-\setlength{\tabcolsep}{2pt}
-
-\renewcommand*{\arraystretch}{1.5}
-
-\begin{longtable}[c]{|p{1.08in}|p{1.02in}|p{1.02in}}
-
-
-
-\hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
-
-\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Kvinner}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Menn}}} \\
-
-\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-3}
-
-\endfirsthead
-
-\hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
-
-\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Kvinner}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Menn}}} \\
-
-\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-3}\endhead
-
-
-
-\multicolumn{3}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 3.13in+4\tabcolsep+2\arrayrulewidth}!{\color[HTML]{FFFFFF}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Verdier\ er\ gitt\ som\ gjennomsnitt\ og\ (Standardavvik)}}} \\
-
-\endfoot
-
-
-
-\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{N}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{4}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{7}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Alder\ (år)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{24.5\ (1.29)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{23.9\ (1.77)}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Vekt\ (kg)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{58.9\ (6.28)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{74.8\ (5.55)}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.08in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Høyde\ (cm)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{166\ (2.99)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{180\ (3.1)}}} \\
-
-\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-3}
-
-
-
-\end{longtable}
-
-Det var 11 deltakere i studien, samtlige deltakere er studenter ved
-Høgskolen i Innlandet. Deskriptive data for disse deltakerne er vist i
-Tabell 1, i Figur 1 kan man se utviklingen fra pre-test til post-test
-fordelt på kjønn. Det typiske målefeilet (typical error,
-(\protect\hyperlink{ref-hopkins}{\textbf{hopkins?}})) fra pre til
-post-test er utregnet til å være 4.04\%.
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/unnamed-chunk-3-1.pdf}
-\caption{Figurtekst legg til\ldots{}}
-\end{figure}
-
 \hypertarget{diskusjon}{%
 \section{Diskusjon}\label{diskusjon}}
-
-Ettersom testing av maksimalt oksygenopptak er en test som gjennomføres
-til utmattelse, vil man kunne forvente en viss variasjon i
-testresultatene ettersom opplevd anstrengelse kan påvirkes av flere
-ulike variabler
-(\protect\hyperlink{ref-halperin2015}{\textbf{halperin2015?}}). For å
-redusere konfundering vil flere faktorer være nyttig å ta hensyn til
-under slik testing. Som nevnt i metoden vil standardisering av
-matinntak, koffeininntak, utstyr og tidspunkt for gjennomføring av test
-være med på å kunne sikre intern validitet i resultatene. Eksempler er
-deltakernes kjennskap til testen, verbal oppmuntring og personer
-tilstede under testen er andre faktorer som potensielt kan bidra til
-konfundering. Felles for alle faktorer er at graden av påvirkning på
-resultatene muligens reduseres ved hjelp av en standardisert
-testprotokoll. Deltakerne - og testlederne, sin kjennskap til testen er
-en annen faktor som trolig påvirker resultatene i vårt prosjekt. I dette
-tilfellet fantes det enkelte deltakere som hadde gjennomført en liknende
-test flere ganger, og en kan da forvente en mindre grad av variasjon
-mellom resultatene på pre og post test, sammenlignet med de deltakerne
-som gjennomførte testen for første gang på pretest. Dette fordi
-kjennskapen og kunnskapen de tilegnet seg på pre-test, trolig spiller
-inn på testresultatene. Standardfeilen på 4.04\% kan også tyde på at
-enkelte av disse resultatene kan være utsatt for konfundering av ulik
-sort (\protect\hyperlink{ref-hopkins2000}{\textbf{hopkins2000?}}).
-
-Grunnen til at vi snakker om standardfeil er at når vi ønsker å måle
-påvirkningen av trening på en gruppe individer er det viktig å kunne si
-noe om hva som er endring og hva som er støy (målefeil). Desto mindre
-støy en test innebærer jo bedre er målingen. Målet som brukes er
-standardfeil. Hva som danner denne variasjonen som representeres ved
-typical error er multifaktorelt, men hoveddelen er som oftest biologisk
-(\protect\hyperlink{ref-hopkins2000}{\textbf{hopkins2000?}}).
-
-For å måle standardfeil har vi brukt within subject deviation metoden.
-Denne metoden påvirkes ikke av at gjennomsnittet endrer seg fra test til
-test (\protect\hyperlink{ref-clark2007}{\textbf{clark2007?}}). Dette
-indikerer at med godt kalibrert utstyr og med utøvere som er godt vant
-med testingen vil en standardfeil på 2\% for det biologiske, og
-analytiske være riktig
-(\protect\hyperlink{ref-halperin2015}{\textbf{halperin2015?}}). Vår
-standardfeil på 4.04\% kan derfor tenkes å være et bilde hvordan det kan
-se ut med få deltakere, med ulikt utgangspunkt, men også uten skikkelig
-standardisering av treningshverdagen i forkant av testene. Det kan også
-tenkes at med et varierende nivå hos deltagerne kan enkelte oppleve en
-treningseffekt av test 1. Samtidig som andre kanskje ble slitne av å få
-en test inn i treningshverdagen.
 
 \hypertarget{referanser}{%
 \section{Referanser}\label{referanser}}
@@ -291,5 +112,68 @@ en test inn i treningshverdagen.
 \hypertarget{formuxe5l}{%
 \section{Formål}\label{formuxe5l}}
 
-\backmatter
+\hypertarget{arbeidskrav-i-vitenskapsteori}{%
+\chapter{Arbeidskrav i vitenskapsteori}\label{arbeidskrav-i-vitenskapsteori}}
+
+Placeholder
+
+\hypertarget{oppgave-1}{%
+\section{Oppgave 1}\label{oppgave-1}}
+
+\hypertarget{oppgave-2}{%
+\section{Oppgave 2}\label{oppgave-2}}
+
+\hypertarget{oppgave-3}{%
+\section{Oppgave 3}\label{oppgave-3}}
+
+\hypertarget{referanser-1}{%
+\section{Referanser}\label{referanser-1}}
+
+\hypertarget{styrke-og-utholdenhetstrening-for-godt-trente-syklister}{%
+\chapter{Styrke og utholdenhetstrening for godt trente syklister}\label{styrke-og-utholdenhetstrening-for-godt-trente-syklister}}
+
+Styrketrening og utholdenhetstrening for godt trente syklister Introduksjon I denne oppgaven skal jeg se på fem ulike forskningsartikler som undersøke hvilken effekt styrketrening, i tillegg til utholdenhetstrening, har på godt trente syklister. Disse fem artiklene har jeg valgt på bakgrunn av at alle ser på hvilken effekt styrketrening har på prestasjon i sykkel, og hvordan de har brukt ulike metoder og tester for å vise resultatet.
+
+\hypertarget{metode-1}{%
+\section{Metode}\label{metode-1}}
+
+\underline{\textbf{Hypotese}} Litteraturen som er valgt til denne oppgaven har alle som hovedmål å undersøke hvordan tung styrketrening i tillegg til vanlig utholdenhetstrening vil påvirke ulike prestasjonsfaktorer innenfor sykling. Hvilke prestasjonsfaktorer som blir vektlagt varierer mellom de ulike forskningsartiklene. Rønnestad \citep{rønnestad2010b} presenterer sin hypotese at styrketreningen vil påvirke muskeltverrsnitt i lårmuskulaturen, power output, windgate test, og 40 min all-out test. Vikmoen et al \citep{vikmoen2016} presenterer samme hypotese, men studien gjennomføres kun på kvinnelige elitesyklister. I artikkelen fra \citep{rønnestad2010a} har Rønnestad et al en hypotese om at vedlikehold av tung styrketrening gjennom starten av treningssesongen vil positivt påvirke utholdenheten over lengre konkurranser i slutten av en 13 ukers periode. Dette minne om hypotesen Aagaard 2011 legger frem, men intervensjonen og resultater blir gjennomført i forberedelses sesong, og ikke i konkurransesesong. Siste artikkel har en hypotese som sier at 10 uker med tung styrketrening sammen med utholdenhetstrening, og 15 uker med vedlikehold av styrketreningen vil gi økt styrke i pedaltråkk og øke styrken i benmuskulaturen \citep{rønnestad2015}.
+
+\underline{\textbf{Studie design}}
+
+Forskningsartiklene som er brukt i denne oppgaven har som hovedmål å finne ut hvordan styrketrening, sammen med utholdenhetstrening, påvirker profesjonelle eller godt trente syklisters prestasjon. Felles for alle studiene er at de gjennomføre en styrkeintervensjon fra 11 til 25 uker på intervensjonsgruppene, og sammenligner forskjellene i ulike styrke- og utholdenhetstester med en kontrollgruppe. De sammenligner Dette vil si at alle studiene bruker randomisert kontrollert studie {[}RCT{]} som studiedesign. I et RCT blir deltakerne tilfeldig valgt hvilken gruppe de tilhører, kontrollgruppe eller intervensjonsgruppe. Ved å tilfeldig fordele de ulike deltakerne i kontrollgruppe, og intervensjonsgruppe vil man minske sannsynligheten for at det er store forskjeller mellom gruppene \citep{hulley2013, Parab2010}. Det er med fordel at alle studiene i denne oppgaven bruker dette studie designet for å kunne se effekten for intervensjonsgruppen, mot kontrollgruppen. Dette vil si at resultatene vil vise hvilken effekt intervensjonen har eller ikke har, og ikke være påvirket av store gruppeforskjeller \citep{helsebiblioteketuå} . Utvalg: I de ulike studiene skilte deltaker gruppene seg fra 12 til 23 deltakere. Alle deltakerne var godt trente syklister. I noen av prosjektene var deltakerne syklister på høyt nasjonalt eller internasjonalt nivå \citep{rønnestad2010a, rønnestad2010b, rønnestad2015, aagaard2011}. Ingen av forfatterne beskrev rekrutteringsprosessen eller at det ble gjennomført en styrkeberegning (antall beregning) for å argumentere for antall deltakere i studiene.
+
+\underline{\textbf{Tester}}
+
+Alle forskningsprosjektene gjennomført av Rønnestad \citep{rønnestad2010a, rønnestad2010b, rønnestad2015} gjennomfører de samme fysiske testene for å teste intervensjonsgruppen mot kontrollgruppen. Disse testene er beskrevet i tabell 1. Vo2 maks test, windgate og 40 min all-out test ble brukt i prosjektet gjennomført av Vikmoen \citep{vikmoen2016}. I det siste prosjektet ble det gjennomført en 5 min prestasjonstest for å se på effekten av intervensjonen ved kort utholdenhetsprestasjon \citep{aagaard2011}. Det ble og gjennomført en 45 min utholdenhetstest. Felles for alle forskningsprosjektene er at testene var standardisert, for å øke validiteten. Deltakerne måtte følge visse regler under testdagene slik at de eksterne faktorene skulle være så like som mulige. Dette innebar regulasjoner på inntak av mat og drikke, og trening under testdagene. Testtidspunkt var standardisert til den enkelte deltaker, slik at testene ble gjennomført likt på dagen, og temperaturen i testrommet var standardisert på alle utøverne.
+
+De ulike artiklene har brukt forskjellige statistiske tester, for å regne ut forskjellen mellom gruppene. For å regne ut forskjellen mellom gruppene ved pre-test har fire av prosjektene brukt uparret t-test \citep{rønnestad2010a, rønnestad2010b, rønnestad2015, vikmoen2016}. En t-test blir brukt for å regne ut om det er signifikant forskjell mellom gjennomsnittet til to grupper. I disse studiene er t-testen brukt på to uavhengige grupper, som gjør at man må bruke en uparet t-test \citet{kim2015} . I motsetning til de andre har Aagaard \citep{aagaard2011} gjennomført en ikke parametisk ANOVA analyse for å regne ut forskjellen mellom gruppene ved pre-test. Ikke parametiske analyser brukes for å sammenligne data som ikke møter standarden for nomralditrubisjon, eller for mindre grupper som Aagaard har (n=14) \citep{altman2009}. Enveis ANOVA er en variasjonsanalyse som regner ut forskjellen i gjennomsnitt mellom to ulike grupper grupper. Hvis dette gir en p-verdi som er lavere enn det gitte signifikans nivået kan man konkludere med at det er forskjell mellom gruppene, men man kan ikke si hvilken forskjell det er. For å finne denne må man gjennomføre en post hoc test for å finne hvilke grupper som er ulike (kilde). For å regne ut den relative forskjellen mellom intervensjonsgruppen og kontrollgruppen har Aagard også brukt en ikke-parametisk ANOVA med post hoc. Vikmoen \citep{vikmoen2016} og Rønnestad \citep{rønnestad2015} brukte uparet t-test for å regne ut relativ forskjell mellom gruppene. Rønnestad \citep{rønnestad2010a, rønnestad2010b} gjennomførte en toveis ANOVA med Bonferroni for å regne ut den relative forskjellen ved post-test. Ved å bruke bonferroni vil de slippe å gjennomføre flere t-tester og få flere p-verdier
+
+Resultater \citep{rønnestad2010b} økte snittwatten med 6.0 +- 1.7\%, Men det var en tendens til høyere snittwatt i kontrollgruppen (4.6 ± 2.0\%). Det var ingen signifikant endring mellom gruppene, og det var kun kontrollgruppen som forbedret watten signifikant. Den maksimal styrken økte med 21.2 ± 4.9\% i kontrollgruppen. Det var en signifikant forskjell mellom gruppene i maksimal styrke. \citet{rønnestad2010a} Resultatene viser en signifikant forskjell mellom intervensjonsgruppen og kontrollgruppen etter endt intervensjon. Intervensjonsgruppen økte prestasjonen med 14 ±3\%, og kontrollgruppen økte 4 ±1\% \citet{rønnestad2015} Intervensjonsgruppen økte snittwatten med 6,5 ±5,7\%. Gruppen som bare trente utholdenhet, hadde ingen endring i prestasjon. Det var en signifikant økning i intervensjonsgruppen i forhold til kontrollgruppen \citet{aagaard2011} Etter endt studie økte intervensjonsgruppen prestasjonen med 8\% på 45 min prestasjonstesten. På 45 minutters prestasjonstest. Forfatterne konkluderer med at det var en signifikant forskjell mellom de to ulike gruppene på prestasjonstesten. \citet{vikmoen2016} Intervensjonsgruppen hadde en økning 6,4\% ± 7,9 \% på 40 minutters prestasjonstest. Det var ingen signifikant endring i kontrollgruppen 2,0 ±6,1\%). Ingen signifikant forskjell mellom gruppene.
+
+\hypertarget{referanser-2}{%
+\section{Referanser}\label{referanser-2}}
+
+\hypertarget{ett-sett-vs-tre-sett-styrketrening}{%
+\chapter{Ett sett vs tre sett styrketrening}\label{ett-sett-vs-tre-sett-styrketrening}}
+
+Placeholder
+
+\hypertarget{introduksjon-1}{%
+\section{Introduksjon}\label{introduksjon-1}}
+
+\hypertarget{resultater-1}{%
+\section{Resultater}\label{resultater-1}}
+
+\hypertarget{diskusjon-1}{%
+\section{Diskusjon}\label{diskusjon-1}}
+
+\hypertarget{konklusjon}{%
+\section{Konklusjon}\label{konklusjon}}
+
+\hypertarget{referanser-3}{%
+\section{Referanser}\label{referanser-3}}
+
+  \bibliography{book.bib,packages.bib}
+
 \end{document}
