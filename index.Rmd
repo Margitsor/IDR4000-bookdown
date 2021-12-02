@@ -32,8 +32,8 @@ sees på som et mål på den aerobe effekten til utøveren [@bassett2000]. I
 Olympiatoppens testprotokoller benytter de flere definerte
 hjelpekriterier for å sikre at man faktisk har funnet deltakerens
 maksimale oksygenopptak [@tønnessen2017]. Følgende kriterier er
-beskrevet; platå i vo2maks er oppnådd, økning i ventilasjon med
-utflating av vo2maks verdi, RER over 1.10 (hvis laktatprofil er
+beskrevet; platå i V̇O~2max~ er oppnådd, økning i ventilasjon med
+utflating av V̇O~2max~ verdi, RER over 1.10 (hvis laktatprofil er
 gjennomført i forkant er 1.05 gjellende), og blodlaktat over 8
 \[@tønnessen2017\].
 
@@ -159,27 +159,27 @@ read_excel("~/Documents/Master i treningsfysiologi/R-studio/IDR4000-bookdown/Dat
 
 ## Diskusjon
 
-Typefeilen på 4.04% kan tyde på at enkelte av disse resultatene kan være
-utsatt for støy av ulik sort \[@hopkins2000\]. Ettersom testing av
-maksimalt oksygenopptak er en test som gjennomføres til utmattelse, vil
-man kunne forvente en viss variasjon i testresultatene ettersom opplevd
-anstrengelse kan påvirkes av flere ulike variabler [@halperin2015]. For
-å redusere støy vil flere faktorer være nyttig å ta hensyn til under
-slik testing. Som nevnt i metoden vil standardisering av matinntak,
-koffeininntak, utstyr og tidspunkt for gjennomføring av test være med på
-å kunne sikre intern validitet i resultatene. Eksempler er deltakernes
-kjennskap til testen, verbal oppmuntring og personer tilstede under
-testen er andre faktorer som potensielt kan bidra til støy
-[@halperin2015]. Felles for alle faktorer er at graden av påvirkning på
-resultatene muligens reduseres ved hjelp av en standardisert
-testprotokoll. Deltakerne - og testlederne, sin kjennskap til testen er
-en annen faktor som trolig påvirker resultatene i vårt prosjekt. I dette
-tilfellet fantes det enkelte deltakere som hadde gjennomført en liknende
-test flere ganger, og en kan da forvente en mindre grad av variasjon
-mellom resultatene på test 1 og test 2, sammenlignet med de deltakerne
-som gjennomførte testen for første gang under test 1. Dette fordi
-kjennskapen og kunnskapen de tilegnet seg på test , trolig spiller inn
-på testresultatene.
+Resultatet i vårt studie er at typefeil er på 4.04%. Typefeilen kan tyde
+på at enkelte av disse resultatene kan være utsatt for støy av ulik sort
+\[@hopkins2000\]. Ettersom testing av maksimalt oksygenopptak er en test
+som gjennomføres til utmattelse, vil man kunne forvente en viss
+variasjon i testresultatene ettersom opplevd anstrengelse kan påvirkes
+av flere ulike variabler [@halperin2015]. For å redusere støy vil flere
+faktorer være nyttig å ta hensyn til under slik testing. Som nevnt i
+metoden vil standardisering av matinntak, koffeininntak, utstyr og
+tidspunkt for gjennomføring av test være med på å kunne sikre intern
+validitet i resultatene. Eksempler er deltakernes kjennskap til testen,
+verbal oppmuntring og personer tilstede under testen er andre faktorer
+som potensielt kan bidra til støy [@halperin2015]. Felles for alle
+faktorer er at graden av påvirkning på resultatene muligens reduseres
+ved hjelp av en standardisert testprotokoll. Deltakerne - og
+testlederne, sin kjennskap til testen er en annen faktor som trolig
+påvirker resultatene i vårt prosjekt. I dette tilfellet fantes det
+enkelte deltakere som hadde gjennomført en liknende test flere ganger,
+og en kan da forvente en mindre grad av variasjon mellom resultatene på
+test 1 og test 2, sammenlignet med de deltakerne som gjennomførte testen
+for første gang under test 1. Dette fordi kjennskapen og kunnskapen de
+tilegnet seg på test , trolig spiller inn på testresultatene.
 
 Grunnen til at vi snakker om typefeil er at når vi ønsker å måle
 påvirkningen av trening på en gruppe individer er det viktig å kunne si
