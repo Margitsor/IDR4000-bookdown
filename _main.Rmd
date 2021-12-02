@@ -225,7 +225,7 @@ Laget sju forskjellige master mixer ved hjelp av 3 referansegener (REEP5, CHMP2A
 
 Forberedt en PCR protokoll i Quant studio 5 50 grader i 2 min, og 95 grader i 2 min + 40 sykluser med 1 sek på 95 grader, og 30sek på 60 grader
 
-```{r}
+```{r setup, include=FALSE}
 if("qpcR" %in% rownames(installed.packages()) == FALSE) install.packages("qpcR")
 if("readxl" %in% rownames(installed.packages()) == FALSE) install.packages("readxl")
 if("parallel" %in% rownames(installed.packages()) == FALSE) install.packages("parallel")
@@ -233,7 +233,7 @@ if("parallel" %in% rownames(installed.packages()) == FALSE) install.packages("pa
 if("qpcrpal" %in% rownames(installed.packages()) == FALSE) {
   
   library(remotes)
-  remotes::install_github("dhammarstrom/qpcrpal", build_vignettes = TRUE)
+  remotes::install_github("dhammarstrom/qpcrpal", build_vignettes = FALSE)
   
 }
 # Load packages
@@ -252,7 +252,7 @@ library(tidyverse)
 -   `analyze_models` use the information in each model to calculate summaries for each reaction.
 
 ```{r}
-group1 <- read_quant5("./data/IDR4000-Group1-precision.xls", skip = 47) %>%
+group1 <- read_quant5("Data/IDR4000-Group1-precision.xls", skip = 47) %>%
   mutate(ID = paste0(Well, "_", ID))
 models <- model_qpcr(group1)
 results_group1 <- analyze_models(models)
@@ -448,7 +448,7 @@ Styrketrening og utholdenhetstrening for godt trente syklister Introduksjon I de
 
 ## Metode
 
-Hypotese
+[**Hypotese**]{.ul}
 
 Litteraturen som er valgt til denne oppgaven har alle som hovedmål å undersøke hvordan tung styrketrening i tillegg til vanlig utholdenhetstrening vil påvirke ulike prestasjonsfaktorer innenfor sykling. Hvilke prestasjonsfaktorer som blir vektlagt varierer mellom de ulike forskningsartiklene. Rønnestad [@rønnestad2010b] presenterer sin hypotese at styrketreningen vil påvirke muskeltverrsnitt i lårmuskulaturen, power output, windgate test, og 40 min all-out test. Vikmoen et al [@vikmoen2016] presenterer samme hypotese, men studien gjennomføres kun på kvinnelige elitesyklister. I artikkelen fra [@rønnestad2010a] har Rønnestad et al en hypotese om at vedlikehold av tung styrketrening gjennom starten av treningssesongen vil positivt påvirke utholdenheten over lengre konkurranser i slutten av en 13 ukers periode. Dette minner om hypotesen Aagaard 2011 legger frem, men intervensjonen og resultater blir gjennomført i forberedelses sesong, og ikke i konkurransesesong. Siste artikkel har en hypotese som sier at 10 uker med tung styrketrening sammen med utholdenhetstrening, og 15 uker med vedlikehold av styrketreningen vil gi økt styrke i pedaltråkk og øke styrken i benmuskulaturen [@rønnestad2015].
 
@@ -496,13 +496,13 @@ Litteraturen som er valgt til denne oppgaven har alle som hovedmål å undersøk
 |                 |               |           |              | Windgate                          |                                       |
 +-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
 
-Tabell 1: Viser info om forskerne
+*Tabell 1:* Viser informasjon om studiedesing, deltakere, treningsintervensjon og tester
 
-Studie design
+[**Studie design**]{.ul}
 
-Forskningsartiklene som er brukt i denne oppgaven har som hovedmål å finne ut hvordan styrketrening, sammen med utholdenhetstrening, påvirker profesjonelle eller godt trente syklisters prestasjon. Felles for alle studiene er at de gjennomføre en styrkeintervensjon fra 11 til 25 uker på intervensjonsgruppene, og sammenligner forskjellene i ulike styrke- og utholdenhetstester med en kontrollgruppe. De sammenligner Dette vil si at alle studiene bruker randomisert kontrollert studie (RCT) som studiedesign. I et RCT blir deltakerne tilfeldig valgt hvilken gruppe de tilhører, kontrollgruppe eller intervensjonsgruppe. Ved å tilfeldig fordele de ulike deltakerne i kontrollgruppe, og intervensjonsgruppe vil man minske sannsynligheten for at det er store forskjeller mellom gruppene [@hulley2013; @Parab2010]. Det er med fordel at alle studiene i denne oppgaven bruker dette studie designet for å kunne se effekten for intervensjonsgruppen, mot kontrollgruppen. Dette vil si at resultatene vil vise hvilken effekt intervensjonen har eller ikke har, og ikke være påvirket av store gruppeforskjeller [@helsebiblioteketuå] . Utvalg: I de ulike studiene skilte deltaker gruppene seg fra 12 til 23 deltakere. Alle deltakerne var godt trente syklister. I noen av prosjektene var deltakerne syklister på høyt nasjonalt eller internasjonalt nivå [@rønnestad2010a; @rønnestad2010b; @rønnestad2015; @aagaard2011]. Ingen av forfatterne beskrev rekrutteringsprosessen eller at det ble gjennomført en styrkeberegning (antall beregning) for å argumentere for antall deltakere i studiene.
+Forskningsartiklene som er brukt i denne oppgaven har som hovedmål å finne ut hvordan styrketrening, sammen med utholdenhetstrening, påvirker profesjonelle eller godt trente syklisters prestasjon. Felles for alle studiene er at de gjennomføre en styrkeintervensjon fra 11 til 25 uker på intervensjonsgruppene, og sammenligner forskjellene i ulike styrke- og utholdenhetstester med en kontrollgruppe. De sammenligner Dette vil si at alle studiene bruker randomisert kontrollert studie (RCT) som studiedesign. I et RCT blir deltakerne tilfeldig valgt hvilken gruppe de tilhører, kontrollgruppe eller intervensjonsgruppe. Ved å tilfeldig fordele de ulike deltakerne i kontrollgruppe, og intervensjonsgruppe vil man minske sannsynligheten for at det er store forskjeller mellom gruppene \[@hulley2013; @Parab2010\]. Det er med fordel at alle studiene i denne oppgaven bruker dette studie designet for å kunne se effekten for intervensjonsgruppen, mot kontrollgruppen. Dette vil si at resultatene vil vise hvilken effekt intervensjonen har eller ikke har, og ikke være påvirket av store gruppeforskjeller \[@helsebiblioteketuå\] . Utvalg: I de ulike studiene skilte deltaker gruppene seg fra 12 til 23 deltakere. Alle deltakerne var godt trente syklister. I noen av prosjektene var deltakerne syklister på høyt nasjonalt eller internasjonalt nivå \[@rønnestad2010a; @rønnestad2010b; @rønnestad2015; @aagaard2011\]. Ingen av forfatterne beskrev rekrutteringsprosessen eller at det ble gjennomført en styrkeberegning (antall beregning) for å argumentere for antall deltakere i studiene.
 
-Tester
+[**Tester**]{.ul}
 
 Alle forskningsprosjektene gjennomført av Rønnestad [@rønnestad2010a; @rønnestad2010b; @rønnestad2015] gjennomfører de samme fysiske testene for å teste intervensjonsgruppen mot kontrollgruppen. Disse testene er beskrevet i tabell 1. Vo2 maks test, windgate og 40 min all-out test ble brukt i prosjektet gjennomført av Vikmoen [@vikmoen2016]. I det siste prosjektet ble det gjennomført en 5 min prestasjonstest for å se på effekten av intervensjonen ved kort utholdenhetsprestasjon [@aagaard2011]. Det ble og gjennomført en 45 min utholdenhetstest. Felles for alle forskningsprosjektene er at testene var standardisert, for å øke validiteten. Deltakerne måtte følge visse regler under testdagene slik at de eksterne faktorene skulle være så like som mulige. Dette innebar regulasjoner på inntak av mat og drikke, og trening under testdagene. Testtidspunkt var standardisert til den enkelte deltaker, slik at testene ble gjennomført likt på dagen, og temperaturen i testrommet var standardisert på alle utøverne.
 
@@ -520,12 +520,17 @@ Aagaard finner i sitt studie økte intervensjonsgruppen prestasjonen med 8% på 
 
 I studiet gjennomført på kvinner viser resultatene viser ingen signifikant forskjell mellom gruppene. Dette viser at hypotesen forfatterne presenterte i starten av studien ikke stemmer med resultatene etter endt intervensjon. Dette vil si at det ikke er en signifikant forskjell mellom kontrollgruppen som kun gjennomførte utholdenhetstrening, og intervensjonsgruppen som gjennomførte styrke og utholdenhetstrening [@vikmoen2016].
 
-## Konklusjon 
+## Konklusjon
 
 Flere at forfatterne kan konkludere med at hypotesen og resultat stemmer \[@aagaard2011; @rønnestad2015; @rønnestad2010a\]. I disse studiene viser forfatter at hypotesen de har lagt frem før gjennomført studie stememr med hovedfunnene i studiene. Dette vil si at tung styrketrening i tillegg til utholdenhetstrening har en positiv effekt på prestasjonsfaktorer i sykkel. Rønnestad \[@rønnestad2010b\] sine hovedfunn viser at deler av hypotesen stemmer med resultatene. Hypotesen om at lårmuskulaturens tverrsnitt vil øke, stemmer med resultatene, men de kan ikke konkludere med at intervensjonen har en effekt på 40 min all-out test. På den andre siden viser resultatene til vikmoen \[@vikmoen2016\] at hypotesen og resultat ikke stemmer, og kan ikke konkludere med at treningsintervensjonen har den forventede effekten.
 
 <!--chapter:end:03-Arbeidskrav4.rmd-->
 
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 # Ett sett vs tre sett styrketrening 
 
 ## Introduksjon
@@ -604,28 +609,14 @@ styrkedat %>%
 dxa <- lm(post ~ pre + sex + sets, data = styrkedat)
 summary(dxa)
 plot(dxa)
+confint(dxa)
 ```
 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", fig.cap = "Muskelvekst fra pretest - posttest for alle forsøkspersoner skilt ved ett- sett og tre- sett"}
-#endre teksten 
-moddat <- dxadata %>%
-  select(participant:include, lean.left_leg, lean.right_leg) %>%
-  pivot_longer(names_to = "leg", 
-               values_to = "lean.mass", 
-               cols = lean.left_leg:lean.right_leg) %>%
-   mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
-         sets = if_else(multiple == leg, "Multiple", "Single")) %>%
-  select(participant, time, sets, sex, leg, lean.mass) %>%
-  group_by(participant) %>%
-  mutate(n = n(), group = factor(sets, levels = c("Single", "Multiple")), time = factor(time, levels = c("pre", "post")))
 
-moddat %>%
- ggplot(aes(time, lean.mass, group = paste(participant, group), color = group)) + geom_line() + theme_bw()
-```
 
 [**Muskel styrke**]{.ul}
-Resultatene viser at 12 ukers treningsintervensjon fører til en endring i muskelstyrke fra pre til post test på beina som gjennomførte et sett. mellom beina som gjennomførte ett sett (31,0 ± 14,2%, p<0,001), og beina som gjennomførte tre sett (2,04 ± 3,71%, p< 0,001). Endring i muskelstyrke for de ulike treningsintervensjonene ved post test er signifikant (0.029 ae, p<0.029).
+Resultatene viser at 12 ukers treningsintervensjon fører til en endring i muskelstyrke fra pre til post test på beina som gjennomførte et sett. mellom beina som gjennomførte ett sett (31,0 ± 14,2%, p<0,001), og beina som gjennomførte tre sett (2,04 ± 3,71%, p< 0,001). Endring i muskelstyrke for de ulike treningsintervensjonene ved post test er signifikant (p<0.029).
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
 styrkedat1 <- strengthvolume %>%
@@ -650,22 +641,35 @@ styrkedat1 %>%
 m2 <- lm(post ~ pre + sex + sets, data = styrkedat1)
 summary(m2)
 plot(m2)
+confint(m2)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", fig.cap = "Figur 2 viser endring i muskelstyrke for alle forsøkspersonene fra pre- post skildt ved single- sett og multiple- sett"}
-#Endre teksten 
-styrkemod <- strengthvolume %>%
-  group_by(exercise) %>%
-  mutate(scaled.load = load / max(load, na.rm = TRUE)) %>%
-  group_by(participant, time, sex, sets) %>%
-  summarise(combined.load = mean(scaled.load, na.rm = TRUE)) %>%
-  ungroup() 
 
-styrkemod %>%
-  filter(!is.na(combined.load), time == factor(time, levels = c("pre", "post"))) %>%
-  mutate(time = factor(time, levels = c("pre", "post")),
-         group = factor(sets, levels = c("Single", "Multiple"))) %>%
- ggplot(aes(time, combined.load, group = paste(participant, sets), color = sets)) + geom_line() + theme_bw() 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", out.width="120%", fig.cap= "Figuren viser økning i muskelstyrke mellom ett-sett og tre-sett ved pre- og post-test etter 12 uker med styrketrening (diff= -0.029AU)"}
+strengthvolume %>%
+  filter(exercise == "legext", time %in% c("pre", "post")) %>%
+  group_by(sets, time) %>%
+  summarise(m = mean(load, na.rm = TRUE), 
+            s = sd(load, na.rm = TRUE)) %>%
+  mutate(time = factor(time, levels = c("pre", "post"), labels = c("Pre-training", "Post-training")), 
+         sets = factor(sets, levels = c("single", "multiple"), labels = c("Single-set", "Multiple-set"))) %>%
+  ggplot(aes(time, m, color = sets)) + 
+  
+  geom_errorbar(aes(ymin = m - s, ymax = m + s), 
+                position = position_dodge(width = 0.2), 
+                width = 0.2) +
+  geom_point(position = position_dodge(width = 0.2)) +
+  
+  labs(x = "Time-point", 
+       y = "Average load (kg)", 
+       color = "Sets") +
+  theme_classic() +
+  
+  
+  
+  theme(legend.position = c(0.1, 0.9))
+
 ```
 
 ## Diskusjon
