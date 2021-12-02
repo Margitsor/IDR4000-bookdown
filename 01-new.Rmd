@@ -41,7 +41,7 @@ library(tidyverse)
 -   `analyze_models` use the information in each model to calculate summaries for each reaction.
 
 ```{r}
-group1 <- read_quant5("~/Documents/Master i treningsfysiologi/R-studio/IDR4000-bookdown/Data/IDR4000-Group1-precision.xls", skip = 47) %>%
+group1 <- read_quant5("Data/IDR4000-Group1-precision.xls", skip = 47) %>%
   mutate(ID = paste0(Well, "_", ID))
 models <- model_qpcr(group1)
 results_group1 <- analyze_models(models)
