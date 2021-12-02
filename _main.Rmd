@@ -211,17 +211,19 @@ treningshverdagen.
 
 # Labrapport - cDNA synthesis using Superscript IV and general qPCR
 
-## Bakgrunn
+## Formål
 
 RNA-overflodsanalyse er gjort ved hjelp av syntese av komplementært DNA fra enkelttrådet RNA. Vi ønsker å amplifisere opp bestemte proteiner ved hjelp av bestemte primere og qPCR. Vi ønsker å få frem en cQ-verdi for å kunne evaluere gen-opphopningen, og sammenlikne mål-genene med referanse gener.
 
+Estimere reaksjonseffektivitet Dobler mengden målgen per syklus
+
 ## Metode
 
-Estimate fold-change 3 forsøkspersoner fra pre-test og test uke 2 (venstre ben) Laget fortynningsserie av cDNA 1:1, 5 ganger. Dette resulterer i fortynning 1:10, 1:50, 1:250, 1:1250, 1:6250, 1:31250, 1:156250
+3 forsøkspersoner fra pre-test og test uke 2 (venstre ben) Laget fortynningsserie av cDNA 1:1, 5 ganger. Dette resulterer i fortynning ved hjelp DEPC-behandlet vann 1:10, 1:50, 1:250, 1:1250, 1:6250, 1:31250, 1:156250. Vortex ble brukt mellom hver fortynningsfase.
 
-Laget sju forskjellige master mixer. 3 referansegener (REEP5, CHMP2A, B2M) og 4 målgener (MyHC I, 2A, 2X, rRNA 475). Mastermix bestod av: 5 µl sybr green, 1 µl valgt gen, 2 µl H2o, 2 µl fortynnet cDNA Fylte hver brønn med 2 µl prøve, og 8 µl med mastermix. Dekke brett med plastfilm, og sentrifugere 1min på 1200rpm, før PCR protokoll
+Laget sju forskjellige master mixer ved hjelp av 3 referansegener (REEP5, CHMP2A, B2M) og 4 målgener (MyHC I, 2A, 2X, rRNA 475). Mastermix bestod av: 5 µl sybr green, 1 µl valgt gen, 2 µl DEPC-behandlet vann , 2 µl fortynnet cDNA. Fylte hver brønn med 2 µl prøve, og 8 µl med mastermix. Dekke brett med plastfilm, og sentrifugere 1min på 1200rpm, før PCR protokoll.
 
-Estimere reaksjonseffektivitet Dobler mengden målgen per syklus Forberedt en PCR protokoll i Quant studio 5 50 grader i 2 min, og 95 grader i 2 min + 40 sykluser med 1 sek på 95 grader, og 30sek på 60 grader
+Forberedt en PCR protokoll i Quant studio 5 50 grader i 2 min, og 95 grader i 2 min + 40 sykluser med 1 sek på 95 grader, og 30sek på 60 grader
 
 ```{r}
 if("qpcR" %in% rownames(installed.packages()) == FALSE) install.packages("qpcR")
@@ -250,13 +252,13 @@ library(tidyverse)
 -   `analyze_models` use the information in each model to calculate summaries for each reaction.
 
 ```{r}
-group1 <- read_quant5("./data/qpcr/IDR4000-Group1-precision.xls", skip = 47) %>%
+group1 <- read_quant5("./data/IDR4000-Group1-precision.xls", skip = 47) %>%
   mutate(ID = paste0(Well, "_", ID))
 models <- model_qpcr(group1)
 results_group1 <- analyze_models(models)
 ```
 
-```{r, echo = FALSE, fig.caption = "An example reaction"}
+```{r, echo = FALSE, fig.caption = "Figur 1: Figuren viser sammenhengen mellom antall PCR-sykluser og fluorescence "}
 data.frame(predict(models[[1]]), cycle = 1:40) %>%
   ggplot(aes(cycle, Prediction)) +
   geom_line() +
@@ -303,7 +305,7 @@ dat %>%
 
 #konsekvente tall fra referansegen som vist i modellen?
 
-group1 <- read_quant5("./data/qpcr/group1-efficiency.xls", skip = 47) %>%
+group1 <- read_quant5("./data/group1-efficiency.xls", skip = 47) %>%
   mutate(ID = paste0(Well, "_", ID))
 models1 <- model_qpcr(group1)
 results_group1 <- analyze_models(models1)
@@ -323,7 +325,7 @@ eff_g1 <- results_group1 %>%
          concentration = 1/concentration) %>%
    dplyr::select(target, concentration, cq) 
 #### Group 2
-group2 <- read_quant5("./data/qpcr/group2-efficiency.xls", skip = 47) %>%
+group2 <- read_quant5("./data/group2-efficiency.xls", skip = 47) %>%
   mutate(ID = paste0(Well, "_", ID))
 models2 <- model_qpcr(group2)
 results_group2 <- analyze_models(models2)
@@ -341,7 +343,7 @@ eff_g2 <- results_group2 %>%
          concentration = 1/concentration) %>%
    dplyr::select(target, concentration, cq) 
 ### Group 3
-group3 <- read_quant5("./data/qpcr/group3-efficiency.xls", skip = 47) %>%
+group3 <- read_quant5("./data/group3-efficiency.xls", skip = 47) %>%
   mutate(ID = paste0(Well, "_", ID))
 models3 <- model_qpcr(group3)
 results_group3 <- analyze_models(models3)
@@ -370,7 +372,7 @@ saveRDS(efficiency_est_data, "./data/efficiency-estimate-data.RDS")
 
 ```
 
-```{r}
+```{r }
  # Create models and extract the second coefficient from each model (the slope)
 b2m_slope <- coef(lm(cq ~ log10(concentration), data = filter(efficiency_est_data, target == "B2M")))[2]
 reep5_slope <- coef(lm(cq ~ log10(concentration), data = filter(efficiency_est_data, target == "REEP5")))[2]
@@ -380,8 +382,9 @@ efficiency_estimates <- data.frame(target = c("B2M", "REEP5"),
                           10^-(1/reep5_slope)))
 ```
 
-```{r}
+```{r cqtabell, tab.cap= "Tabellen viser cq-verider"}
 ## Estimerte cq verdier? 
+library(flextable)
 fc_g1 <- results_group1 %>%
   separate(ID, into = c("well", "sample", "subsample", "time", "target")) %>%
   dplyr::select(well:target, cq = cpD2) %>%
@@ -389,54 +392,19 @@ fc_g1 <- results_group1 %>%
   dplyr::select(sample, time, target, cq) %>%
   mutate(target = toupper(target), 
          target = gsub("RRNA475", "RRNA47S", target)) %>%
+  group_by(sample)%>%
+  pivot_wider(names_from = target, values_from = cq) %>%
+  arrange(time) %>%
+   flextable() %>%
   print()
-fc_g2 <- results_group2 %>%
-  separate(ID, into = c("well", "sample", "time", "na", "target")) %>%
-  dplyr::select(well:target, cq = cpD2) %>%
-  filter(sample %in% c("FP1", "FP2", "FP3")) %>%
-  mutate(target = toupper(target), 
-         target = if_else(target %in% c("2A", "2X"), paste0("MYHC", target),
-                 if_else(target == "RNA475", "RRNA47S", target))) %>%
-  dplyr::select(sample, time, target, cq) %>%
-  print()
-  
-fc_g3 <- results_group3 %>%
-  separate(ID, into = c("well", "sample", "conc", "target", "na")) %>%
-  dplyr::select(well:target, cq = cpD2) %>%
-  filter(sample %in% c("fp1", "fp2", "fp3")) %>%
-  mutate(sample = toupper(sample), 
-         target = toupper(target), 
-         target = if_else(target == "MYC2A", "MYHC2A", 
-                          if_else(target == "MYC2X", "MYHC2X",
-                                  if_else(target == "RRNA475", "RRNA47S", 
-                                          if_else(target == "MYCH1", "MYHC1", 
-                                          target)))) , 
-         time = toupper(conc)) %>%
-  dplyr::select(sample, time, target, cq) %>%
-                         
-  print()
-fc_data <- bind_rows(fc_g1, 
-          fc_g2, 
-          fc_g3) %>%
-  print()
-unique(fc_data$target)
 
-```
 
-```{r}
-library(kableExtra)
-library(flextable)
-cqtabell <- fc_data %>%
-select(sample, time, target, cq) %>% 
-  pivot_wider(names_from = target,
-              values_from = cq ) %>%
-   flextable()
-  
+
 ```
 
 ## Diskusjon
 
-Cq-verdien sier noe om hvor mange PCR-sykluser som trengs for å detektere ulike targets.En høyere Cq-verdi indikerer altså at mengden RNA må dobles flere ganger for å detektere en terskelverdi av target. En lavere Cq-verdi indikerer at terskelverdien oppnås ved færre PCR-sykluser, altså at konsentrasjonen av target er høyere. En lavere Cq-verdi ved uke 2, sammenlignet med uke 0(baseline) som i forsøket, indikerer høyere konsentrasjon ved uke 2 enn ved uke 0. (Dermed en effekt av intervensjonen, avhengig av funksjonen til target - gen).
+Cq-verdien sier noe om hvor mange PCR-sykluser som trengs for å detektere ulike targets[@juji] .En høyere Cq-verdi indikerer altså at mengden RNA må dobles flere ganger for å detektere en terskelverdi av target. En lavere Cq-verdi indikerer at terskelverdien oppnås ved færre PCR-sykluser, altså at konsentrasjonen av target er høyere. En lavere Cq-verdi ved uke 2, sammenlignet med uke 0(baseline) som i forsøket, indikerer høyere konsentrasjon ved uke 2 enn ved uke 0. (Dermed en effekt av intervensjonen, avhengig av funksjonen til target - gen).
 
 <!--chapter:end:01-new.rmd-->
 
@@ -474,10 +442,6 @@ Bird presenterer en mer akademisk forklaring enn de andre årsakene som blir nev
 
 <!--chapter:end:02-ArbeidskravVitenskapsteori.rmd-->
 
----
-biblo
----
-
 # Styrke og utholdenhetstrening for godt trente syklister
 
 Styrketrening og utholdenhetstrening for godt trente syklister Introduksjon I denne oppgaven skal jeg se på fem ulike forskningsartikler som undersøke hvilken effekt styrketrening, i tillegg til utholdenhetstrening, har på godt trente syklister. Disse fem artiklene har jeg valgt på bakgrunn av at alle ser på hvilken effekt styrketrening har på prestasjon i sykkel, og hvordan de har brukt ulike metoder og tester for å vise resultatet.
@@ -487,8 +451,6 @@ Styrketrening og utholdenhetstrening for godt trente syklister Introduksjon I de
 Hypotese
 
 Litteraturen som er valgt til denne oppgaven har alle som hovedmål å undersøke hvordan tung styrketrening i tillegg til vanlig utholdenhetstrening vil påvirke ulike prestasjonsfaktorer innenfor sykling. Hvilke prestasjonsfaktorer som blir vektlagt varierer mellom de ulike forskningsartiklene. Rønnestad [@rønnestad2010b] presenterer sin hypotese at styrketreningen vil påvirke muskeltverrsnitt i lårmuskulaturen, power output, windgate test, og 40 min all-out test. Vikmoen et al [@vikmoen2016] presenterer samme hypotese, men studien gjennomføres kun på kvinnelige elitesyklister. I artikkelen fra [@rønnestad2010a] har Rønnestad et al en hypotese om at vedlikehold av tung styrketrening gjennom starten av treningssesongen vil positivt påvirke utholdenheten over lengre konkurranser i slutten av en 13 ukers periode. Dette minner om hypotesen Aagaard 2011 legger frem, men intervensjonen og resultater blir gjennomført i forberedelses sesong, og ikke i konkurransesesong. Siste artikkel har en hypotese som sier at 10 uker med tung styrketrening sammen med utholdenhetstrening, og 15 uker med vedlikehold av styrketreningen vil gi økt styrke i pedaltråkk og øke styrken i benmuskulaturen [@rønnestad2015].
-
-`{knitr::opts_chunk$set(echo = TRUE)}`
 
 +-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
 |                 | Studie design | Deltakere | Intervensjon | Fysiske tester                    | Statistiske tester                    |
@@ -548,7 +510,19 @@ De ulike artiklene har brukt forskjellige statistiske tester, for å regne ut fo
 
 ## Resultat
 
-Resultater [@rønnestad2010b] økte snittwatten med 6.0 +- 1.7%, Men det var en tendens til høyere snittwatt i kontrollgruppen (4.6 ± 2.0%). Det var ingen signifikant endring mellom gruppene, og det var kun kontrollgruppen som forbedret watten signifikant. Den maksimal styrken økte med 21.2 ± 4.9% i kontrollgruppen. Det var en signifikant forskjell mellom gruppene i maksimal styrke. @rønnestad2010a Resultatene viser en signifikant forskjell mellom intervensjonsgruppen og kontrollgruppen etter endt intervensjon. Intervensjonsgruppen økte prestasjonen med 14 ±3%, og kontrollgruppen økte 4 ±1% @rønnestad2015 Intervensjonsgruppen økte snittwatten med 6,5 ±5,7%. Gruppen som bare trente utholdenhet, hadde ingen endring i prestasjon. Det var en signifikant økning i intervensjonsgruppen i forhold til kontrollgruppen @aagaard2011 Etter endt studie økte intervensjonsgruppen prestasjonen med 8% på 45 min prestasjonstesten. På 45 minutters prestasjonstest. Forfatterne konkluderer med at det var en signifikant forskjell mellom de to ulike gruppene på prestasjonstesten. @vikmoen2016 Intervensjonsgruppen hadde en økning 6,4% ± 7,9 % på 40 minutters prestasjonstest. Det var ingen signifikant endring i kontrollgruppen 2,0 ±6,1%). Ingen signifikant forskjell mellom gruppene.
+Rønnestad presenter resultater med gjennomsnittig kraftutvikling i 40 min all-out testen økte i forbredelsesperioden for både intervensjonsgruppen (8 ± 2%, p\<0,05) og kontrollgruppen (4 ± 1%, p\<0.05). Det var ingen signifikant forkjell i endring mellom gruppene. Fra pre-test til post-test hadde intervensjonsgruppen større endring i 40 min all-out (14 ± 3%, p\<0,05) enn kontrollgruppen (4 ± 1%, p\< 0,05). Dette stemmer med hypotesen de la frem i studiet [@rønnestad2010a].
+
+I den andre undersøkelsen av Rønnestad fra 2010 viser resultatene at muskeltversnittet til intervensjonsgruppen økte signifiknat fra pre til post test etter endt intervensjon (4.6 ± 0.5%, p \< 0.01), og kontrollgruppen hadde ingen endring. Ved 40 min all-out testen var det ingen signifikant endring mellom gruppene. Dette vil si at deler av hypotesen stemmer med resultatene som ble funnet \[@rønnestad2010b\].
+
+I prosjektet hvor Rønnestad undersøkte hvordan styrke påvirker pedaltråkk viser resultatene at endringene i maksimal styrke var større gjennom hele testperioden for intervensjonsgruppen fra 65.8 ± 8.1 kg til 66.9 ± 8.0 kg, P \< 0.05) enn for kontrollgruppen, (74.6 ± 7.1 kg til 75.9 ± 7.2 kg, P \< 0.05). Det var og en signifikant endring mellom gruppene på 40 min all-out testen (6.5 ± 5.7%, P \< 0.01). Disse resultatene er med på å underbygge at hypotesen stemmer [@rønnestad2015].
+
+Aagaard finner i sitt studie økte intervensjonsgruppen prestasjonen med 8% på 45 min prestasjonstesten (313.7± 45.9 til 340.1± 33.1 W, p\<0,05). Forskjellen i endring i prestasjonstesten mellom kontrollgruppen og intervensjonsgruppen var statistisk signifikant (p\<0,001) [@aagaard2011]. Dette stemmer med hypotesen som ble lagt frem før studien ble gjennomført. Intervensjonsgruppen hadde en økning 6,4% ± 7,9 % på 40 minutters prestasjonstest.
+
+I studiet gjennomført på kvinner viser resultatene viser ingen signifikant forskjell mellom gruppene. Dette viser at hypotesen forfatterne presenterte i starten av studien ikke stemmer med resultatene etter endt intervensjon. Dette vil si at det ikke er en signifikant forskjell mellom kontrollgruppen som kun gjennomførte utholdenhetstrening, og intervensjonsgruppen som gjennomførte styrke og utholdenhetstrening [@vikmoen2016].
+
+## Konklusjon 
+
+Flere at forfatterne kan konkludere med at hypotesen og resultat stemmer \[@aagaard2011; @rønnestad2015; @rønnestad2010a\]. I disse studiene viser forfatter at hypotesen de har lagt frem før gjennomført studie stememr med hovedfunnene i studiene. Dette vil si at tung styrketrening i tillegg til utholdenhetstrening har en positiv effekt på prestasjonsfaktorer i sykkel. Rønnestad \[@rønnestad2010b\] sine hovedfunn viser at deler av hypotesen stemmer med resultatene. Hypotesen om at lårmuskulaturens tverrsnitt vil øke, stemmer med resultatene, men de kan ikke konkludere med at intervensjonen har en effekt på 40 min all-out test. På den andre siden viser resultatene til vikmoen \[@vikmoen2016\] at hypotesen og resultat ikke stemmer, og kan ikke konkludere med at treningsintervensjonen har den forventede effekten.
 
 <!--chapter:end:03-Arbeidskrav4.rmd-->
 
