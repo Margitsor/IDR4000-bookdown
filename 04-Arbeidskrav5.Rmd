@@ -85,25 +85,10 @@ confint(dxa)
 ```
 
 
-{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", fig.cap = "Muskelvekst fra pretest - posttest for alle forsøkspersoner skilt ved ett- sett og tre- sett"}
-#endre teksten 
-moddat <- dxadata %>%
-  select(participant:include, lean.left_leg, lean.right_leg) %>%
-  pivot_longer(names_to = "leg", 
-               values_to = "lean.mass", 
-               cols = lean.left_leg:lean.right_leg) %>%
-   mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
-         sets = if_else(multiple == leg, "Multiple", "Single")) %>%
-  select(participant, time, sets, sex, leg, lean.mass) %>%
-  group_by(participant) %>%
-  mutate(n = n(), group = factor(sets, levels = c("Single", "Multiple")), time = factor(time, levels = c("pre", "post")))
-
-moddat %>%
- ggplot(aes(time, lean.mass, group = paste(participant, group), color = group)) + geom_line() + theme_bw()
 
 
 [**Muskel styrke**]{.ul}
-Resultatene viser at 12 ukers treningsintervensjon fører til en endring i muskelstyrke fra pre til post test på beina som gjennomførte et sett. mellom beina som gjennomførte ett sett (31,0 ± 14,2%, p<0,001), og beina som gjennomførte tre sett (2,04 ± 3,71%, p< 0,001). Endring i muskelstyrke for de ulike treningsintervensjonene ved post test er signifikant (0.029 ae, p<0.029).
+Resultatene viser at 12 ukers treningsintervensjon fører til en endring i muskelstyrke fra pre til post test på beina som gjennomførte et sett. mellom beina som gjennomførte ett sett (31,0 ± 14,2%, p<0,001), og beina som gjennomførte tre sett (2,04 ± 3,71%, p< 0,001). Endring i muskelstyrke for de ulike treningsintervensjonene ved post test er signifikant (p<0.029).
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
 styrkedat1 <- strengthvolume %>%
