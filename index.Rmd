@@ -23,9 +23,9 @@ editor_options:
 
 ## Introduksjon
 
-Maksimalt oksygenopptak V̇O~2max~ ble først beskrevet av [@hill1923\] ,
+Maksimalt oksygenopptak V̇O~2max~ ble først beskrevet av \[@hill1923\] ,
 og kan defineres som kroppens evne til å ta opp og forbruke oksygen per
-tidsenhet \[@hill1923; @Basset2000]. Innen toppidrett måles ofte det
+tidsenhet \[@hill1923; @Basset2000\]. Innen toppidrett måles ofte det
 maksimale oksygenopptaket for å måle utøverens kapasitet opp mot
 arbeidskravet i den spesifikke idretten, og V̇O~2max~ kan i så måte også
 sees på som et mål på den aerobe effekten til utøveren [@bassett2000]. I
@@ -136,7 +136,7 @@ I Figur 1 kan man se endringen fra test 1 til test 2 fordelt på kjønn.
 Den typiske målefeilen (typical error, [@hopkins2000]) fra test 1 til
 test 2 er utregnet til å være `r round(reliabilitet$cv, 2)`%.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "Figur 1 viser forskjellen i vo2max (ml/min) mellom test 1 og test 2"}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "Figuren viser forskjellen i vo2max (ml/min) mellom test 1 og test 2"}
 library(readxl)
 library(ggtext)
 
@@ -159,27 +159,28 @@ read_excel("~/Documents/Master i treningsfysiologi/R-studio/IDR4000-bookdown/Dat
 
 ## Diskusjon
 
-Resultatet i vårt studie er at typefeil er på 4.04%. Typefeilen kan tyde
-på at enkelte av disse resultatene kan være utsatt for støy av ulik sort
-\[@hopkins2000\]. Ettersom testing av maksimalt oksygenopptak er en test
-som gjennomføres til utmattelse, vil man kunne forvente en viss
-variasjon i testresultatene ettersom opplevd anstrengelse kan påvirkes
-av flere ulike variabler [@halperin2015]. For å redusere støy vil flere
-faktorer være nyttig å ta hensyn til under slik testing. Som nevnt i
-metoden vil standardisering av matinntak, koffeininntak, utstyr og
-tidspunkt for gjennomføring av test være med på å kunne sikre intern
-validitet i resultatene. Eksempler er deltakernes kjennskap til testen,
-verbal oppmuntring og personer tilstede under testen er andre faktorer
-som potensielt kan bidra til støy [@halperin2015]. Felles for alle
-faktorer er at graden av påvirkning på resultatene muligens reduseres
-ved hjelp av en standardisert testprotokoll. Deltakerne - og
-testlederne, sin kjennskap til testen er en annen faktor som trolig
-påvirker resultatene i vårt prosjekt. I dette tilfellet fantes det
-enkelte deltakere som hadde gjennomført en liknende test flere ganger,
-og en kan da forvente en mindre grad av variasjon mellom resultatene på
-test 1 og test 2, sammenlignet med de deltakerne som gjennomførte testen
-for første gang under test 1. Dette fordi kjennskapen og kunnskapen de
-tilegnet seg på test , trolig spiller inn på testresultatene.
+Resultatet i vårt reabilitetstudie er at typefeil er på 4.04%.
+Typefeilen kan tyde på at enkelte av disse resultatene kan være utsatt
+for støy av ulik sort \[@hopkins2000\]. Ettersom testing av maksimalt
+oksygenopptak er en test som gjennomføres til utmattelse, vil man kunne
+forvente en viss variasjon i testresultatene ettersom opplevd
+anstrengelse kan påvirkes av flere ulike variabler [@halperin2015]. For
+å redusere støy vil flere faktorer være nyttig å ta hensyn til under
+slik testing. Som nevnt i metoden vil standardisering av matinntak,
+koffeininntak, utstyr og tidspunkt for gjennomføring av test være med på
+å kunne sikre intern validitet i resultatene. Eksempler er deltakernes
+kjennskap til testen, verbal oppmuntring og personer tilstede under
+testen er andre faktorer som potensielt kan bidra til støy
+[@halperin2015]. Felles for alle faktorer er at graden av påvirkning på
+resultatene muligens reduseres ved hjelp av en standardisert
+testprotokoll. Deltakerne - og testlederne, sin kjennskap til testen er
+en annen faktor som trolig påvirker resultatene i vårt prosjekt. I dette
+tilfellet fantes det enkelte deltakere som hadde gjennomført en liknende
+test flere ganger, og en kan da forvente en mindre grad av variasjon
+mellom resultatene på test 1 og test 2, sammenlignet med de deltakerne
+som gjennomførte testen for første gang under test 1. Dette fordi
+kjennskapen og kunnskapen de tilegnet seg på test , trolig spiller inn
+på testresultatene.
 
 Grunnen til at vi snakker om typefeil er at når vi ønsker å måle
 påvirkningen av trening på en gruppe individer er det viktig å kunne si
@@ -191,11 +192,11 @@ error er multifaktorelt, men hoveddelen er som oftest biologisk
 
 For å måle typefeil har vi brukt within subject deviation metoden. Denne
 metoden påvirkes ikke av at gjennomsnittet endrer seg fra test til test
-[@hopkins2000\]. Data for målinger i VO2max fra fem sertifiserte
+\[@hopkins2000\]. Data for målinger i VO2max fra fem sertifiserte
 Australske laboratorier fastslo ett gjennomsnitt på 2.2% for typefeil
 \[@halperin2015\]. Data fra det Australske institutt for sport har også
 fastslått at en typefeil på omtrent 2% er riktig for både maksimal og
-submaksimal VO2 \[@clark2007; @robertson2010; @saunders2009]. Dette
+submaksimal VO2 \[@clark2007; @robertson2010; @saunders2009\]. Dette
 indikerer at med godt kalibrert utstyr og med utøvere som er godt vant
 med testingen vil en typefeil på 2% for det biologiske, og analytiske
 være riktig [@halperin2015]. Vår typefeil på 4.04% kan derfor tenkes å
