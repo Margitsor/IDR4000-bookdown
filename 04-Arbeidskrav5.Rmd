@@ -1,3 +1,8 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 # Ett sett vs tre sett styrketrening 
 
 ## Introduksjon
@@ -76,10 +81,11 @@ styrkedat %>%
 dxa <- lm(post ~ pre + sex + sets, data = styrkedat)
 summary(dxa)
 plot(dxa)
+confint(dxa)
 ```
 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", fig.cap = "Muskelvekst fra pretest - posttest for alle forsøkspersoner skilt ved ett- sett og tre- sett"}
+{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", fig.cap = "Muskelvekst fra pretest - posttest for alle forsøkspersoner skilt ved ett- sett og tre- sett"}
 #endre teksten 
 moddat <- dxadata %>%
   select(participant:include, lean.left_leg, lean.right_leg) %>%
@@ -94,7 +100,7 @@ moddat <- dxadata %>%
 
 moddat %>%
  ggplot(aes(time, lean.mass, group = paste(participant, group), color = group)) + geom_line() + theme_bw()
-```
+
 
 [**Muskel styrke**]{.ul}
 Resultatene viser at 12 ukers treningsintervensjon fører til en endring i muskelstyrke fra pre til post test på beina som gjennomførte et sett. mellom beina som gjennomførte ett sett (31,0 ± 14,2%, p<0,001), og beina som gjennomførte tre sett (2,04 ± 3,71%, p< 0,001). Endring i muskelstyrke for de ulike treningsintervensjonene ved post test er signifikant (0.029 ae, p<0.029).
@@ -122,22 +128,35 @@ styrkedat1 %>%
 m2 <- lm(post ~ pre + sex + sets, data = styrkedat1)
 summary(m2)
 plot(m2)
+confint(m2)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", fig.cap = "Figur 2 viser endring i muskelstyrke for alle forsøkspersonene fra pre- post skildt ved single- sett og multiple- sett"}
-#Endre teksten 
-styrkemod <- strengthvolume %>%
-  group_by(exercise) %>%
-  mutate(scaled.load = load / max(load, na.rm = TRUE)) %>%
-  group_by(participant, time, sex, sets) %>%
-  summarise(combined.load = mean(scaled.load, na.rm = TRUE)) %>%
-  ungroup() 
 
-styrkemod %>%
-  filter(!is.na(combined.load), time == factor(time, levels = c("pre", "post"))) %>%
-  mutate(time = factor(time, levels = c("pre", "post")),
-         group = factor(sets, levels = c("Single", "Multiple"))) %>%
- ggplot(aes(time, combined.load, group = paste(participant, sets), color = sets)) + geom_line() + theme_bw() 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", out.width="120%", fig.cap= "Figuren viser økning i muskelstyrke mellom ett-sett og tre-sett ved pre- og post-test etter 12 uker med styrketrening (diff= -0.029AU)"}
+strengthvolume %>%
+  filter(exercise == "legext", time %in% c("pre", "post")) %>%
+  group_by(sets, time) %>%
+  summarise(m = mean(load, na.rm = TRUE), 
+            s = sd(load, na.rm = TRUE)) %>%
+  mutate(time = factor(time, levels = c("pre", "post"), labels = c("Pre-training", "Post-training")), 
+         sets = factor(sets, levels = c("single", "multiple"), labels = c("Single-set", "Multiple-set"))) %>%
+  ggplot(aes(time, m, color = sets)) + 
+  
+  geom_errorbar(aes(ymin = m - s, ymax = m + s), 
+                position = position_dodge(width = 0.2), 
+                width = 0.2) +
+  geom_point(position = position_dodge(width = 0.2)) +
+  
+  labs(x = "Time-point", 
+       y = "Average load (kg)", 
+       color = "Sets") +
+  theme_classic() +
+  
+  
+  
+  theme(legend.position = c(0.1, 0.9))
+
 ```
 
 ## Diskusjon
