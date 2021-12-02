@@ -233,7 +233,7 @@ if("parallel" %in% rownames(installed.packages()) == FALSE) install.packages("pa
 if("qpcrpal" %in% rownames(installed.packages()) == FALSE) {
   
   library(remotes)
-  remotes::install_github("dhammarstrom/qpcrpal", build_vignettes = FALSE)
+  remotes::install_github("dhammarstrom/qpcrpal", build_vignettes = TRUE)
   
 }
 # Load packages

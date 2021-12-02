@@ -14,7 +14,7 @@ Laget sju forskjellige master mixer ved hjelp av 3 referansegener (REEP5, CHMP2A
 
 Forberedt en PCR protokoll i Quant studio 5 50 grader i 2 min, og 95 grader i 2 min + 40 sykluser med 1 sek på 95 grader, og 30sek på 60 grader
 
-```{r setup, include=FALSE}
+```{r setup1, include=FALSE}
 if("qpcR" %in% rownames(installed.packages()) == FALSE) install.packages("qpcR")
 if("readxl" %in% rownames(installed.packages()) == FALSE) install.packages("readxl")
 if("parallel" %in% rownames(installed.packages()) == FALSE) install.packages("parallel")
