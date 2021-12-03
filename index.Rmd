@@ -1,85 +1,33 @@
 ---
 title: "Mappeeksamen"
-author: "Margit Dahl Sørensen"
+subtitle: "https://github.com/Margitsor/IDR4000-bookdown.git"
+author: "Margit Dahl Sørensen, Kandidatnummer:110"
 date: "`r Sys.Date()`"
 output: pdf_document
 documentclass: book
-bibliography:
-- book.bib
-- packages.bib
-description: |
-  This is a minimal example of using the bookdown package to write a book.
-  set in the _output.yml file.
-  The HTML output format for this example is bookdown::gitbook,
+bibliography: Referanser.bib
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 site: bookdown::bookdown_site
 editor_options: 
-  markdown: 
-    wrap: 72
+  chunk_output_type: console
 ---
 
 # Reabilitet
 
 ## Introduksjon
 
-Maksimalt oksygenopptak V̇O~2max~ ble først beskrevet av \[@hill1923\] ,
-og kan defineres som kroppens evne til å ta opp og forbruke oksygen per
-tidsenhet \[@hill1923; @Basset2000\]. Innen toppidrett måles ofte det
-maksimale oksygenopptaket for å måle utøverens kapasitet opp mot
-arbeidskravet i den spesifikke idretten, og V̇O~2max~ kan i så måte også
-sees på som et mål på den aerobe effekten til utøveren [@bassett2000]. I
-Olympiatoppens testprotokoller benytter de flere definerte
-hjelpekriterier for å sikre at man faktisk har funnet deltakerens
-maksimale oksygenopptak [@tønnessen2017]. Følgende kriterier er
-beskrevet; platå i V̇O~2max~ er oppnådd, økning i ventilasjon med
-utflating av V̇O~2max~ verdi, RER over 1.10 (hvis laktatprofil er
-gjennomført i forkant er 1.05 gjellende), og blodlaktat over 8
-\[@tønnessen2017\].
+Maksimalt oksygenopptak vo2max ble først beskrevet av Hill, og kan defineres som kroppens evne til å ta opp og forbruke oksygen per tidsenhet [@hill1923]. Innen toppidrett måles ofte det maksimale oksygenopptaket for å måle utøverens kapasitet opp mot arbeidskravet i den spesifikke idretten, og vo2max kan i så måte også sees på som et mål på den aerobe effekten til utøveren [@bassett2000]. I Olympiatoppens testprotokoller benytter de flere definerte hjelpekriterier for å sikre at man faktisk har funnet deltakerens maksimale oksygenopptak [@tønnessen2017]. Følgende kriterier er beskrevet; platå i vo2max er oppnådd, økning i ventilasjon med utflating av vo2max verdi, RER over 1.10 (hvis laktatprofil er gjennomført i forkant er 1.05 gjellende), og blodlaktat over 8 [@tønnessen2017].
 
 ## Metode
 
-I forkant av testen målte alle deltakerne kroppsvekten, men ble bedt om
-å ta av seg skoene. Kroppsvekten som senere brukt i beregningen av
-maksimalt oksygenopptak (ml kg^-1^ min^-1^) er kroppsvekten målt i
-forkant av test, etter at 300g har blitt trukket av for å ta høyde for
-vekten av klær og sko. For å sikre intern validitet ble deltakerne bedt
-om å avstå fra anstrengende fysisk aktivitet dagen før test,
-standardisere måltidet i forkant av test samt avstå fra inntak av
-koffein under de siste 12 timene før testen [@halperin2015]. Test 1 og
-test 2 ble gjennomført på samme tid på døgnet under standardiserte
-forhold. Test 2 ble gjennomført 6 dager etter gjennomført test 1. Det
-ble ikke kontrollert for fysisk aktivitet mellom testdagene.
+I forkant av testen målte alle deltakerne kroppsvekten, men ble bedt om å ta av seg skoene. Kroppsvekten som senere brukt i beregningen av maksimalt oksygenopptak (ml kg^-1^ min^-1^) er kroppsvekten målt i forkant av test, etter at 300g har blitt trukket av for å ta høyde for vekten av klær og sko. For å sikre intern validitet ble deltakerne bedt om å avstå fra anstrengende fysisk aktivitet dagen før test, standardisere måltidet i forkant av test samt avstå fra inntak av koffein under de siste 12 timene før testen [@halperin2015]. Test 1 og test 2 ble gjennomført på samme tid på døgnet under standardiserte forhold. Test 2 ble gjennomført 6 dager etter gjennomført test 1. Det ble ikke kontrollert for fysisk aktivitet mellom testdagene.
 
-11 deltakere (Tabell 1) gjennomførte en 10 minutter lang
-oppvarmingsprotokoll på tredemøllen (Woodway, 4 front, Wisconsin, USA),
-beskrevet for deltakerne i forkant av testen. Denne
-oppvarmingsprotokollen bestod av fem minutter på 11-13 i Borg 6-20 RPE
-skala [@borg1982], etterfulgt av 2x1min på starthastighet og stigning
-med 30 sekund pause mellom dragene på ett minutt. . Siste tre minutter
-av oppvarming ble gjennomført 11-13 i borg på valgfri stigning og fart.
-. Etter oppvarming var det to minutter pause før testen begynte.
-Starthastighet var satt til 8km/t, med stigning på 10.5% og 5.5% for
-henholdsvis menn og kvinner.
+11 deltakere (Tabell 1) gjennomførte en 10 minutter lang oppvarmingsprotokoll på tredemøllen (Woodway, 4 front, Wisconsin, USA), beskrevet for deltakerne i forkant av testen. Denne oppvarmingsprotokollen bestod av fem minutter på 11-13 i Borg 6-20 RPE skala [@borg1982], etterfulgt av 2x1min på starthastighet og stigning med 30 sekund pause mellom dragene på ett minutt. . Siste tre minutter av oppvarming ble gjennomført 11-13 i borg på valgfri stigning og fart. Etter oppvarming var det to minutter pause før testen begynte. Starthastighet var satt til 8km/t, med stigning på 10.5% og 5.5% for henholdsvis menn og kvinner.
 
-V̇O~2max~ ble målt ved hjelp av en metabolsk analysator med Vyntus CPX
-miksekammer (Vyntus CPX, Jaeger-CareFusion, UK). Forut for alle tester
-ble analysatoren gass og volumkalibrert . Analysatoren ble stilt inn til
-å gjøre målinger hvert 30sek, og V̇O~2max~ ble kalkulert gjennom å bruke
-snittet av de to høyeste påfølgende målingene av V̇O~2~. Underveis i
-testen mottok alle deltakerne en høylytt verbal oppmuntring fra
-testleder som var standisert [@halperin1923]. Alle deltakerne
-gjennomførte også begge testene med samme testleder og med samme
-personer til stede i rommet for å redusere konfundering [@halperin1923].
+Vo2max ble målt ved hjelp av en metabolsk analysator med Vyntus CPX miksekammer (Vyntus CPX, Jaeger-CareFusion, UK). Forut for alle tester ble analysatoren gass og volumkalibrert . Analysatoren ble stilt inn til å gjøre målinger hvert 30sek, og V̇O~2max~ ble kalkulert gjennom å bruke snittet av de to høyeste påfølgende målingene av vo2max. Underveis i testen mottok alle deltakerne en høylytt verbal oppmuntring fra testleder som var standisert [@halperin2015]. Alle deltakerne gjennomførte også begge testene med samme testleder og med samme personer til stede i rommet for å redusere konfundering [@halperin2015].
 
-For hvert medgåtte minutt av testen ble hastigheten på møllen økt med
-1km/t, helt til utmattelse, hvor testen ble avsluttet. Deltakernes
-hjertefrekvens (GARMIN/POLAR) ble også registrert under hele testen. Når
-testen ble avsluttet ble deltakerne bedt om å rapportere opplevd
-anstrengelse ved hjelp av Borg-skala [@borg1982]. Maksimal
-hjertefrekvens under testen ble også registrert. Ett minutt etter
-avsluttet test ble hjertefrekvens registrert, og det ble målt og
-analysert blodlaktat (BIOSEN).
+For hvert medgåtte minutt av testen ble hastigheten på møllen økt med 1km/t, helt til utmattelse, hvor testen ble avsluttet. Deltakernes hjertefrekvens (GARMIN/POLAR) ble også registrert under hele testen. Når testen ble avsluttet ble deltakerne bedt om å rapportere opplevd anstrengelse ved hjelp av Borg-skala [@borg1982]. Maksimal hjertefrekvens under testen ble også registrert. Ett minutt etter avsluttet test ble hjertefrekvens registrert, og det ble målt og analysert blodlaktat (BIOSEN).
 
 ## 
 
@@ -88,7 +36,6 @@ library(readxl)
 vo2g1 <- read_excel("~/Documents/Master i treningsfysiologi/R-studio/IDR4000-bookdown/Data/vo2g1.xlsx")
 library(tidyverse) # 
 library(knitr)
-library(kableExtra)
 library(flextable)
 vo2g1 %>% # heter vo2data
   select(fp, time, sex, age, height, weight) %>% 
@@ -132,9 +79,7 @@ reliabilitet <- read_excel("~/Documents/Master i treningsfysiologi/R-studio/IDR4
              L = qt(0.975, 4) * s)  # Calculate as a percentage of the mean
 ```
 
-I Figur 1 kan man se endringen fra test 1 til test 2 fordelt på kjønn.
-Den typiske målefeilen (typical error, [@hopkins2000]) fra test 1 til
-test 2 er utregnet til å være `r round(reliabilitet$cv, 2)`%.
+I Figur 1 kan man se endringen fra test 1 til test 2 fordelt på kjønn. Den typiske målefeilen (typical error, [@hopkins2000]) fra test 1 til test 2 er utregnet til å være `r round(reliabilitet$cv, 2)`%.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "Figuren viser forskjellen i vo2max (ml/min) mellom test 1 og test 2"}
 library(readxl)
@@ -159,50 +104,8 @@ read_excel("~/Documents/Master i treningsfysiologi/R-studio/IDR4000-bookdown/Dat
 
 ## Diskusjon
 
-Resultatet i vårt reabilitetstudie er at typefeil er på 4.04%.
-Typefeilen kan tyde på at enkelte av disse resultatene kan være utsatt
-for støy av ulik sort \[@hopkins2000\]. Ettersom testing av maksimalt
-oksygenopptak er en test som gjennomføres til utmattelse, vil man kunne
-forvente en viss variasjon i testresultatene ettersom opplevd
-anstrengelse kan påvirkes av flere ulike variabler [@halperin2015]. For
-å redusere støy vil flere faktorer være nyttig å ta hensyn til under
-slik testing. Som nevnt i metoden vil standardisering av matinntak,
-koffeininntak, utstyr og tidspunkt for gjennomføring av test være med på
-å kunne sikre intern validitet i resultatene. Eksempler er deltakernes
-kjennskap til testen, verbal oppmuntring og personer tilstede under
-testen er andre faktorer som potensielt kan bidra til støy
-[@halperin2015]. Felles for alle faktorer er at graden av påvirkning på
-resultatene muligens reduseres ved hjelp av en standardisert
-testprotokoll. Deltakerne - og testlederne, sin kjennskap til testen er
-en annen faktor som trolig påvirker resultatene i vårt prosjekt. I dette
-tilfellet fantes det enkelte deltakere som hadde gjennomført en liknende
-test flere ganger, og en kan da forvente en mindre grad av variasjon
-mellom resultatene på test 1 og test 2, sammenlignet med de deltakerne
-som gjennomførte testen for første gang under test 1. Dette fordi
-kjennskapen og kunnskapen de tilegnet seg på test , trolig spiller inn
-på testresultatene.
+Resultatet i vårt reabilitetstudie er at typefeil er på 4.04%. Typefeilen kan tyde på at enkelte av disse resultatene kan være utsatt for støy av ulik sort [@hopkins2000]. Ettersom testing av maksimalt oksygenopptak er en test som gjennomføres til utmattelse, vil man kunne forvente en viss variasjon i testresultatene ettersom opplevd anstrengelse kan påvirkes av flere ulike variabler [@halperin2015]. For å redusere støy vil flere faktorer være nyttig å ta hensyn til under slik testing. Som nevnt i metoden vil standardisering av matinntak, koffeininntak, utstyr og tidspunkt for gjennomføring av test være med på å kunne sikre intern validitet i resultatene. Eksempler er deltakernes kjennskap til testen, verbal oppmuntring og personer tilstede under testen er andre faktorer som potensielt kan bidra til støy [@halperin2015]. Felles for alle faktorer er at graden av påvirkning på resultatene muligens reduseres ved hjelp av en standardisert testprotokoll. Deltakerne - og testlederne, sin kjennskap til testen er en annen faktor som trolig påvirker resultatene i vårt prosjekt. I dette tilfellet fantes det enkelte deltakere som hadde gjennomført en liknende test flere ganger, og en kan da forvente en mindre grad av variasjon mellom resultatene på test 1 og test 2, sammenlignet med de deltakerne som gjennomførte testen for første gang under test 1. Dette fordi kjennskapen og kunnskapen de tilegnet seg på test , trolig spiller inn på testresultatene.
 
-Grunnen til at vi snakker om typefeil er at når vi ønsker å måle
-påvirkningen av trening på en gruppe individer er det viktig å kunne si
-noe om hva som er endring og hva som er støy (målefeil). Desto mindre
-støy en test innebærer jo bedre er målingen. Målet som brukes er
-typefeil. Hva som danner denne variasjonen som representeres ved typical
-error er multifaktorelt, men hoveddelen er som oftest biologisk
-[@hopkins2000].
+Grunnen til at vi snakker om typefeil er at når vi ønsker å måle påvirkningen av trening på en gruppe individer er det viktig å kunne si noe om hva som er endring og hva som er støy (målefeil). Desto mindre støy en test innebærer jo bedre er målingen. Målet som brukes er typefeil. Hva som danner denne variasjonen som representeres ved typical error er multifaktorelt, men hoveddelen er som oftest biologisk [@hopkins2000].
 
-For å måle typefeil har vi brukt within subject deviation metoden. Denne
-metoden påvirkes ikke av at gjennomsnittet endrer seg fra test til test
-\[@hopkins2000\]. Data for målinger i VO2max fra fem sertifiserte
-Australske laboratorier fastslo ett gjennomsnitt på 2.2% for typefeil
-\[@halperin2015\]. Data fra det Australske institutt for sport har også
-fastslått at en typefeil på omtrent 2% er riktig for både maksimal og
-submaksimal VO2 \[@clark2007; @robertson2010; @saunders2009\]. Dette
-indikerer at med godt kalibrert utstyr og med utøvere som er godt vant
-med testingen vil en typefeil på 2% for det biologiske, og analytiske
-være riktig [@halperin2015]. Vår typefeil på 4.04% kan derfor tenkes å
-være et bilde hvordan det kan se ut med få deltakere, med ulikt
-utgangspunkt, men også uten skikkelig standardisering av
-treningshverdagen i forkant av testene. Det kan også tenkes at med et
-varierende nivå hos deltagerne kan enkelte oppleve en treningseffekt av
-test 1. Samtidig som andre kanskje ble slitne av å få en test inn i
-treningshverdagen.
+For å måle typefeil har vi brukt within subject deviation metoden. Denne metoden påvirkes ikke av at gjennomsnittet endrer seg fra test til test [@hopkins2000]. Data for målinger i vo2max fra fem sertifiserte Australske laboratorier fastslo ett gjennomsnitt på 2.2% for typefeil [@halperin2015]. Data fra det Australske institutt for sport har også fastslått at en typefeil på omtrent 2% er riktig for både maksimal og submaksimal vo2max [@clark2007; @robertson2010; @saunders2009]. Dette indikerer at med godt kalibrert utstyr og med utøvere som er godt vant med testingen vil en typefeil på 2% for det biologiske, og analytiske være riktig [@halperin2015]. Vår typefeil på 4.04% kan derfor tenkes å være et bilde hvordan det kan se ut med få deltakere, med ulikt utgangspunkt, men også uten skikkelig standardisering av treningshverdagen i forkant av testene. Det kan også tenkes at med et varierende nivå hos deltagerne kan enkelte oppleve en treningseffekt av test 1. Samtidig som andre kanskje ble slitne av å få en test inn i treningshverdagen.

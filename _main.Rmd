@@ -1,85 +1,33 @@
 ---
 title: "Mappeeksamen"
-author: "Margit Dahl Sørensen"
+subtitle: "https://github.com/Margitsor/IDR4000-bookdown.git"
+author: "Margit Dahl Sørensen, Kandidatnummer:110"
 date: "`r Sys.Date()`"
 output: pdf_document
 documentclass: book
-bibliography:
-- book.bib
-- packages.bib
-description: |
-  This is a minimal example of using the bookdown package to write a book.
-  set in the _output.yml file.
-  The HTML output format for this example is bookdown::gitbook,
+bibliography: Referanser.bib
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 site: bookdown::bookdown_site
 editor_options: 
-  markdown: 
-    wrap: 72
+  chunk_output_type: console
 ---
 
 # Reabilitet
 
 ## Introduksjon
 
-Maksimalt oksygenopptak V̇O~2max~ ble først beskrevet av \[@hill1923\] ,
-og kan defineres som kroppens evne til å ta opp og forbruke oksygen per
-tidsenhet \[@hill1923; @Basset2000\]. Innen toppidrett måles ofte det
-maksimale oksygenopptaket for å måle utøverens kapasitet opp mot
-arbeidskravet i den spesifikke idretten, og V̇O~2max~ kan i så måte også
-sees på som et mål på den aerobe effekten til utøveren [@bassett2000]. I
-Olympiatoppens testprotokoller benytter de flere definerte
-hjelpekriterier for å sikre at man faktisk har funnet deltakerens
-maksimale oksygenopptak [@tønnessen2017]. Følgende kriterier er
-beskrevet; platå i V̇O~2max~ er oppnådd, økning i ventilasjon med
-utflating av V̇O~2max~ verdi, RER over 1.10 (hvis laktatprofil er
-gjennomført i forkant er 1.05 gjellende), og blodlaktat over 8
-\[@tønnessen2017\].
+Maksimalt oksygenopptak vo2max ble først beskrevet av Hill, og kan defineres som kroppens evne til å ta opp og forbruke oksygen per tidsenhet [@hill1923]. Innen toppidrett måles ofte det maksimale oksygenopptaket for å måle utøverens kapasitet opp mot arbeidskravet i den spesifikke idretten, og vo2max kan i så måte også sees på som et mål på den aerobe effekten til utøveren [@bassett2000]. I Olympiatoppens testprotokoller benytter de flere definerte hjelpekriterier for å sikre at man faktisk har funnet deltakerens maksimale oksygenopptak [@tønnessen2017]. Følgende kriterier er beskrevet; platå i vo2max er oppnådd, økning i ventilasjon med utflating av vo2max verdi, RER over 1.10 (hvis laktatprofil er gjennomført i forkant er 1.05 gjellende), og blodlaktat over 8 [@tønnessen2017].
 
 ## Metode
 
-I forkant av testen målte alle deltakerne kroppsvekten, men ble bedt om
-å ta av seg skoene. Kroppsvekten som senere brukt i beregningen av
-maksimalt oksygenopptak (ml kg^-1^ min^-1^) er kroppsvekten målt i
-forkant av test, etter at 300g har blitt trukket av for å ta høyde for
-vekten av klær og sko. For å sikre intern validitet ble deltakerne bedt
-om å avstå fra anstrengende fysisk aktivitet dagen før test,
-standardisere måltidet i forkant av test samt avstå fra inntak av
-koffein under de siste 12 timene før testen [@halperin2015]. Test 1 og
-test 2 ble gjennomført på samme tid på døgnet under standardiserte
-forhold. Test 2 ble gjennomført 6 dager etter gjennomført test 1. Det
-ble ikke kontrollert for fysisk aktivitet mellom testdagene.
+I forkant av testen målte alle deltakerne kroppsvekten, men ble bedt om å ta av seg skoene. Kroppsvekten som senere brukt i beregningen av maksimalt oksygenopptak (ml kg^-1^ min^-1^) er kroppsvekten målt i forkant av test, etter at 300g har blitt trukket av for å ta høyde for vekten av klær og sko. For å sikre intern validitet ble deltakerne bedt om å avstå fra anstrengende fysisk aktivitet dagen før test, standardisere måltidet i forkant av test samt avstå fra inntak av koffein under de siste 12 timene før testen [@halperin2015]. Test 1 og test 2 ble gjennomført på samme tid på døgnet under standardiserte forhold. Test 2 ble gjennomført 6 dager etter gjennomført test 1. Det ble ikke kontrollert for fysisk aktivitet mellom testdagene.
 
-11 deltakere (Tabell 1) gjennomførte en 10 minutter lang
-oppvarmingsprotokoll på tredemøllen (Woodway, 4 front, Wisconsin, USA),
-beskrevet for deltakerne i forkant av testen. Denne
-oppvarmingsprotokollen bestod av fem minutter på 11-13 i Borg 6-20 RPE
-skala [@borg1982], etterfulgt av 2x1min på starthastighet og stigning
-med 30 sekund pause mellom dragene på ett minutt. . Siste tre minutter
-av oppvarming ble gjennomført 11-13 i borg på valgfri stigning og fart.
-. Etter oppvarming var det to minutter pause før testen begynte.
-Starthastighet var satt til 8km/t, med stigning på 10.5% og 5.5% for
-henholdsvis menn og kvinner.
+11 deltakere (Tabell 1) gjennomførte en 10 minutter lang oppvarmingsprotokoll på tredemøllen (Woodway, 4 front, Wisconsin, USA), beskrevet for deltakerne i forkant av testen. Denne oppvarmingsprotokollen bestod av fem minutter på 11-13 i Borg 6-20 RPE skala [@borg1982], etterfulgt av 2x1min på starthastighet og stigning med 30 sekund pause mellom dragene på ett minutt. . Siste tre minutter av oppvarming ble gjennomført 11-13 i borg på valgfri stigning og fart. Etter oppvarming var det to minutter pause før testen begynte. Starthastighet var satt til 8km/t, med stigning på 10.5% og 5.5% for henholdsvis menn og kvinner.
 
-V̇O~2max~ ble målt ved hjelp av en metabolsk analysator med Vyntus CPX
-miksekammer (Vyntus CPX, Jaeger-CareFusion, UK). Forut for alle tester
-ble analysatoren gass og volumkalibrert . Analysatoren ble stilt inn til
-å gjøre målinger hvert 30sek, og V̇O~2max~ ble kalkulert gjennom å bruke
-snittet av de to høyeste påfølgende målingene av V̇O~2~. Underveis i
-testen mottok alle deltakerne en høylytt verbal oppmuntring fra
-testleder som var standisert [@halperin1923]. Alle deltakerne
-gjennomførte også begge testene med samme testleder og med samme
-personer til stede i rommet for å redusere konfundering [@halperin1923].
+Vo2max ble målt ved hjelp av en metabolsk analysator med Vyntus CPX miksekammer (Vyntus CPX, Jaeger-CareFusion, UK). Forut for alle tester ble analysatoren gass og volumkalibrert . Analysatoren ble stilt inn til å gjøre målinger hvert 30sek, og V̇O~2max~ ble kalkulert gjennom å bruke snittet av de to høyeste påfølgende målingene av vo2max. Underveis i testen mottok alle deltakerne en høylytt verbal oppmuntring fra testleder som var standisert [@halperin2015]. Alle deltakerne gjennomførte også begge testene med samme testleder og med samme personer til stede i rommet for å redusere konfundering [@halperin2015].
 
-For hvert medgåtte minutt av testen ble hastigheten på møllen økt med
-1km/t, helt til utmattelse, hvor testen ble avsluttet. Deltakernes
-hjertefrekvens (GARMIN/POLAR) ble også registrert under hele testen. Når
-testen ble avsluttet ble deltakerne bedt om å rapportere opplevd
-anstrengelse ved hjelp av Borg-skala [@borg1982]. Maksimal
-hjertefrekvens under testen ble også registrert. Ett minutt etter
-avsluttet test ble hjertefrekvens registrert, og det ble målt og
-analysert blodlaktat (BIOSEN).
+For hvert medgåtte minutt av testen ble hastigheten på møllen økt med 1km/t, helt til utmattelse, hvor testen ble avsluttet. Deltakernes hjertefrekvens (GARMIN/POLAR) ble også registrert under hele testen. Når testen ble avsluttet ble deltakerne bedt om å rapportere opplevd anstrengelse ved hjelp av Borg-skala [@borg1982]. Maksimal hjertefrekvens under testen ble også registrert. Ett minutt etter avsluttet test ble hjertefrekvens registrert, og det ble målt og analysert blodlaktat (BIOSEN).
 
 ## 
 
@@ -88,7 +36,6 @@ library(readxl)
 vo2g1 <- read_excel("~/Documents/Master i treningsfysiologi/R-studio/IDR4000-bookdown/Data/vo2g1.xlsx")
 library(tidyverse) # 
 library(knitr)
-library(kableExtra)
 library(flextable)
 vo2g1 %>% # heter vo2data
   select(fp, time, sex, age, height, weight) %>% 
@@ -132,9 +79,7 @@ reliabilitet <- read_excel("~/Documents/Master i treningsfysiologi/R-studio/IDR4
              L = qt(0.975, 4) * s)  # Calculate as a percentage of the mean
 ```
 
-I Figur 1 kan man se endringen fra test 1 til test 2 fordelt på kjønn.
-Den typiske målefeilen (typical error, [@hopkins2000]) fra test 1 til
-test 2 er utregnet til å være `r round(reliabilitet$cv, 2)`%.
+I Figur 1 kan man se endringen fra test 1 til test 2 fordelt på kjønn. Den typiske målefeilen (typical error, [@hopkins2000]) fra test 1 til test 2 er utregnet til å være `r round(reliabilitet$cv, 2)`%.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "Figuren viser forskjellen i vo2max (ml/min) mellom test 1 og test 2"}
 library(readxl)
@@ -159,53 +104,11 @@ read_excel("~/Documents/Master i treningsfysiologi/R-studio/IDR4000-bookdown/Dat
 
 ## Diskusjon
 
-Resultatet i vårt reabilitetstudie er at typefeil er på 4.04%.
-Typefeilen kan tyde på at enkelte av disse resultatene kan være utsatt
-for støy av ulik sort \[@hopkins2000\]. Ettersom testing av maksimalt
-oksygenopptak er en test som gjennomføres til utmattelse, vil man kunne
-forvente en viss variasjon i testresultatene ettersom opplevd
-anstrengelse kan påvirkes av flere ulike variabler [@halperin2015]. For
-å redusere støy vil flere faktorer være nyttig å ta hensyn til under
-slik testing. Som nevnt i metoden vil standardisering av matinntak,
-koffeininntak, utstyr og tidspunkt for gjennomføring av test være med på
-å kunne sikre intern validitet i resultatene. Eksempler er deltakernes
-kjennskap til testen, verbal oppmuntring og personer tilstede under
-testen er andre faktorer som potensielt kan bidra til støy
-[@halperin2015]. Felles for alle faktorer er at graden av påvirkning på
-resultatene muligens reduseres ved hjelp av en standardisert
-testprotokoll. Deltakerne - og testlederne, sin kjennskap til testen er
-en annen faktor som trolig påvirker resultatene i vårt prosjekt. I dette
-tilfellet fantes det enkelte deltakere som hadde gjennomført en liknende
-test flere ganger, og en kan da forvente en mindre grad av variasjon
-mellom resultatene på test 1 og test 2, sammenlignet med de deltakerne
-som gjennomførte testen for første gang under test 1. Dette fordi
-kjennskapen og kunnskapen de tilegnet seg på test , trolig spiller inn
-på testresultatene.
+Resultatet i vårt reabilitetstudie er at typefeil er på 4.04%. Typefeilen kan tyde på at enkelte av disse resultatene kan være utsatt for støy av ulik sort [@hopkins2000]. Ettersom testing av maksimalt oksygenopptak er en test som gjennomføres til utmattelse, vil man kunne forvente en viss variasjon i testresultatene ettersom opplevd anstrengelse kan påvirkes av flere ulike variabler [@halperin2015]. For å redusere støy vil flere faktorer være nyttig å ta hensyn til under slik testing. Som nevnt i metoden vil standardisering av matinntak, koffeininntak, utstyr og tidspunkt for gjennomføring av test være med på å kunne sikre intern validitet i resultatene. Eksempler er deltakernes kjennskap til testen, verbal oppmuntring og personer tilstede under testen er andre faktorer som potensielt kan bidra til støy [@halperin2015]. Felles for alle faktorer er at graden av påvirkning på resultatene muligens reduseres ved hjelp av en standardisert testprotokoll. Deltakerne - og testlederne, sin kjennskap til testen er en annen faktor som trolig påvirker resultatene i vårt prosjekt. I dette tilfellet fantes det enkelte deltakere som hadde gjennomført en liknende test flere ganger, og en kan da forvente en mindre grad av variasjon mellom resultatene på test 1 og test 2, sammenlignet med de deltakerne som gjennomførte testen for første gang under test 1. Dette fordi kjennskapen og kunnskapen de tilegnet seg på test , trolig spiller inn på testresultatene.
 
-Grunnen til at vi snakker om typefeil er at når vi ønsker å måle
-påvirkningen av trening på en gruppe individer er det viktig å kunne si
-noe om hva som er endring og hva som er støy (målefeil). Desto mindre
-støy en test innebærer jo bedre er målingen. Målet som brukes er
-typefeil. Hva som danner denne variasjonen som representeres ved typical
-error er multifaktorelt, men hoveddelen er som oftest biologisk
-[@hopkins2000].
+Grunnen til at vi snakker om typefeil er at når vi ønsker å måle påvirkningen av trening på en gruppe individer er det viktig å kunne si noe om hva som er endring og hva som er støy (målefeil). Desto mindre støy en test innebærer jo bedre er målingen. Målet som brukes er typefeil. Hva som danner denne variasjonen som representeres ved typical error er multifaktorelt, men hoveddelen er som oftest biologisk [@hopkins2000].
 
-For å måle typefeil har vi brukt within subject deviation metoden. Denne
-metoden påvirkes ikke av at gjennomsnittet endrer seg fra test til test
-\[@hopkins2000\]. Data for målinger i VO2max fra fem sertifiserte
-Australske laboratorier fastslo ett gjennomsnitt på 2.2% for typefeil
-\[@halperin2015\]. Data fra det Australske institutt for sport har også
-fastslått at en typefeil på omtrent 2% er riktig for både maksimal og
-submaksimal VO2 \[@clark2007; @robertson2010; @saunders2009\]. Dette
-indikerer at med godt kalibrert utstyr og med utøvere som er godt vant
-med testingen vil en typefeil på 2% for det biologiske, og analytiske
-være riktig [@halperin2015]. Vår typefeil på 4.04% kan derfor tenkes å
-være et bilde hvordan det kan se ut med få deltakere, med ulikt
-utgangspunkt, men også uten skikkelig standardisering av
-treningshverdagen i forkant av testene. Det kan også tenkes at med et
-varierende nivå hos deltagerne kan enkelte oppleve en treningseffekt av
-test 1. Samtidig som andre kanskje ble slitne av å få en test inn i
-treningshverdagen.
+For å måle typefeil har vi brukt within subject deviation metoden. Denne metoden påvirkes ikke av at gjennomsnittet endrer seg fra test til test [@hopkins2000]. Data for målinger i vo2max fra fem sertifiserte Australske laboratorier fastslo ett gjennomsnitt på 2.2% for typefeil [@halperin2015]. Data fra det Australske institutt for sport har også fastslått at en typefeil på omtrent 2% er riktig for både maksimal og submaksimal vo2max [@clark2007; @robertson2010; @saunders2009]. Dette indikerer at med godt kalibrert utstyr og med utøvere som er godt vant med testingen vil en typefeil på 2% for det biologiske, og analytiske være riktig [@halperin2015]. Vår typefeil på 4.04% kan derfor tenkes å være et bilde hvordan det kan se ut med få deltakere, med ulikt utgangspunkt, men også uten skikkelig standardisering av treningshverdagen i forkant av testene. Det kan også tenkes at med et varierende nivå hos deltagerne kan enkelte oppleve en treningseffekt av test 1. Samtidig som andre kanskje ble slitne av å få en test inn i treningshverdagen.
 
 <!--chapter:end:index.rmd-->
 
@@ -219,13 +122,13 @@ Estimere reaksjonseffektivitet Dobler mengden målgen per syklus
 
 ## Metode
 
-3 forsøkspersoner fra pre-test og test uke 2 (venstre ben) Laget fortynningsserie av cDNA 1:1, 5 ganger. Dette resulterer i fortynning ved hjelp DEPC-behandlet vann 1:10, 1:50, 1:250, 1:1250, 1:6250, 1:31250, 1:156250. Vortex ble brukt mellom hver fortynningsfase.
+Vi hentet cDNA fra 3 forsøkspersoner. Dette er cDNA hentet fra testene som ble gjennomført i uke 0 og uke 2. Alle prøver er fra venstre ben. Det ble laget en 5 fortynningsserier fra disse prøvene. Dette ble fortynnet ved hjelp av DEPC-behandlet vann, i følgende serie 1:10, 1:50, 1:250, 1:1250, 1:6250, 1:31250, 1:156250. Vortex ble brukt mellom hver fortynningsfase.
 
-Laget sju forskjellige master mixer ved hjelp av 3 referansegener (REEP5, CHMP2A, B2M) og 4 målgener (MyHC I, 2A, 2X, rRNA 475). Mastermix bestod av: 5 µl sybr green, 1 µl valgt gen, 2 µl DEPC-behandlet vann , 2 µl fortynnet cDNA. Fylte hver brønn med 2 µl prøve, og 8 µl med mastermix. Dekke brett med plastfilm, og sentrifugere 1min på 1200rpm, før PCR protokoll.
+Det ble derreter laget sju forskjellige master mixer ved hjelp av 3 referansegener (REEP5, CHMP2A, B2M) og 4 målgener (MyHC I, 2A, 2X, rRNA 475). Mastermix bestod av 5 µl sybr green, 1 µl valgt gen, 2 µl DEPC-behandlet vann , 2 µl fortynnet cDNA. Deretter ble det fylt 71 brønner i en qPCR-reaksjonsplate ed henholdsvis 2 µl prøve, og 8 µl med mastermix. Reaksjonsplaten med brønner ble dekt med plastfilm, og sentrifugerte 1 minutt på 1200 omrdreininger (rpm), før PCR protokoll ble gjennomført.
 
-Forberedt en PCR protokoll i Quant studio 5 50 grader i 2 min, og 95 grader i 2 min + 40 sykluser med 1 sek på 95 grader, og 30sek på 60 grader
+En PCR protokoll ble på forhånd forberedet i QuantStudio5. PCR protokollen bestod av 50 grader i 2 minutter, og 95 grader i 2 minutter, før den kjørte 40 sykluser bestående av 1 sekund på 95 grader celsius, og 30 sekunder på 60 grader celsius.
 
-```{r setup, include=FALSE}
+```{r setup1, echo=FALSE, include=FALSE}
 if("qpcR" %in% rownames(installed.packages()) == FALSE) install.packages("qpcR")
 if("readxl" %in% rownames(installed.packages()) == FALSE) install.packages("readxl")
 if("parallel" %in% rownames(installed.packages()) == FALSE) install.packages("parallel")
@@ -244,14 +147,7 @@ library(qpcrpal)
 library(tidyverse)
 ```
 
-## Exploring the data
-
--   Reading and analyzing qPCR-data is done in a stepwise manner using `qpcrpal`.
--   The `read_quant5` function organizes the data from the instrument (QuantStudio 5)
--   `model_qpcr` creates models of the fluorecense from each reaction
--   `analyze_models` use the information in each model to calculate summaries for each reaction.
-
-```{r}
+```{r, echo=FALSE}
 group1 <- read_quant5("Data/IDR4000-Group1-precision.xls", skip = 47) %>%
   mutate(ID = paste0(Well, "_", ID))
 models <- model_qpcr(group1)
@@ -280,9 +176,9 @@ data.frame(predict(models[[1]]), cycle = 1:40) %>%
 
 ## Resultater
 
-Modellen viser sammenhengen mellom antall sykluser og fluorescence. Flere PCR-sykluser gir flere kopier, og dermed også en økt konsentrasjon i prøven. På denne måten kan vi bruke fluorescence til å si noe om hvor mange sykluser som må til for å oppnå en bestemt terskelverdi(Cq-verdi). Med primerne vi benyttet i forsøket var det ønskelig med et sted mellom 10 og 40 sykluser for å sikre at vi oppnådde terskelverdien. Det ble derfor kjørt 40 sykluser.
+Modellen viser sammenhengen mellom antall sykluser og fluorescence. Flere PCR-sykluser gir flere kopier, og dermed også en økt konsentrasjon i prøven. På denne måten kan vi bruke fluorescence til å si noe om hvor mange sykluser som må til for å oppnå en bestemt terskelverdi(Cq-verdi). Med primerne vi benyttet i forsøket var det ønskelig med et sted mellom 10 og 40 sykluser for å sikre at vi oppnådde terskelverdien. Det ble derfor kjørt 40 sykluser.Ved flere sykluser øker trolig sannsynligheten for falske positive.
 
-```{r}
+```{r, echo=FALSE, warning=FALSE}
 #hvordan mengden av kopiert RNA utvikler seg med antall PCR-sykluser/Cq verdier??
 cyc.diff <- 3.327
 dat <- data.frame(concentration = c(1, 1/10, 1/100, 1/1000, 1/10000, 1/100000), 
@@ -372,7 +268,7 @@ saveRDS(efficiency_est_data, "./data/efficiency-estimate-data.RDS")
 
 ```
 
-```{r }
+```{r, echo=FALSE, warning=FALSE}
  # Create models and extract the second coefficient from each model (the slope)
 b2m_slope <- coef(lm(cq ~ log10(concentration), data = filter(efficiency_est_data, target == "B2M")))[2]
 reep5_slope <- coef(lm(cq ~ log10(concentration), data = filter(efficiency_est_data, target == "REEP5")))[2]
@@ -382,9 +278,7 @@ efficiency_estimates <- data.frame(target = c("B2M", "REEP5"),
                           10^-(1/reep5_slope)))
 ```
 
-```{r cqtabell, tab.cap= "Tabellen viser cq-verider"}
-## Estimerte cq verdier? 
-library(flextable)
+```{r, echo=FALSE, cqtabell, tab.cap= "Tabellen viser cq-verider", warning=FALSE}
 fc_g1 <- results_group1 %>%
   separate(ID, into = c("well", "sample", "subsample", "time", "target")) %>%
   dplyr::select(well:target, cq = cpD2) %>%
@@ -404,7 +298,7 @@ fc_g1 <- results_group1 %>%
 
 ## Diskusjon
 
-Cq-verdien sier noe om hvor mange PCR-sykluser som trengs for å detektere ulike targets[@juji] .En høyere Cq-verdi indikerer altså at mengden RNA må dobles flere ganger for å detektere en terskelverdi av target. En lavere Cq-verdi indikerer at terskelverdien oppnås ved færre PCR-sykluser, altså at konsentrasjonen av target er høyere. En lavere Cq-verdi ved uke 2, sammenlignet med uke 0(baseline) som i forsøket, indikerer høyere konsentrasjon ved uke 2 enn ved uke 0. (Dermed en effekt av intervensjonen, avhengig av funksjonen til target - gen).
+Cq-verdien sier noe om hvor mange PCR-sykluser som trengs for å detektere ulike målgen[@kuang2018]. En høyere Cq-verdi indikerer altså at mengden RNA må dobles flere ganger for å detektere en terskelverdi av target. En lavere Cq-verdi indikerer at terskelverdien oppnås ved færre PCR-sykluser, altså at konsentrasjonen av target er høyere. En lavere Cq-verdi ved uke 2, sammenlignet med uke 0(baseline) som i forsøket, indikerer høyere konsentrasjon ved uke 2 enn ved uke 0. Dermed en effekt av intervensjonen, avhengig av funksjonen til målgenet vi underøkser.
 
 <!--chapter:end:01-new.rmd-->
 
@@ -438,7 +332,7 @@ En annen forklaringer som blir nevnt ved replikasjonskrisen er publikasjons bias
 
 Andre forklaringer til replikasjonskrisen er at flere studier ikke blir gjennomført på tilstrekkelig måte for å kunne repetere forsøket, eller at studiet mangler validitet, ergo at studiet ikke gjennomføres på den måten det var planlagt at det skulle gjøres, eller gjennomført slik det er beskrevet at det er gjort. En annen forklaring som blir nevnt er hacking av resultater for å få en studie til å se bedre ut enn det er [@bird2020].
 
-Bird presenterer en mer akademisk forklaring enn de andre årsakene som blir nevnt. Om forskere driver med svindel eller praktiserer dårlig gjennomføring i studiene blir vanskelig å kunne konkludere med. Bird kommer med en forklaring som viser hvordan hypotesetesting kan tolkes feil, eller aksepteres med stor mulighet for type-I eller type-II feil. Forklaringene som har blitt nevnt er alle aksepterbare, og mulige, og det blir vanskelig å konkludere at den ene er bedre enn den andre, men Bird presenterer en mer troverdig forklaring\[@bird2020\].
+Bird presenterer en mer akademisk forklaring enn de andre årsakene som blir nevnt. Om forskere driver med svindel eller praktiserer dårlig gjennomføring i studiene blir vanskelig å kunne konkludere med. Bird kommer med en forklaring som viser hvordan hypotesetesting kan tolkes feil, eller aksepteres med stor mulighet for type-I eller type-II feil. Forklaringene som har blitt nevnt er alle aksepterbare, og mulige, og det blir vanskelig å konkludere at den ene er bedre enn den andre, men Bird presenterer en mer troverdig forklaring [@bird2020].
 
 <!--chapter:end:02-ArbeidskravVitenskapsteori.rmd-->
 
@@ -452,67 +346,71 @@ Styrketrening og utholdenhetstrening for godt trente syklister Introduksjon I de
 
 Litteraturen som er valgt til denne oppgaven har alle som hovedmål å undersøke hvordan tung styrketrening i tillegg til vanlig utholdenhetstrening vil påvirke ulike prestasjonsfaktorer innenfor sykling. Hvilke prestasjonsfaktorer som blir vektlagt varierer mellom de ulike forskningsartiklene. Rønnestad [@rønnestad2010b] presenterer sin hypotese at styrketreningen vil påvirke muskeltverrsnitt i lårmuskulaturen, power output, windgate test, og 40 min all-out test. Vikmoen et al [@vikmoen2016] presenterer samme hypotese, men studien gjennomføres kun på kvinnelige elitesyklister. I artikkelen fra [@rønnestad2010a] har Rønnestad et al en hypotese om at vedlikehold av tung styrketrening gjennom starten av treningssesongen vil positivt påvirke utholdenheten over lengre konkurranser i slutten av en 13 ukers periode. Dette minner om hypotesen Aagaard 2011 legger frem, men intervensjonen og resultater blir gjennomført i forberedelses sesong, og ikke i konkurransesesong. Siste artikkel har en hypotese som sier at 10 uker med tung styrketrening sammen med utholdenhetstrening, og 15 uker med vedlikehold av styrketreningen vil gi økt styrke i pedaltråkk og øke styrken i benmuskulaturen [@rønnestad2015].
 
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
-|                 | Studie design | Deltakere | Intervensjon | Fysiske tester                    | Statistiske tester                    |
-+=================+===============+===========+==============+===================================+=======================================+
-| @rønnestad2010a | RCT           | n=23      | 12 Uker      | Benpress                          | Uparret t-test                        |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Laktatprofil                      | To-veis ANOVA med Bonferroni post hoc |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Vo2 maks                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Windgate                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | 40 min all-out                    |                                       |
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
-| @rønnestad2010b | RCT           | n=12      | 25 Uker      | Benpress                          | Uparret t-test                        |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Laktatprofil                      |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Vo2 maks                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Windgate                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | 40 min all-out                    |                                       |
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
-| @rønnestad2015  | RCT           | n=16      | 25 Uker      | Benpress                          | Uparret t-test                        |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Laktatprofil                      | To-veis ANOVA med post-hoc            |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Vo2 maks                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Windgate                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | 40 min all-out                    |                                       |
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
-| @aagaard2011    | RCT           | n=14      | 16 Uker      | 5 min prestasjonstest             | Ikke-parametisk ANOVA                 |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | 45 min utholdende kapasitets test |                                       |
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
-| @vikmoen2016    | RCT           | n=21      | 11 Uker      | Vo2 maks test                     | Uparret t-test                        |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | 40 min all-out                    |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Windgate                          |                                       |
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
+|                 | Studie design | Deltakere | Intervensjon | Fysiske tester         | Statistiske tester                    |
++=================+===============+===========+==============+========================+=======================================+
+| @rønnestad2010a | RCT           | n=23      | 12 Uker      | Benpress               | Uparret t-test                        |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Laktatprofil           | To-veis ANOVA med Bonferroni post hoc |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Vo2 maks               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Windgate               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | 40 min all-out         |                                       |
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
+| @rønnestad2010b | RCT           | n=12      | 25 Uker      | Benpress               | Uparret t-test                        |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Laktatprofil           |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Vo2 maks               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Windgate               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | 40 min all-out         |                                       |
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
+| @rønnestad2015  | RCT           | n=16      | 25 Uker      | Benpress               | Uparret t-test                        |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Laktatprofil           | To-veis ANOVA med post-hoc            |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Vo2 maks               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Windgate               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | 40 min all-out         |                                       |
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
+| @aagaard2011    | RCT           | n=14      | 16 Uker      | 5 min prestasjonstest  | Ikke-parametisk ANOVA                 |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | 45 min kapasitets test |                                       |
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
+| @vikmoen2016    | RCT           | n=21      | 11 Uker      | Vo2 maks test          | Uparret t-test                        |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | 40 min all-out         |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Windgate               |                                       |
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
 
 *Tabell 1:* Viser informasjon om studiedesing, deltakere, treningsintervensjon og tester
 
 [**Studie design**]{.ul}
 
-Forskningsartiklene som er brukt i denne oppgaven har som hovedmål å finne ut hvordan styrketrening, sammen med utholdenhetstrening, påvirker profesjonelle eller godt trente syklisters prestasjon. Felles for alle studiene er at de gjennomføre en styrkeintervensjon fra 11 til 25 uker på intervensjonsgruppene, og sammenligner forskjellene i ulike styrke- og utholdenhetstester med en kontrollgruppe. De sammenligner Dette vil si at alle studiene bruker randomisert kontrollert studie (RCT) som studiedesign. I et RCT blir deltakerne tilfeldig valgt hvilken gruppe de tilhører, kontrollgruppe eller intervensjonsgruppe. Ved å tilfeldig fordele de ulike deltakerne i kontrollgruppe, og intervensjonsgruppe vil man minske sannsynligheten for at det er store forskjeller mellom gruppene \[@hulley2013; @Parab2010\]. Det er med fordel at alle studiene i denne oppgaven bruker dette studie designet for å kunne se effekten for intervensjonsgruppen, mot kontrollgruppen. Dette vil si at resultatene vil vise hvilken effekt intervensjonen har eller ikke har, og ikke være påvirket av store gruppeforskjeller \[@helsebiblioteketuå\] . Utvalg: I de ulike studiene skilte deltaker gruppene seg fra 12 til 23 deltakere. Alle deltakerne var godt trente syklister. I noen av prosjektene var deltakerne syklister på høyt nasjonalt eller internasjonalt nivå \[@rønnestad2010a; @rønnestad2010b; @rønnestad2015; @aagaard2011\]. Ingen av forfatterne beskrev rekrutteringsprosessen eller at det ble gjennomført en styrkeberegning (antall beregning) for å argumentere for antall deltakere i studiene.
+Forskningsartiklene som er brukt i denne oppgaven har som hovedmål å finne ut hvordan styrketrening, sammen med utholdenhetstrening, påvirker profesjonelle eller godt trente syklisters prestasjon. Felles for alle studiene er at de gjennomføre en styrkeintervensjon fra 11 til 25 uker på intervensjonsgruppene, og sammenligner forskjellene i ulike styrke- og utholdenhetstester med en kontrollgruppe. De sammenligner Dette vil si at alle studiene bruker randomisert kontrollert studie (RCT) som studiedesign. I et RCT blir deltakerne tilfeldig valgt hvilken gruppe de tilhører, kontrollgruppe eller intervensjonsgruppe. Ved å tilfeldig fordele de ulike deltakerne i kontrollgruppe, og intervensjonsgruppe vil man minske sannsynligheten for at det er store forskjeller mellom gruppene [@hulley2013; @Parab2010]. Det er med fordel at alle studiene i denne oppgaven bruker dette studie designet for å kunne se effekten for intervensjonsgruppen, mot kontrollgruppen. Dette vil si at resultatene vil vise hvilken effekt intervensjonen har eller ikke har, og ikke være påvirket av store gruppeforskjeller [@helsebiblioteket].
+
+[**Utvalg**]{.ul}
+
+I de ulike studiene skilte deltaker gruppene seg fra 12 til 23 deltakere. Alle deltakerne var godt trente syklister. I noen av prosjektene var deltakerne syklister på høyt nasjonalt eller internasjonalt nivå [@rønnestad2010a; @rønnestad2010b; @rønnestad2015; @aagaard2011]. Ingen av forfatterne beskrev rekrutteringsprosessen eller at det ble gjennomført en styrkeberegning (antall beregning) for å argumentere for antall deltakere i studiene.
 
 [**Tester**]{.ul}
 
 Alle forskningsprosjektene gjennomført av Rønnestad [@rønnestad2010a; @rønnestad2010b; @rønnestad2015] gjennomfører de samme fysiske testene for å teste intervensjonsgruppen mot kontrollgruppen. Disse testene er beskrevet i tabell 1. Vo2 maks test, windgate og 40 min all-out test ble brukt i prosjektet gjennomført av Vikmoen [@vikmoen2016]. I det siste prosjektet ble det gjennomført en 5 min prestasjonstest for å se på effekten av intervensjonen ved kort utholdenhetsprestasjon [@aagaard2011]. Det ble og gjennomført en 45 min utholdenhetstest. Felles for alle forskningsprosjektene er at testene var standardisert, for å øke validiteten. Deltakerne måtte følge visse regler under testdagene slik at de eksterne faktorene skulle være så like som mulige. Dette innebar regulasjoner på inntak av mat og drikke, og trening under testdagene. Testtidspunkt var standardisert til den enkelte deltaker, slik at testene ble gjennomført likt på dagen, og temperaturen i testrommet var standardisert på alle utøverne.
 
-De ulike artiklene har brukt forskjellige statistiske tester, for å regne ut forskjellen mellom gruppene. For å regne ut forskjellen mellom gruppene ved pre-test har fire av prosjektene brukt uparret t-test [@rønnestad2010a; @rønnestad2010b; @rønnestad2015; @vikmoen2016]. En t-test blir brukt for å regne ut om det er signifikant forskjell mellom gjennomsnittet til to grupper. I disse studiene er t-testen brukt på to uavhengige grupper, som gjør at man må bruke en uparet t-test [@kim2015]. I motsetning til de andre har Aagaard [@aagaard2011] gjennomført en ikke parametisk ANOVA analyse for å regne ut forskjellen mellom gruppene ved pre-test. Ikke parametiske analyser brukes for å sammenligne data som ikke møter standarden for nomralditrubisjon, eller for mindre grupper som Aagaard har (n=14) [@altman2009]. Enveis ANOVA er en variasjonsanalyse som regner ut forskjellen i gjennomsnitt mellom to ulike grupper grupper. Hvis dette gir en p-verdi som er lavere enn det gitte signifikans nivået kan man konkludere med at det er forskjell mellom gruppene, men man kan ikke si hvilken forskjell det er. For å finne denne må man gjennomføre en post hoc test for å finne hvilke grupper som er ulike \[@kim2017?\] . For å regne ut den relative forskjellen mellom intervensjonsgruppen og kontrollgruppen har Aagard også brukt en ikke-parametisk ANOVA med post hoc. Vikmoen [@vikmoen2016] og Rønnestad [@rønnestad2015] brukte uparet t-test for å regne ut relativ forskjell mellom gruppene. Rønnestad [@rønnestad2010a; @rønnestad2010b] gjennomførte en toveis ANOVA med Bonferroni for å regne ut den relative forskjellen ved post-test. Ved å bruke bonferroni vil de slippe å gjennomføre flere t-tester og få flere p-verdier som vil være vanskelig å holde styr på.
+De ulike artiklene har brukt forskjellige statistiske tester, for å regne ut forskjellen mellom gruppene. For å regne ut forskjellen mellom gruppene ved pre-test har fire av prosjektene brukt uparret t-test [@rønnestad2010a; @rønnestad2010b; @rønnestad2015; @vikmoen2016]. En t-test blir brukt for å regne ut om det er signifikant forskjell mellom gjennomsnittet til to grupper. I disse studiene er t-testen brukt på to uavhengige grupper, som gjør at man må bruke en uparet t-test [@kim2015]. I motsetning til de andre har Aagaard [@aagaard2011] gjennomført en ikke parametisk ANOVA analyse for å regne ut forskjellen mellom gruppene ved pre-test. Ikke parametiske analyser brukes for å sammenligne data som ikke møter standarden for nomralditrubisjon, eller for mindre grupper som Aagaard har (n=14) [@altman2009]. Enveis ANOVA er en variasjonsanalyse som regner ut forskjellen i gjennomsnitt mellom to ulike grupper grupper. Hvis dette gir en p-verdi som er lavere enn det gitte signifikans nivået kan man konkludere med at det er forskjell mellom gruppene, men man kan ikke si hvilken forskjell det er. For å finne denne må man gjennomføre en post hoc test for å finne hvilke grupper som er ulike [@kim2017] . For å regne ut den relative forskjellen mellom intervensjonsgruppen og kontrollgruppen har Aagard også brukt en ikke-parametisk ANOVA med post hoc. Vikmoen [@vikmoen2016] og Rønnestad [@rønnestad2015] brukte uparet t-test for å regne ut relativ forskjell mellom gruppene. Rønnestad [@rønnestad2010a; @rønnestad2010b] gjennomførte en toveis ANOVA med Bonferroni for å regne ut den relative forskjellen ved post-test. Ved å bruke bonferroni vil de slippe å gjennomføre flere t-tester og få flere p-verdier som vil være vanskelig å holde styr på.
 
 ## Resultat
 
 Rønnestad presenter resultater med gjennomsnittig kraftutvikling i 40 min all-out testen økte i forbredelsesperioden for både intervensjonsgruppen (8 ± 2%, p\<0,05) og kontrollgruppen (4 ± 1%, p\<0.05). Det var ingen signifikant forkjell i endring mellom gruppene. Fra pre-test til post-test hadde intervensjonsgruppen større endring i 40 min all-out (14 ± 3%, p\<0,05) enn kontrollgruppen (4 ± 1%, p\< 0,05). Dette stemmer med hypotesen de la frem i studiet [@rønnestad2010a].
 
-I den andre undersøkelsen av Rønnestad fra 2010 viser resultatene at muskeltversnittet til intervensjonsgruppen økte signifiknat fra pre til post test etter endt intervensjon (4.6 ± 0.5%, p \< 0.01), og kontrollgruppen hadde ingen endring. Ved 40 min all-out testen var det ingen signifikant endring mellom gruppene. Dette vil si at deler av hypotesen stemmer med resultatene som ble funnet \[@rønnestad2010b\].
+I den andre undersøkelsen av Rønnestad fra 2010 viser resultatene at muskeltversnittet til intervensjonsgruppen økte signifiknat fra pre til post test etter endt intervensjon (4.6 ± 0.5%, p \< 0.01), og kontrollgruppen hadde ingen endring. Ved 40 min all-out testen var det ingen signifikant endring mellom gruppene. Dette vil si at deler av hypotesen stemmer med resultatene som ble funnet [@rønnestad2010b].
 
 I prosjektet hvor Rønnestad undersøkte hvordan styrke påvirker pedaltråkk viser resultatene at endringene i maksimal styrke var større gjennom hele testperioden for intervensjonsgruppen fra 65.8 ± 8.1 kg til 66.9 ± 8.0 kg, P \< 0.05) enn for kontrollgruppen, (74.6 ± 7.1 kg til 75.9 ± 7.2 kg, P \< 0.05). Det var og en signifikant endring mellom gruppene på 40 min all-out testen (6.5 ± 5.7%, P \< 0.01). Disse resultatene er med på å underbygge at hypotesen stemmer [@rønnestad2015].
 
@@ -522,74 +420,78 @@ I studiet gjennomført på kvinner viser resultatene viser ingen signifikant for
 
 ## Konklusjon
 
-Flere at forfatterne kan konkludere med at hypotesen og resultat stemmer \[@aagaard2011; @rønnestad2015; @rønnestad2010a\]. I disse studiene viser forfatter at hypotesen de har lagt frem før gjennomført studie stememr med hovedfunnene i studiene. Dette vil si at tung styrketrening i tillegg til utholdenhetstrening har en positiv effekt på prestasjonsfaktorer i sykkel. Rønnestad \[@rønnestad2010b\] sine hovedfunn viser at deler av hypotesen stemmer med resultatene. Hypotesen om at lårmuskulaturens tverrsnitt vil øke, stemmer med resultatene, men de kan ikke konkludere med at intervensjonen har en effekt på 40 min all-out test. På den andre siden viser resultatene til vikmoen \[@vikmoen2016\] at hypotesen og resultat ikke stemmer, og kan ikke konkludere med at treningsintervensjonen har den forventede effekten.
+Flere at forfatterne kan konkludere med at hypotesen og resultat stemmer [@aagaard2011; @rønnestad2015; @rønnestad2010a]. I disse studiene viser forfatter at hypotesen de har lagt frem før gjennomført studie stememr med hovedfunnene i studiene. Dette vil si at tung styrketrening i tillegg til utholdenhetstrening har en positiv effekt på prestasjonsfaktorer i sykkel. Rønnestad [@rønnestad2010b] sine hovedfunn viser at deler av hypotesen stemmer med resultatene. Hypotesen om at lårmuskulaturens tverrsnitt vil øke, stemmer med resultatene, men de kan ikke konkludere med at intervensjonen har en effekt på 40 min all-out test. På den andre siden viser resultatene til vikmoen [@vikmoen2016] at hypotesen og resultat ikke stemmer, og kan ikke konkludere med at treningsintervensjonen har den forventede effekten.
 
 <!--chapter:end:03-Arbeidskrav4.rmd-->
 
----
-output: html_document
-editor_options: 
-  chunk_output_type: console
----
-# Ett sett vs tre sett styrketrening 
+# Styrketrening med ett sett vs tre sett
 
 ## Introduksjon
 
-Flere forskere har undersøkt forskjellen på hvordan ulike sett og reps påvirker maksimal styrke, muskel hypertrofi og kroppssammensetning. Schoenfeld og flere [@2019] gjennomførte et studie for undersøke forskjellen i hypertrofi forskjellen mellom å gjennomføre ett eller tre sett i styreprogrammet. I denne studien var det ingen signifikant forskjell mellom gruppen som gjennomførte ett sett og gruppen som gjennomførte tre sett, men begge gruppene hadde signifikant økt muskel styrke fra pre-test til post-test. Flere andre gjennomførte studier viser et annet resultat, og konkluderer med at å gjennomføre tre sett gir en statistisk signifikant økning i maksimal styrke [@rhea2002; @munn2005; @fröhlich2010]. På den andre siden konkluderer Carpinelli [@carpinelli1998], at det ikke er signifikant forskjell på ett og tre sett, og diskuterer for at ett sett holder for å få god utvikling i muskelstyrke.
+Flere forskere har undersøkt forskjellen på hvordan ulike sett og reps påvirker maksimal styrke, muskel hypertrofi og kroppssammensetning. Schoenfeld og flere [schoenfld2019] gjennomførte et studie for undersøke forskjellen i hypertrofi forskjellen mellom å gjennomføre ett eller tre sett i styreprogrammet. I denne studien var det ingen signifikant forskjell mellom gruppen som gjennomførte ett sett og gruppen som gjennomførte tre sett, men begge gruppene hadde signifikant økt muskel styrke fra pre-test til post-test. Flere andre gjennomførte studier viser et annet resultat, og konkluderer med at å gjennomføre tre sett gir en statistisk signifikant økning i maksimal styrke [@rhea2002; @munn2005; @fröhlich2010]. På den andre siden konkluderer Carpinelli [@carpinelli1998], at det ikke er signifikant forskjell på ett og tre sett, og diskuterer for at ett sett holder for å få god utvikling i muskelstyrke.
 
 Dette danner grunnlaget for ønsket om å undersøke denne problemstillingen videre. Formålet med denne studien er å se om det vil forekomme endring i lean bodymass og styrkeadaptasjon etter 12 ukers treningsintervensjon, med ulik volum belastning på hvert ben, og sammenligne disse endringene.
 
-
 [**Intervensjon**]{.ul}
-Intervensjonen bestod av 12 ukers full-kropps styrketrening. Beinøvelsene ble gjennomført på et og et bein for å tillate interne styrkeforskjeller. Begge utøverne gjennomførte begge protokollene (et sett, og tre sett) og det ble tilfeldig valgt hvilket ben som skulle gjennomføre hvilken protokoll. Muskelstyrken ble vurdert ved oppstart, under (uke 3,5 og 9) og etter treningsintervensjon. Kroppssammensetning ble målt før og etter treningsintervensjonen. Muskelbiopsi ble samlet 4 ganger under intervensjonen. Ved start av intervensjon, før, og en time etter treningsøkt fem, og etter intervensjon.
 
+Intervensjonen bestod av 12 ukers full-kropps styrketrening. Beinøvelsene ble gjennomført på et og et bein for å tillate interne styrkeforskjeller. Begge utøverne gjennomførte begge protokollene (et sett, og tre sett) og det ble tilfeldig valgt hvilket ben som skulle gjennomføre hvilken protokoll. Muskelstyrken ble vurdert ved oppstart, under (uke 3,5 og 9) og etter treningsintervensjon. Kroppssammensetning ble målt før og etter treningsintervensjonen. Muskelbiopsi ble samlet 4 ganger under intervensjonen. Ved start av intervensjon, før, og en time etter treningsøkt fem, og etter intervensjon.
 
 [**Treningsprotokoll**]{.ul}
 
 [**Oppvarming**]{.ul}
-Alle deltakerne gjennomførte en standardisert oppvarmingsprotokoll før hver treningsøkt, hvor protokollen bestod av tre deler. Første del bestod av 5 min sykling på ergometersykkel til opplevd anstrengelse på 12-14 på Borg-skalaen (RPE). Andre del av oppvarmingen 10 repetisjoner av fire kroppsvekt treningsøvelser (individuelt tilpasset armhevninger, sit-ups, rygghev og knebøy). Siste del av oppvarmingen var et sett med 10 repetisjoner av ~50% av en repetisjon maksimum [1RM], for hver motstandsøvelse.
 
+Alle deltakerne gjennomførte en standardisert oppvarmingsprotokoll før hver treningsøkt, hvor protokollen bestod av tre deler. Første del bestod av 5 min sykling på ergometersykkel til opplevd anstrengelse på 12-14 på Borg-skalaen (RPE). Andre del av oppvarmingen 10 repetisjoner av fire kroppsvekt treningsøvelser (individuelt tilpasset armhevninger, sit-ups, rygghev og knebøy). Siste del av oppvarmingen var et sett med 10 repetisjoner av \~50% av en repetisjon maksimum (RM), for hver motstandsøvelse.
 
 [**Styrkeprogram**]{.ul}
-Beinøvelsene ble gjennomført i denne rekkefølgen: et beins beinpress, knefleksjon og kneekstensjon. Disse ble gjennomført som et eller tre sett per øvelse. Det ene settet ble gjennomført mellom andre og tredje sett. Etter å ha beinøvelsene gjennomførte deltakerne benkpress med manualer, nedtrekk og skulderpress eller sittende roing. Pausene mellom settene var 90-180 sekunder. Treningsintensiteten økte gradvis gjennom de 12 ukene. Deltakerne startet med 10RM de første to ukene, 8RM de neste tre ukene, og 7RM de siste sju ukene.
 
+Beinøvelsene ble gjennomført i denne rekkefølgen: et beins beinpress, knefleksjon og kneekstensjon. Disse ble gjennomført som et eller tre sett per øvelse. Det ene settet ble gjennomført mellom andre og tredje sett. Etter å ha beinøvelsene gjennomførte deltakerne benkpress med manualer, nedtrekk og skulderpress eller sittende roing. Pausene mellom settene var 90-180 sekunder. Treningsintensiteten økte gradvis gjennom de 12 ukene. Deltakerne startet med 10RM de første to ukene, 8RM de neste tre ukene, og 7RM de siste sju ukene.
 
 [**Tester**]{.ul}
 
-[**MAksimal styrke**]{.ul}
+[**Maksimal styrke**]{.ul}
+
 Maksimal styrke ble vurdert som 1RM i benpress med manualer og kneekstensjon. Spesifikk oppvarming på testdagen bestod av 10, 6 og 3 repetisjoner på 50, 75 og 85 % av forventet maksimum. 1RM ble funnet ved å øke motstanden gradvis inntil deltakeren ikke klarte å gjennomføre en fullstendig repetisjon. På hver øvelse ble den høyeste vekten deltakeren klarte å fullføre godkjent som 1RM. Deltakerne fikk fire til seks forsøk hver.
 
 [**Kroppssammensetning**]{.ul}
+
 Kroppssammensetningen ble testet før og etter intervensjonen ved bruk av dual-energy røntgenabsorptiometri (DXA), i henhold til standard protokoll. Før DXA-målingene fikk deltakerne beskjed om å faste i 2 timer, og ikke gjennomføre moderat fysisk aktivitet 48 timer før testtidspunkt. Den siste DXA-målingen ble gjennomført to dager etter siste styrkeøkt.
 
 [**Statistisk test**]{.ul}
-Statistisk analyse er gjennomført i R-studio (Version 1.4.1717). Deskriptiv statistikk er oppgitt som prosent, og ANCOVA modell er brukt til å regne ut p-verdi på endringsscore fra pre- til post-test. Statistisk signifikans er satt ved p <0,05.
 
+Statistisk analyse er gjennomført i R-studio (Version 1.4.1717). Deskriptiv statistikk er oppgitt som prosent, og ANCOVA modell er brukt til å regne ut p-verdi på endringsscore fra pre- til post-test. Statistisk signifikans er satt ved p \<0,05.
 
 ## Resultater
 
 [**Lean bodymass**]{.ul}
-Resultatene presentert i studien viser at 12 uker med styrketrening førte til en endring av lean body mass fra pre til post test på beina som gjennomførte tre sett (3,32 ± 4,39%, p<0,001), det samme gjelder for beina som gjennomførte ett sett (2,04 ± 3,71%, p<0,001). Endringer mellom de ulike treningsintervensjonene viser ingen signifikant endring mellom gruppene (114,56 ae, p<0,193).
+
+Resultatene presentert i studien viser at 12 uker med styrketrening førte til en endring av lean body mass fra pre til post test på beina som gjennomførte tre sett (3,32 ± 4,39%, p\<0,001), det samme gjelder for beina som gjennomførte ett sett (2,04 ± 3,71%, p\<0,001). Endringer mellom de ulike treningsintervensjonene viser ingen signifikant endring mellom gruppene (114,56 ae, p\<0,193).
+
+[**Muskel styrke**]{.ul}
+
+Resultatene viser at 12 ukers treningsintervensjon fører til en endring i muskelstyrke fra pre til post test på beina som gjennomførte et sett. mellom beina som gjennomførte ett sett (31,0 ± 14,2%, p\<0,001), og beina som gjennomførte tre sett (2,04 ± 3,71%, p\< 0,001). Endring i muskelstyrke for de ulike treningsintervensjonene ved post test er signifikant (p\<0.029).
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 remotes::install_github("dhammarstrom/exscidata")
 library(tidyverse)
 library(exscidata)
+library(dplyr)
+
 data("dxadata") 
 data("strengthvolume")
 ```
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
 library(tidyverse)
-styrkedat <- dxadata %>%
-  select(participant:include, lean.left_leg, lean.right_leg) %>%
+styrkedat <- dxadata %>% 
+  dplyr::select(participant:include, lean.left_leg, lean.right_leg) %>%
   pivot_longer(names_to = "leg", 
-               values_to = "lean.mass", 
+               values_to = "lean.mass",
                cols = lean.left_leg:lean.right_leg) %>%
   mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
          sets = if_else(multiple == leg, "multiple", "single")) %>%
-  select(participant, time, sets, sex, leg, lean.mass) %>%
+  dplyr::select(participant, time, sets, sex, leg, lean.mass) %>%
+  
   
   pivot_wider(names_from = time,
               values_from = lean.mass) %>%
@@ -611,12 +513,6 @@ summary(dxa)
 plot(dxa)
 confint(dxa)
 ```
-
-
-
-
-[**Muskel styrke**]{.ul}
-Resultatene viser at 12 ukers treningsintervensjon fører til en endring i muskelstyrke fra pre til post test på beina som gjennomførte et sett. mellom beina som gjennomførte ett sett (31,0 ± 14,2%, p<0,001), og beina som gjennomførte tre sett (2,04 ± 3,71%, p< 0,001). Endring i muskelstyrke for de ulike treningsintervensjonene ved post test er signifikant (p<0.029).
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
 styrkedat1 <- strengthvolume %>%
@@ -643,8 +539,6 @@ summary(m2)
 plot(m2)
 confint(m2)
 ```
-
-
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", out.width="120%", fig.cap= "Figuren viser økning i muskelstyrke mellom ett-sett og tre-sett ved pre- og post-test etter 12 uker med styrketrening (diff= -0.029AU)"}
 strengthvolume %>%
@@ -673,15 +567,14 @@ strengthvolume %>%
 ```
 
 ## Diskusjon
-To til tre styrkeøkter i 12 uker øker maksimal styrke i beina, og muskel hypertrofi. Disse resultatene er gjeldende for om man gjennomfører ett eller tre sett. Resultatene presentert i denne studien viser at endringen vil være større om man gjennomfører tre sett. Dette samsvarer med det store mengder av litteraturen viser [@rhea2002; @munn2005; @fröhlich2010]. Som presentert i introduksjonen viser resultatene de presenterer at tre sett har signifikant større økning enn ett sett. Rhea med flere viser til at deltakerne som kjørte tre sett hadde dobbelt så stor utvikling som deltakerne som gjennomførte ett sett (25%) etter tre uker (48%). Etter 12 uker ble det større forskjell mellom gruppene hvor deltakerne som gjennomførte tre sett hadde 56% økning, og deltakerne som gjennomførte ett sett hadde 26% økning. Dette kan være et tegn på at skilnaden mellom gruppen kan være enda større hvis samme styrkeprogram blir gjennomført i en periode som er lengre enn 12 uker.
+
+To til tre styrkeøkter i 12 uker øker maksimal styrke i beina, og muskel hypertrofi. Disse resultatene er gjeldende for om man gjennomfører ett eller tre sett. Resultatene presentert i denne studien viser at endringen vil være større om man gjennomfører tre sett. Dette samsvarer med det store mengder av litteraturen viser [@rhea2002; @munn2005; @fröhlich2010]. Som presentert i introduksjonen viser resultatene de presenterer at tre sett har signifikant større økning enn ett sett. [Rhea @rhea2002] viser til at deltakerne som kjørte tre sett hadde dobbelt så stor utvikling som deltakerne som gjennomførte ett sett (25%) etter tre uker (48%). Etter 12 uker ble det større forskjell mellom gruppene hvor deltakerne som gjennomførte tre sett hadde 56% økning, og deltakerne som gjennomførte ett sett hadde 26% økning. Dette kan være et tegn på at skilnaden mellom gruppen kan være enda større hvis samme styrkeprogram blir gjennomført i en periode som er lengre enn 12 uker.
 
 På den andre siden konkluderer Carpinelli [@carpinelli1998] som nevnt i introduksjonen at forskjellen mellom deltakerne som gjennomført ett sett og tre sett ikke var stor nok til at det var hensiktsmessig å gjennomføre tre sett. Dette understreker de med å påpeke at ved så lite forskjell vil det være lettere for folk å praktisere ett sett i sitt treningsprogram i det daglige liv. Dette er et viktig poeng å ta med seg inn i resultatene fra dette studiet da det er gjennomført på vanlige mennesker, og ikke treningsutøvere, som kan ha vanskeligheter med å få tid til å gjennomføre et styrkeprogram med tre sett på hver øvelse. Resultatene presentert over viser og at beina som gjennomførte ett sett hadde signifikant endring i lean bodymass, og i muskelstyrke.
 
 ## Konklusjon
+
 Etter endt studie kan man konkludere med at om man gjennomfører ett sett eller tre sett med styrketrening to til tre ganger i uken, vil man kunne se en signifikant økning i muskel styrke og hypertrofi. Ved å gjennomføre tre sett vil endringen være større enn ved ett sett. Til videre forskning kan man undersøke hvordan denne endringen vil være i en lengre periode enn 12 uker.
 
-
-
-
-<!--chapter:end:04-Arbeidskrav5.rmd-->
+<!--chapter:end:04-AK5.rmd-->
 

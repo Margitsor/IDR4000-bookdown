@@ -8,67 +8,71 @@ Styrketrening og utholdenhetstrening for godt trente syklister Introduksjon I de
 
 Litteraturen som er valgt til denne oppgaven har alle som hovedmål å undersøke hvordan tung styrketrening i tillegg til vanlig utholdenhetstrening vil påvirke ulike prestasjonsfaktorer innenfor sykling. Hvilke prestasjonsfaktorer som blir vektlagt varierer mellom de ulike forskningsartiklene. Rønnestad [@rønnestad2010b] presenterer sin hypotese at styrketreningen vil påvirke muskeltverrsnitt i lårmuskulaturen, power output, windgate test, og 40 min all-out test. Vikmoen et al [@vikmoen2016] presenterer samme hypotese, men studien gjennomføres kun på kvinnelige elitesyklister. I artikkelen fra [@rønnestad2010a] har Rønnestad et al en hypotese om at vedlikehold av tung styrketrening gjennom starten av treningssesongen vil positivt påvirke utholdenheten over lengre konkurranser i slutten av en 13 ukers periode. Dette minner om hypotesen Aagaard 2011 legger frem, men intervensjonen og resultater blir gjennomført i forberedelses sesong, og ikke i konkurransesesong. Siste artikkel har en hypotese som sier at 10 uker med tung styrketrening sammen med utholdenhetstrening, og 15 uker med vedlikehold av styrketreningen vil gi økt styrke i pedaltråkk og øke styrken i benmuskulaturen [@rønnestad2015].
 
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
-|                 | Studie design | Deltakere | Intervensjon | Fysiske tester                    | Statistiske tester                    |
-+=================+===============+===========+==============+===================================+=======================================+
-| @rønnestad2010a | RCT           | n=23      | 12 Uker      | Benpress                          | Uparret t-test                        |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Laktatprofil                      | To-veis ANOVA med Bonferroni post hoc |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Vo2 maks                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Windgate                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | 40 min all-out                    |                                       |
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
-| @rønnestad2010b | RCT           | n=12      | 25 Uker      | Benpress                          | Uparret t-test                        |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Laktatprofil                      |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Vo2 maks                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Windgate                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | 40 min all-out                    |                                       |
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
-| @rønnestad2015  | RCT           | n=16      | 25 Uker      | Benpress                          | Uparret t-test                        |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Laktatprofil                      | To-veis ANOVA med post-hoc            |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Vo2 maks                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Windgate                          |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | 40 min all-out                    |                                       |
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
-| @aagaard2011    | RCT           | n=14      | 16 Uker      | 5 min prestasjonstest             | Ikke-parametisk ANOVA                 |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | 45 min utholdende kapasitets test |                                       |
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
-| @vikmoen2016    | RCT           | n=21      | 11 Uker      | Vo2 maks test                     | Uparret t-test                        |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | 40 min all-out                    |                                       |
-|                 |               |           |              |                                   |                                       |
-|                 |               |           |              | Windgate                          |                                       |
-+-----------------+---------------+-----------+--------------+-----------------------------------+---------------------------------------+
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
+|                 | Studie design | Deltakere | Intervensjon | Fysiske tester         | Statistiske tester                    |
++=================+===============+===========+==============+========================+=======================================+
+| @rønnestad2010a | RCT           | n=23      | 12 Uker      | Benpress               | Uparret t-test                        |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Laktatprofil           | To-veis ANOVA med Bonferroni post hoc |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Vo2 maks               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Windgate               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | 40 min all-out         |                                       |
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
+| @rønnestad2010b | RCT           | n=12      | 25 Uker      | Benpress               | Uparret t-test                        |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Laktatprofil           |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Vo2 maks               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Windgate               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | 40 min all-out         |                                       |
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
+| @rønnestad2015  | RCT           | n=16      | 25 Uker      | Benpress               | Uparret t-test                        |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Laktatprofil           | To-veis ANOVA med post-hoc            |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Vo2 maks               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Windgate               |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | 40 min all-out         |                                       |
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
+| @aagaard2011    | RCT           | n=14      | 16 Uker      | 5 min prestasjonstest  | Ikke-parametisk ANOVA                 |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | 45 min kapasitets test |                                       |
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
+| @vikmoen2016    | RCT           | n=21      | 11 Uker      | Vo2 maks test          | Uparret t-test                        |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | 40 min all-out         |                                       |
+|                 |               |           |              |                        |                                       |
+|                 |               |           |              | Windgate               |                                       |
++-----------------+---------------+-----------+--------------+------------------------+---------------------------------------+
 
 *Tabell 1:* Viser informasjon om studiedesing, deltakere, treningsintervensjon og tester
 
 [**Studie design**]{.ul}
 
-Forskningsartiklene som er brukt i denne oppgaven har som hovedmål å finne ut hvordan styrketrening, sammen med utholdenhetstrening, påvirker profesjonelle eller godt trente syklisters prestasjon. Felles for alle studiene er at de gjennomføre en styrkeintervensjon fra 11 til 25 uker på intervensjonsgruppene, og sammenligner forskjellene i ulike styrke- og utholdenhetstester med en kontrollgruppe. De sammenligner Dette vil si at alle studiene bruker randomisert kontrollert studie (RCT) som studiedesign. I et RCT blir deltakerne tilfeldig valgt hvilken gruppe de tilhører, kontrollgruppe eller intervensjonsgruppe. Ved å tilfeldig fordele de ulike deltakerne i kontrollgruppe, og intervensjonsgruppe vil man minske sannsynligheten for at det er store forskjeller mellom gruppene \[@hulley2013; @Parab2010\]. Det er med fordel at alle studiene i denne oppgaven bruker dette studie designet for å kunne se effekten for intervensjonsgruppen, mot kontrollgruppen. Dette vil si at resultatene vil vise hvilken effekt intervensjonen har eller ikke har, og ikke være påvirket av store gruppeforskjeller \[@helsebiblioteketuå\] . Utvalg: I de ulike studiene skilte deltaker gruppene seg fra 12 til 23 deltakere. Alle deltakerne var godt trente syklister. I noen av prosjektene var deltakerne syklister på høyt nasjonalt eller internasjonalt nivå \[@rønnestad2010a; @rønnestad2010b; @rønnestad2015; @aagaard2011\]. Ingen av forfatterne beskrev rekrutteringsprosessen eller at det ble gjennomført en styrkeberegning (antall beregning) for å argumentere for antall deltakere i studiene.
+Forskningsartiklene som er brukt i denne oppgaven har som hovedmål å finne ut hvordan styrketrening, sammen med utholdenhetstrening, påvirker profesjonelle eller godt trente syklisters prestasjon. Felles for alle studiene er at de gjennomføre en styrkeintervensjon fra 11 til 25 uker på intervensjonsgruppene, og sammenligner forskjellene i ulike styrke- og utholdenhetstester med en kontrollgruppe. De sammenligner Dette vil si at alle studiene bruker randomisert kontrollert studie (RCT) som studiedesign. I et RCT blir deltakerne tilfeldig valgt hvilken gruppe de tilhører, kontrollgruppe eller intervensjonsgruppe. Ved å tilfeldig fordele de ulike deltakerne i kontrollgruppe, og intervensjonsgruppe vil man minske sannsynligheten for at det er store forskjeller mellom gruppene [@hulley2013; @Parab2010]. Det er med fordel at alle studiene i denne oppgaven bruker dette studie designet for å kunne se effekten for intervensjonsgruppen, mot kontrollgruppen. Dette vil si at resultatene vil vise hvilken effekt intervensjonen har eller ikke har, og ikke være påvirket av store gruppeforskjeller [@helsebiblioteket].
+
+[**Utvalg**]{.ul}
+
+I de ulike studiene skilte deltaker gruppene seg fra 12 til 23 deltakere. Alle deltakerne var godt trente syklister. I noen av prosjektene var deltakerne syklister på høyt nasjonalt eller internasjonalt nivå [@rønnestad2010a; @rønnestad2010b; @rønnestad2015; @aagaard2011]. Ingen av forfatterne beskrev rekrutteringsprosessen eller at det ble gjennomført en styrkeberegning (antall beregning) for å argumentere for antall deltakere i studiene.
 
 [**Tester**]{.ul}
 
 Alle forskningsprosjektene gjennomført av Rønnestad [@rønnestad2010a; @rønnestad2010b; @rønnestad2015] gjennomfører de samme fysiske testene for å teste intervensjonsgruppen mot kontrollgruppen. Disse testene er beskrevet i tabell 1. Vo2 maks test, windgate og 40 min all-out test ble brukt i prosjektet gjennomført av Vikmoen [@vikmoen2016]. I det siste prosjektet ble det gjennomført en 5 min prestasjonstest for å se på effekten av intervensjonen ved kort utholdenhetsprestasjon [@aagaard2011]. Det ble og gjennomført en 45 min utholdenhetstest. Felles for alle forskningsprosjektene er at testene var standardisert, for å øke validiteten. Deltakerne måtte følge visse regler under testdagene slik at de eksterne faktorene skulle være så like som mulige. Dette innebar regulasjoner på inntak av mat og drikke, og trening under testdagene. Testtidspunkt var standardisert til den enkelte deltaker, slik at testene ble gjennomført likt på dagen, og temperaturen i testrommet var standardisert på alle utøverne.
 
-De ulike artiklene har brukt forskjellige statistiske tester, for å regne ut forskjellen mellom gruppene. For å regne ut forskjellen mellom gruppene ved pre-test har fire av prosjektene brukt uparret t-test [@rønnestad2010a; @rønnestad2010b; @rønnestad2015; @vikmoen2016]. En t-test blir brukt for å regne ut om det er signifikant forskjell mellom gjennomsnittet til to grupper. I disse studiene er t-testen brukt på to uavhengige grupper, som gjør at man må bruke en uparet t-test [@kim2015]. I motsetning til de andre har Aagaard [@aagaard2011] gjennomført en ikke parametisk ANOVA analyse for å regne ut forskjellen mellom gruppene ved pre-test. Ikke parametiske analyser brukes for å sammenligne data som ikke møter standarden for nomralditrubisjon, eller for mindre grupper som Aagaard har (n=14) [@altman2009]. Enveis ANOVA er en variasjonsanalyse som regner ut forskjellen i gjennomsnitt mellom to ulike grupper grupper. Hvis dette gir en p-verdi som er lavere enn det gitte signifikans nivået kan man konkludere med at det er forskjell mellom gruppene, men man kan ikke si hvilken forskjell det er. For å finne denne må man gjennomføre en post hoc test for å finne hvilke grupper som er ulike \[@kim2017?\] . For å regne ut den relative forskjellen mellom intervensjonsgruppen og kontrollgruppen har Aagard også brukt en ikke-parametisk ANOVA med post hoc. Vikmoen [@vikmoen2016] og Rønnestad [@rønnestad2015] brukte uparet t-test for å regne ut relativ forskjell mellom gruppene. Rønnestad [@rønnestad2010a; @rønnestad2010b] gjennomførte en toveis ANOVA med Bonferroni for å regne ut den relative forskjellen ved post-test. Ved å bruke bonferroni vil de slippe å gjennomføre flere t-tester og få flere p-verdier som vil være vanskelig å holde styr på.
+De ulike artiklene har brukt forskjellige statistiske tester, for å regne ut forskjellen mellom gruppene. For å regne ut forskjellen mellom gruppene ved pre-test har fire av prosjektene brukt uparret t-test [@rønnestad2010a; @rønnestad2010b; @rønnestad2015; @vikmoen2016]. En t-test blir brukt for å regne ut om det er signifikant forskjell mellom gjennomsnittet til to grupper. I disse studiene er t-testen brukt på to uavhengige grupper, som gjør at man må bruke en uparet t-test [@kim2015]. I motsetning til de andre har Aagaard [@aagaard2011] gjennomført en ikke parametisk ANOVA analyse for å regne ut forskjellen mellom gruppene ved pre-test. Ikke parametiske analyser brukes for å sammenligne data som ikke møter standarden for nomralditrubisjon, eller for mindre grupper som Aagaard har (n=14) [@altman2009]. Enveis ANOVA er en variasjonsanalyse som regner ut forskjellen i gjennomsnitt mellom to ulike grupper grupper. Hvis dette gir en p-verdi som er lavere enn det gitte signifikans nivået kan man konkludere med at det er forskjell mellom gruppene, men man kan ikke si hvilken forskjell det er. For å finne denne må man gjennomføre en post hoc test for å finne hvilke grupper som er ulike [@kim2017] . For å regne ut den relative forskjellen mellom intervensjonsgruppen og kontrollgruppen har Aagard også brukt en ikke-parametisk ANOVA med post hoc. Vikmoen [@vikmoen2016] og Rønnestad [@rønnestad2015] brukte uparet t-test for å regne ut relativ forskjell mellom gruppene. Rønnestad [@rønnestad2010a; @rønnestad2010b] gjennomførte en toveis ANOVA med Bonferroni for å regne ut den relative forskjellen ved post-test. Ved å bruke bonferroni vil de slippe å gjennomføre flere t-tester og få flere p-verdier som vil være vanskelig å holde styr på.
 
 ## Resultat
 
 Rønnestad presenter resultater med gjennomsnittig kraftutvikling i 40 min all-out testen økte i forbredelsesperioden for både intervensjonsgruppen (8 ± 2%, p\<0,05) og kontrollgruppen (4 ± 1%, p\<0.05). Det var ingen signifikant forkjell i endring mellom gruppene. Fra pre-test til post-test hadde intervensjonsgruppen større endring i 40 min all-out (14 ± 3%, p\<0,05) enn kontrollgruppen (4 ± 1%, p\< 0,05). Dette stemmer med hypotesen de la frem i studiet [@rønnestad2010a].
 
-I den andre undersøkelsen av Rønnestad fra 2010 viser resultatene at muskeltversnittet til intervensjonsgruppen økte signifiknat fra pre til post test etter endt intervensjon (4.6 ± 0.5%, p \< 0.01), og kontrollgruppen hadde ingen endring. Ved 40 min all-out testen var det ingen signifikant endring mellom gruppene. Dette vil si at deler av hypotesen stemmer med resultatene som ble funnet \[@rønnestad2010b\].
+I den andre undersøkelsen av Rønnestad fra 2010 viser resultatene at muskeltversnittet til intervensjonsgruppen økte signifiknat fra pre til post test etter endt intervensjon (4.6 ± 0.5%, p \< 0.01), og kontrollgruppen hadde ingen endring. Ved 40 min all-out testen var det ingen signifikant endring mellom gruppene. Dette vil si at deler av hypotesen stemmer med resultatene som ble funnet [@rønnestad2010b].
 
 I prosjektet hvor Rønnestad undersøkte hvordan styrke påvirker pedaltråkk viser resultatene at endringene i maksimal styrke var større gjennom hele testperioden for intervensjonsgruppen fra 65.8 ± 8.1 kg til 66.9 ± 8.0 kg, P \< 0.05) enn for kontrollgruppen, (74.6 ± 7.1 kg til 75.9 ± 7.2 kg, P \< 0.05). Det var og en signifikant endring mellom gruppene på 40 min all-out testen (6.5 ± 5.7%, P \< 0.01). Disse resultatene er med på å underbygge at hypotesen stemmer [@rønnestad2015].
 
@@ -78,4 +82,4 @@ I studiet gjennomført på kvinner viser resultatene viser ingen signifikant for
 
 ## Konklusjon
 
-Flere at forfatterne kan konkludere med at hypotesen og resultat stemmer \[@aagaard2011; @rønnestad2015; @rønnestad2010a\]. I disse studiene viser forfatter at hypotesen de har lagt frem før gjennomført studie stememr med hovedfunnene i studiene. Dette vil si at tung styrketrening i tillegg til utholdenhetstrening har en positiv effekt på prestasjonsfaktorer i sykkel. Rønnestad \[@rønnestad2010b\] sine hovedfunn viser at deler av hypotesen stemmer med resultatene. Hypotesen om at lårmuskulaturens tverrsnitt vil øke, stemmer med resultatene, men de kan ikke konkludere med at intervensjonen har en effekt på 40 min all-out test. På den andre siden viser resultatene til vikmoen \[@vikmoen2016\] at hypotesen og resultat ikke stemmer, og kan ikke konkludere med at treningsintervensjonen har den forventede effekten.
+Flere at forfatterne kan konkludere med at hypotesen og resultat stemmer [@aagaard2011; @rønnestad2015; @rønnestad2010a]. I disse studiene viser forfatter at hypotesen de har lagt frem før gjennomført studie stememr med hovedfunnene i studiene. Dette vil si at tung styrketrening i tillegg til utholdenhetstrening har en positiv effekt på prestasjonsfaktorer i sykkel. Rønnestad [@rønnestad2010b] sine hovedfunn viser at deler av hypotesen stemmer med resultatene. Hypotesen om at lårmuskulaturens tverrsnitt vil øke, stemmer med resultatene, men de kan ikke konkludere med at intervensjonen har en effekt på 40 min all-out test. På den andre siden viser resultatene til vikmoen [@vikmoen2016] at hypotesen og resultat ikke stemmer, og kan ikke konkludere med at treningsintervensjonen har den forventede effekten.

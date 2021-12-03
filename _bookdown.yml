@@ -1,5 +1,5 @@
 delete_merged_file: true
-rmd_files: ["index.rmd", "01-new.rmd", "02-ArbeidskravVitenskapsteori.rmd", "03-Arbeidskrav4.rmd", "04-Arbeidskrav5.rmd"]
+rmd_files: ["index.rmd", "01-new.rmd", "02-ArbeidskravVitenskapsteori.rmd", "03-Arbeidskrav4.rmd", "04-AK5.rmd"]
 language:
   ui:
     chapter_name: "Chapter "
